@@ -1,0 +1,7 @@
+# Build Dependencies
+/node_modules
+
+# Built/compiled files
+# Grunt build to create these files
+/assets/js
+/assets/css
