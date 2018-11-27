@@ -1,33 +1,53 @@
 module.exports = function(grunt) {
 
-  // Project configuration.
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */'
+   // Configuration
+   grunt.initConfig({
+      concat: {
+         js: {
+            src: ['src/js/*.js'],
+            dest: 'assets/js/main.js'
+         },
+         css: {
+            src: ['src/css/*.css'],
+            dest: 'assets/css/main.css'
+         }
       },
-      build: {
-        // src: 'src/<%= pkg.name %>.js',
-        src: 'assets/js/main.js',
-        dest: 'assets/js/main.min.js'
+
+      sass: {
+         dist: {
+            files: {
+               'assets/css/test.css': 'src/sass/test.scss'
+            }
+         }
+      }﻿,
+
+      watch: {
+         scripts: {
+            files: ['src/js/*.js', 'src/sass/*.scss'],
+            tasks: ['concat', 'sass'],
+            options: {
+               spawn: false,
+            },
+         },
       }
-    },
-    browserify: {
-      build: {
-        src: 'src/js/main.js',
-        dest: 'assets/js/main.js'
-      }
-    }
-  });
 
-  // Load the plugin that provides the "node-browserify" task.
-  grunt.loadNpmTasks('grunt-browserify');
+   });
 
-  // Load the plugin that provides the "uglify" task.
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+   // Load Plugins
+   grunt.loadNpmTasks('grunt-contrib-concat');
+   grunt.loadNpmTasks('grunt-contrib-sass');
+   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  // Default task(s).
-  grunt.registerTask('default', ['browserify', 'uglify']);
+   // Sample Tasks
+   grunt.registerTask('run', function() {
+      console.log('task running');
+   });
+   grunt.registerTask('sleep', function() {
+      console.log('task sleeping');
+   });
 
+   // Register Tasks
+   grunt.registerTask('concat-js', ['concat:js']);
+   grunt.registerTask('concat-css', ['concat:css']);
+   grunt.registerTask('default', ['concat', 'sass']);
 };
