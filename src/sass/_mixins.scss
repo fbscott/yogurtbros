@@ -1,0 +1,115 @@
+// Gradients
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+
+// Border Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin border-radius-top-left($radius) {
+  -webkit-border-top-left-radius: $radius;
+      -moz-border-radius-topleft: $radius;
+          border-top-left-radius: $radius;
+}
+@mixin border-radius-top-right($radius) {
+  -webkit-border-top-right-radius: $radius;
+      -moz-border-radius-topright: $radius;
+          border-top-right-radius: $radius;
+}
+@mixin border-radius-bottom-left($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+      -moz-border-radius-bottomleft: $radius;
+          border-bottom-left-radius: $radius;
+}
+@mixin border-radius-bottom-right($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+      -moz-border-radius-bottomright: $radius;
+          border-bottom-right-radius: $radius;
+}
+
+// Box Shadow
+@mixin box-shadow($x, $y, $blur, $spread, $color, $inset:"") {
+  -webkit-box-shadow:$x $y $blur $spread $color #{$inset};
+     -moz-box-shadow:$x $y $blur $spread $color #{$inset};
+          box-shadow:$x $y $blur $spread $color #{$inset};
+}
+
+// Transitions
+@mixin transition($transition...) {
+    -webkit-transition: $transition;
+       -moz-transition: $transition;
+        -ms-transition: $transition;
+         -o-transition: $transition;
+            transition: $transition;
+}
+@mixin transition-property($property...) {
+    -webkit-transition-property: $property;
+       -moz-transition-property: $property;
+        -ms-transition-property: $property;
+         -o-transition-property: $property;
+            transition-property: $property;
+}
+@mixin transition-duration($duration...) {
+    -webkit-transition-property: $duration;
+       -moz-transition-property: $duration;
+        -ms-transition-property: $duration;
+         -o-transition-property: $duration;
+            transition-property: $duration;
+}
+@mixin transition-timing-function($timing...) {
+    -webkit-transition-timing-function: $timing;
+       -moz-transition-timing-function: $timing;
+        -ms-transition-timing-function: $timing;
+         -o-transition-timing-function: $timing;
+            transition-timing-function: $timing;
+}
+@mixin transition-delay($delay...) {
+    -webkit-transition-delay: $delay;
+       -moz-transition-delay: $delay;
+        -ms-transition-delay: $delay;
+         -o-transition-delay: $delay;
+            transition-delay: $delay;
+}
+
+// Opacity
+@mixin opacity($opacity) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity * 100})";
+  filter: alpha(opactiy=($opacity * 100));
+  -khtml-opacity: $opacity;
+  -moz-opacity: $opacity;
+  opacity: $opacity;
+}
+
+// Animations
+@mixin animation($animation, $time, $duration) {
+-webkit-animation: $animation $time $duration;
+   -moz-animation: $animation $time $duration;
+     -o-animation: $animation $time $duration;
+        animation: $animation $time $duration;
+}
+
+// Alignment
+@mixin center-align($position: absolute, $orientation: "", $valueA: 50%, $valueB: (-50%, -50%)) {
+  position: $position;
+  top: $valueA;
+  left: $valueA;
+  -webkit-transform: translate#{$orientation}unquote('"("#{$valueB}")"');
+      -ms-transform: translate#{$orientation}unquote('"("#{$valueB}")"');
+          transform: translate#{$orientation}unquote('"("#{$valueB}")"');
+}
+
+// Margin shorthand version
+// @include margin(top right bottom left);  --->   @include margin(1px 2px 3px 4px);
+@mixin margin($margin) {
+  margin: $margin;
+}
