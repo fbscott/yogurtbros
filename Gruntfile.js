@@ -9,21 +9,21 @@ module.exports = function(grunt) {
          },
          css: {
             src: ['src/css/*.css'],
-            dest: 'assets/css/main.css'
+            dest: 'assets/css/yb.css'
          }
       },
 
       sass: {
          dist: {
             files: {
-               'assets/css/test.css': 'src/sass/test.scss'
+               'assets/css/main.css': 'src/sass/main.scss'
             }
          }
       }﻿,
 
       watch: {
          scripts: {
-            files: ['src/js/*.js', 'src/sass/*.scss'],
+            files: ['src/**/*.js', 'src/**/*.scss'],
             tasks: ['concat', 'sass'],
             options: {
                spawn: false,
