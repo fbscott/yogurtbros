@@ -5,3 +5,4 @@
 # Grunt build to create these files
 /assets/js
 /assets/css
+.sass-cache/
