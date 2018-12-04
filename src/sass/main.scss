@@ -8,16 +8,12 @@
 @import "./base/reset";
 @import "./base/base";
 
-//*************************** Foundation *************************************
-// @import "foundation/components/grid";
-// @import "foundation/components/type";
-// @import "foundation/components/panels";
-
 //*************************** Fonts ******************************************
 // @import "./base/font-family_sc";
 // @import "./base/font-icons_sc";
 
 //*************************** Modules ****************************************
+@import "./modules/grid";
 // @import "./modules/panels_sc";
 // @import "./modules/homePanels_sc";
 // @import "./modules/margin_sc";
