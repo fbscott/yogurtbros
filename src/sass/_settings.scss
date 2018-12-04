@@ -11,7 +11,7 @@ $browser-context: 16; // Default
   @return #{$pixels / $context}rem;
 }
 
-// $column-gutter: rem-calc(15) !default;
+$column-gutter: remCalc(15) !default;
 
 //*************************** Breakpoints ************************************
 $small-breakpoint:   remCalc(320);
@@ -23,6 +23,8 @@ $medium-range:    (40.063em, remCalc(1023));
 $large-range:     (remCalc(1024), 90em);
 $xlarge-range:    (90.063em, 120em);
 $xxlarge-range:   (120.063em, 99999999em);
+
+$max-screen-width: remCalc(1200);
 
 //*************************** Colors *****************************************
 $black:           #000000;
@@ -74,6 +76,8 @@ $default-line-height:   remCalc(14);
 $side-nav-font-size:    remCalc(13);
 
 //*************************** Margin and Padding *****************************
+$h1-padding-top:        remCalc(10);
+$h1-padding-bottom:     remCalc(10);
 
 //*************************** Modules ****************************************
 // Note: module settings should go at the top of each individual module partials.
@@ -81,4 +85,4 @@ $side-nav-font-size:    remCalc(13);
 //*************************** Properties *************************************
 $properties:            margin, padding;
 $sides:                 top, right, bottom, left;
-$sides-gird-overrides:  right left;
+$sides-gird-overrides:  right, left;
