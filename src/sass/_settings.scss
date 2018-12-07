@@ -46,8 +46,7 @@ $font-weight:           400;
 $font-size:             remCalc(16);
 $font-stack-fallbacks:  Helvetica, Arial, Sans-Serif;
 
-// $font-stack:            $font-face, $font-stack-fallbacks;
-$font-stack:            $font-stack-fallbacks;
+$font-stack:            $font-face, $font-stack-fallbacks;
 $font-size-start:       9;
 $font-size-end:         32;
 

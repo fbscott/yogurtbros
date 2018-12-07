@@ -1,6 +1,6 @@
 /*****************************************************************************
- * namespace.js
- * Global Namespace
+ * main.js
+ * Yogurt Bros main site JS
  * @type {Object}
  ****************************************************************************/
-var YB = YB || {};
+console.log('Hello World!!');

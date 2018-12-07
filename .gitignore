@@ -6,3 +6,6 @@
 /assets/js
 /assets/css
 .sass-cache/
+
+# Ignore these while developing
+/src/js/modules
