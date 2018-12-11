@@ -1,122 +1,126 @@
-// Ubuntu
+/*****************************************************************************
+ * _font-family.scss
+ ****************************************************************************/
+// Lobster
 @font-face {
-   font-family: 'UbuntuLight';
-   src: url('../fonts/ubuntu/Ubuntu-L.ttf') format('truetype');
-   font-weight: normal; //Suposed to be "normal." Don't change.
-   font-style: normal; //Suposed to be "normal." Don't change.
+   font-family: 'Lobster';
+   src: url('/assets/fonts/Lobster/Lobster_1.3.otf') format(opentype);
+   font-weight: normal;
+   font-style: normal;
 }
 
-@font-face {
-   font-family: 'UbuntuLightItalic';
-   src: url('../fonts/ubuntu/Ubuntu-LI.ttf') format('truetype');
-   font-weight: normal; //Suposed to be "normal." Don't change.
-   font-style: normal; //Suposed to be "normal." Don't change.
-}
+// // Ubuntu
+// @font-face {
+//    font-family: 'UbuntuLight';
+//    src: url('../fonts/ubuntu/Ubuntu-L.ttf') format('truetype');
+//    font-weight: normal; //Suposed to be "normal." Don't change.
+//    font-style: normal; //Suposed to be "normal." Don't change.
+// }
+// @font-face {
+//    font-family: 'UbuntuLightItalic';
+//    src: url('../fonts/ubuntu/Ubuntu-LI.ttf') format('truetype');
+//    font-weight: normal; //Suposed to be "normal." Don't change.
+//    font-style: normal; //Suposed to be "normal." Don't change.
+// }
+// @font-face {
+//    font-family: 'UbuntuRegular';
+//    src: url('../fonts/ubuntu/Ubuntu-R.ttf') format('truetype');
+//    font-weight: normal; //Suposed to be "normal." Don't change.
+//    font-style: normal; //Suposed to be "normal." Don't change.
+// }
+// @font-face {
+//    font-family: 'UbuntuRegularItalic';
+//    src: url('../fonts/ubuntu/Ubuntu-RI.ttf') format('truetype');
+//    font-weight: normal; //Suposed to be "normal." Don't change.
+//    font-style: normal; //Suposed to be "normal." Don't change.
+// }
+// @font-face {
+//    font-family: 'UbuntuBold';
+//    src: url('../fonts/ubuntu/Ubuntu-B.ttf') format('truetype');
+//    font-weight: normal; //Suposed to be "normal." Don't change.
+//    font-style: normal; //Suposed to be "normal." Don't change.
+// }
+// @font-face {
+//    font-family: 'UbuntuBoldItalic';
+//    src: url('../fonts/ubuntu/Ubuntu-BI.ttf') format('truetype');
+//    font-weight: normal; //Suposed to be "normal." Don't change.
+//    font-style: normal; //Suposed to be "normal." Don't change.
+// }
 
-@font-face {
-   font-family: 'UbuntuRegular';
-   src: url('../fonts/ubuntu/Ubuntu-R.ttf') format('truetype');
-   font-weight: normal; //Suposed to be "normal." Don't change.
-   font-style: normal; //Suposed to be "normal." Don't change.
-}
+// // Roboto
+// @font-face {
+//    font-family: 'RobotoLight';
+//    src: url('../fonts/roboto/Roboto-Thin.ttf') format('truetype');
+//    font-weight: normal; //Suposed to be "normal." Don't change.
+//    font-style: normal; //Suposed to be "normal." Don't change.
+// }
+// @font-face {
+//    font-family: 'RobotoLightItalic';
+//    src: url('../fonts/roboto/Roboto-ThinItalic.ttf') format('truetype');
+//    font-weight: normal; //Suposed to be "normal." Don't change.
+//    font-style: normal; //Suposed to be "normal." Don't change.
+// }
+// @font-face {
+//    font-family: 'RobotoRegular';
+//    src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
+//    font-weight: normal; //Suposed to be "normal." Don't change.
+//    font-style: normal; //Suposed to be "normal." Don't change.
+// }
+// @font-face {
+//    font-family: 'RobotoRegularItalic';
+//    src: url('../fonts/roboto/Roboto-Italic.ttf') format('truetype');
+//    font-weight: normal; //Suposed to be "normal." Don't change.
+//    font-style: normal; //Suposed to be "normal." Don't change.
+// }
+// @font-face {
+//    font-family: 'RobotoBold';
+//    src: url('../fonts/roboto/Roboto-Bold.ttf') format('truetype');
+//    font-weight: normal; //Suposed to be "normal." Don't change.
+//    font-style: normal; //Suposed to be "normal." Don't change.
+// }
+// @font-face {
+//    font-family: 'RobotoBoldItalic';
+//    src: url('../fonts/roboto/Roboto-BoldItalic.ttf') format('truetype');
+//    font-weight: normal; //Suposed to be "normal." Don't change.
+//    font-style: normal; //Suposed to be "normal." Don't change.
+// }
 
-@font-face {
-   font-family: 'UbuntuRegularItalic';
-   src: url('../fonts/ubuntu/Ubuntu-RI.ttf') format('truetype');
-   font-weight: normal; //Suposed to be "normal." Don't change.
-   font-style: normal; //Suposed to be "normal." Don't change.
-}
+// // CreightonPro
+// @font-face {
+//    font-family: 'CreightonProLight';
+//    src: url('../fonts/CreightonProLight.otf') format('truetype');
+//    font-weight: normal; //Suposed to be "normal." Don't change.
+//    font-style: normal; //Suposed to be "normal." Don't change.
+// }
 
-@font-face {
-   font-family: 'UbuntuBold';
-   src: url('../fonts/ubuntu/Ubuntu-B.ttf') format('truetype');
-   font-weight: normal; //Suposed to be "normal." Don't change.
-   font-style: normal; //Suposed to be "normal." Don't change.
-}
-
-@font-face {
-   font-family: 'UbuntuBoldItalic';
-   src: url('../fonts/ubuntu/Ubuntu-BI.ttf') format('truetype');
-   font-weight: normal; //Suposed to be "normal." Don't change.
-   font-style: normal; //Suposed to be "normal." Don't change.
-}
-// Roboto
-@font-face {
-   font-family: 'RobotoLight';
-   src: url('../fonts/roboto/Roboto-Thin.ttf') format('truetype');
-   font-weight: normal; //Suposed to be "normal." Don't change.
-   font-style: normal; //Suposed to be "normal." Don't change.
-}
-
-@font-face {
-   font-family: 'RobotoLightItalic';
-   src: url('../fonts/roboto/Roboto-ThinItalic.ttf') format('truetype');
-   font-weight: normal; //Suposed to be "normal." Don't change.
-   font-style: normal; //Suposed to be "normal." Don't change.
-}
-
-@font-face {
-   font-family: 'RobotoRegular';
-   src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
-   font-weight: normal; //Suposed to be "normal." Don't change.
-   font-style: normal; //Suposed to be "normal." Don't change.
-}
-
-@font-face {
-   font-family: 'RobotoRegularItalic';
-   src: url('../fonts/roboto/Roboto-Italic.ttf') format('truetype');
-   font-weight: normal; //Suposed to be "normal." Don't change.
-   font-style: normal; //Suposed to be "normal." Don't change.
-}
-
-@font-face {
-   font-family: 'RobotoBold';
-   src: url('../fonts/roboto/Roboto-Bold.ttf') format('truetype');
-   font-weight: normal; //Suposed to be "normal." Don't change.
-   font-style: normal; //Suposed to be "normal." Don't change.
-}
-
-@font-face {
-   font-family: 'RobotoBoldItalic';
-   src: url('../fonts/roboto/Roboto-BoldItalic.ttf') format('truetype');
-   font-weight: normal; //Suposed to be "normal." Don't change.
-   font-style: normal; //Suposed to be "normal." Don't change.
-}
-// CreightonPro
-@font-face {
-   font-family: 'CreightonProLight';
-   src: url('../fonts/CreightonProLight.otf') format('truetype');
-   font-weight: normal; //Suposed to be "normal." Don't change.
-   font-style: normal; //Suposed to be "normal." Don't change.
-}
-// Gotham
-@font-face {
-   font-family: 'Gotham-XLight';
-   src: url('../fonts/Gotham-XLight.otf') format('truetype');
-   font-weight: normal; //Suposed to be "normal." Don't change.
-   font-style: normal; //Suposed to be "normal." Don't change.
-}
-@font-face {
-   font-family: 'Gotham-XLightIta';
-   src: url('../fonts/Gotham-XLightIta.otf') format('truetype');
-   font-weight: normal; //Suposed to be "normal." Don't change.
-   font-style: normal; //Suposed to be "normal." Don't change.
-}
-@font-face {
-   font-family: 'Gotham-Light';
-   src: url('../fonts/Gotham-Light.otf') format('truetype');
-   font-weight: normal; //Suposed to be "normal." Don't change.
-   font-style: normal; //Suposed to be "normal." Don't change.
-}
-@font-face {
-   font-family: 'Gotham-Medium';
-   src: url('../fonts/Gotham-Medium.otf') format('truetype');
-   font-weight: normal; //Suposed to be "normal." Don't change.
-   font-style: normal; //Suposed to be "normal." Don't change.
-}
-@font-face {
-   font-family: 'Gotham-MediumIta';
-   src: url('../fonts/Gotham-MediumIta.otf') format('truetype');
-   font-weight: normal; //Suposed to be "normal." Don't change.
-   font-style: normal; //Suposed to be "normal." Don't change.
-}
+// // Gotham
+// @font-face {
+//    font-family: 'Gotham-XLight';
+//    src: url('../fonts/Gotham-XLight.otf') format('truetype');
+//    font-weight: normal; //Suposed to be "normal." Don't change.
+//    font-style: normal; //Suposed to be "normal." Don't change.
+// }
+// @font-face {
+//    font-family: 'Gotham-XLightIta';
+//    src: url('../fonts/Gotham-XLightIta.otf') format('truetype');
+//    font-weight: normal; //Suposed to be "normal." Don't change.
+//    font-style: normal; //Suposed to be "normal." Don't change.
+// }
+// @font-face {
+//    font-family: 'Gotham-Light';
+//    src: url('../fonts/Gotham-Light.otf') format('truetype');
+//    font-weight: normal; //Suposed to be "normal." Don't change.
+//    font-style: normal; //Suposed to be "normal." Don't change.
+// }
+// @font-face {
+//    font-family: 'Gotham-Medium';
+//    src: url('../fonts/Gotham-Medium.otf') format('truetype');
+//    font-weight: normal; //Suposed to be "normal." Don't change.
+//    font-style: normal; //Suposed to be "normal." Don't change.
+// }
+// @font-face {
+//    font-family: 'Gotham-MediumIta';
+//    src: url('../fonts/Gotham-MediumIta.otf') format('truetype');
+//    font-weight: normal; //Suposed to be "normal." Don't change.
+//    font-style: normal; //Suposed to be "normal." Don't change.
+// }

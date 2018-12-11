@@ -15,11 +15,11 @@ module.exports = function(grunt) {
          js: {
             src: ['src/js/*.js'],
             dest: 'assets/js/yb.js'
-         },
-         css: {
-            src: ['src/css/*.css'],
-            dest: 'assets/css/main.css'
          }
+         // css: {
+         //    src: ['src/css/*.css'],
+         //    dest: 'assets/css/main.css'
+         // }
       },
 
       cssmin: {
@@ -88,6 +88,6 @@ module.exports = function(grunt) {
 
    // Register Tasks
    grunt.registerTask('concat-js', ['concat:js']);
-   grunt.registerTask('concat-css', ['concat:css']);
+   // grunt.registerTask('concat-css', ['concat:css']);
    grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'browserify', 'uglify']);
 };
