@@ -1,11 +1,25 @@
 /*****************************************************************************
  * header
  ****************************************************************************/
+// module-specific settings
+$header-primary-color: rgba(147,175,42,0.5);
+$header-secondary-color: $white;
+$header-border-color: $header-secondary-color;
 
 header {
+   margin-top: remCalc(180);
+   border-top: remCalc(8) solid $header-border-color;
+   border-bottom: remCalc(8) solid $header-border-color;
+   background-color: $header-primary-color;
+   box-shadow: 0px 0px 0.3125rem 0px rgba(0,0,0,0.5);
+   .logo {
+      z-index: 1;
+      @include align-vertical($position: absolute, $valueA: '');
+   }
    .strapline {
-      position: absolute;
-      bottom: 0;
-      right: 0;
+      height: 100px;
+      div {
+         height: 100%;
+      }
    }
 }

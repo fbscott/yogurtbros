@@ -58,11 +58,13 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 //*************************** Colors *****************************************
 $black:           #000000;
 $charcoal:        #333333;
+$green:           #93af2a;
 $grey:            #4a4a4a;
 $grey-light:      lighten($grey, 15%);
 $grey-very-light: lighten($grey, 52.75%);
 $grey-dark:       darken($grey, 10%);
 $grey-very-dark:  darken($grey, 25%);
+$orange:          #f15a22;
 $white:           #FFFFFF;
 
 //*************************** Element Colors *********************************
