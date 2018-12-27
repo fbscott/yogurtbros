@@ -1,11 +1,13 @@
-// Font Icons
+/*****************************************************************************
+ * font-icons
+ ****************************************************************************/
 @font-face {
 	font-family: 'yb';
 	src:url('../fonts/yb/yb.eot?9tmepv');
 	src:url('../fonts/yb/yb.eot?#iefix9tmepv') format('embedded-opentype'),
-		url('../fonts/yb/yb.woff?9tmepv') format('woff'),
-		url('../fonts/yb/yb.ttf?9tmepv') format('truetype'),
-		url('../fonts/yb/yb.svg?9tmepv#yb') format('svg');
+       url('../fonts/yb/yb.woff?9tmepv') format('woff'),
+       url('../fonts/yb/yb.ttf?9tmepv') format('truetype'),
+       url('../fonts/yb/yb.svg?9tmepv#yb') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }

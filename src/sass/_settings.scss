@@ -15,9 +15,9 @@ $column-gutter: remCalc(15) !default;
 
 //*************************** Breakpoints ************************************
 $xsmall-breakpoint: remCalc(320);
-$small-breakpoint:  remCalc(720);
-$medium-breakpoint: remCalc(642);
-$large-breakpoint:  remCalc(1025);
+$small-breakpoint:  remCalc(400);
+$medium-breakpoint: remCalc(768);
+$large-breakpoint:  remCalc(1024);
 $xlarge-breakpoint: remCalc(1600);
 
 $small-range:     (0, 40em);

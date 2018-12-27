@@ -1,15 +1,21 @@
 /*****************************************************************************
- * Base
+ * base
  ****************************************************************************/
 
 html {
+   height: 100%; // to keep footer at bottom of page
 	body {
 		font-family: $font-stack;
 		// font-weight: $body-font-weight;
 		// font-size: $rem-base;
 		// color: $text-color;
 		// background-color: $background-color-primary;
+      height: 100%; // to keep footer at bottom of page
 		overflow-y: scroll;
+      #container {
+         min-height: 100%; // to keep footer at bottom of page
+         position: relative; // to keep footer at bottom of page
+      }
 	}
 }
 
@@ -19,4 +25,9 @@ h1 {
 	font-weight: bold;
 	padding-top: $h1-padding-top;
 	padding-bottom: $h1-padding-bottom;
+}
+
+p {
+   margin-bottom: remCalc(30);
+   line-height: 1.5;
 }
