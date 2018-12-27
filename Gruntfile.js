@@ -74,7 +74,7 @@ module.exports = function(grunt) {
 
       uglify: {
          options: {
-            banner: '/*! <%= pkg.name %> v<%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */'
+            banner: '/*! <%= pkg.name %> v<%= pkg.version %> Author: <%= pkg.author %> <%= grunt.template.today("yyyy-mm-dd") %> */'
          },
          build: {
             // src: 'src/<%= pkg.name %>.js',
@@ -95,7 +95,7 @@ module.exports = function(grunt) {
             files: [{
                expand: true,
                cwd: 'src/js',
-               src: '**/*.js', // '**/*.js' for sub directories
+               src: '*.js', // '**/*.js' for sub directories
                dest: 'assets/js'
             }]
          }
