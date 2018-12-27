@@ -1,26 +1,28 @@
   <header>
-    <div class="row">
+    <div class="header-content">
+      <div class="row">
 
-      <div class="columns medium-3 logo">
-        <img src="/assets/img/logo.png" alt="Yogurt Brothers Logo">
-      </div><!-- end .column -->
+        <div class="columns medium-3 logo">
+          <img src="/assets/img/logo.png" alt="Yogurt Brothers Logo">
+        </div><!-- end .column -->
 
-      <div class="column medium-9 medium-offset-3 strapline">
-        <div class="row">
-          <div class="columns medium-6 large-8">
-            <p class="align-vertical"><span id="js-strapline">&nbsp;</span></p>
-          </div><!-- end .column -->
-          <div class="columns medium-6 large-4">
-            <nav class="align-vertical">
-              <a href="javascript:void(0);">Home</a> |
-              <a href="javascript:void(0);">About Us</a> |
-              <a href="javascript:void(0);">Menu</a> |
-              <a href="javascript:void(0);">Contact</a>
-            </nav>
-          </div><!-- end .column -->
-        </div><!-- end .row -->
-      </div><!-- end .column -->
+        <div class="column medium-9 medium-offset-3 strapline">
+          <div class="row">
+            <div class="columns medium-6 large-7">
+              <p class="align-vertical"><span id="js-strapline">&nbsp;</span></p>
+            </div><!-- end .column -->
+            <div class="columns medium-6 large-5">
+              <nav class="align-vertical">
+                <a href="javascript:void(0);">Home</a> |
+                <a href="javascript:void(0);">About Us</a> |
+                <a href="javascript:void(0);">Menu</a> |
+                <a href="javascript:void(0);">Contact</a>
+              </nav>
+            </div><!-- end .column -->
+          </div><!-- end .row -->
+        </div><!-- end .column -->
 
-    </div><!-- end .row -->
+      </div><!-- end .row -->
+    </div>
   </header>
   
