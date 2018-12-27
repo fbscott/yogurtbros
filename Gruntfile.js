@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
       browserify: {
          build: {
-            src: 'src/js/modules/objects.js',
+            src: 'src/js/modules/object.js',
             dest: 'assets/js/bundle.js'
          }
       },
@@ -35,6 +35,35 @@ module.exports = function(grunt) {
          }
       },
 
+      image: {
+         // static: {
+         //    options: {
+         //       optipng: false,
+         //       pngquant: true,
+         //       zopflipng: true,
+         //       jpegRecompress: false,
+         //       mozjpeg: true,
+         //       guetzli: false,
+         //       gifsicle: true,
+         //       svgo: true
+         //    },
+         //    files: {
+         //       'assets/img/img.png': 'src/img/img.png',
+         //       'assets/img/img.jpg': 'src/img/img.jpg',
+         //       'assets/img/img.gif': 'src/img/img.gif',
+         //       'assets/img/img.svg': 'src/img/img.svg'
+         //    }
+         // },
+         dynamic: {
+            files: [{
+               expand: true,
+               cwd: 'src/img/',
+               src: ['**/*.{png,jpg,gif,svg}'],
+               dest: 'assets/img/'
+            }]
+         }
+      },
+
       sass: {
          dist: {
             files: {
@@ -45,27 +74,48 @@ module.exports = function(grunt) {
 
       uglify: {
          options: {
-            banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */'
+            banner: '/*! <%= pkg.name %> v<%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */'
          },
          build: {
             // src: 'src/<%= pkg.name %>.js',
             // src: 'assets/js/bundle.js',
             // dest: 'assets/js/bundle.min.js'
-            files: {
-               'assets/js/bundle.min.js': ['assets/js/bundle.js'],
-               'assets/js/yb.min.js': ['assets/js/yb.js']
-            }
+
+            /**
+             * Individual files
+             */
+            // files: {
+            //    'assets/js/bundle.min.js': ['assets/js/bundle.js'],
+            //    'assets/js/yb.min.js': ['assets/js/yb.js']
+            // }
+
+            /**
+             * Takes each file and minifies them individually
+             */
+            files: [{
+               expand: true,
+               cwd: 'src/js',
+               src: '*.js', // '**/*.js' for sub directories
+               dest: 'assets/js'
+            }]
          }
       },
 
       watch: {
          scripts: {
-            files: ['src/**/*.js', 'src/**/*.css', 'src/**/*.scss'],
-            tasks: ['concat', 'sass', 'cssmin', 'browserify', 'uglify'],
+            files: ['src/**/*.js'],
+            tasks: ['concat', 'browserify', 'uglify'],
             options: {
                spawn: false,
-            },
+            }
          },
+         styles: {
+            files: ['src/**/*.css', 'src/**/*.scss'],
+            tasks: ['sass', 'cssmin'],
+            options: {
+               spawn: false,
+            }
+         }
       }
 
    });
@@ -74,6 +124,7 @@ module.exports = function(grunt) {
    grunt.loadNpmTasks('grunt-browserify');
    grunt.loadNpmTasks('grunt-contrib-concat');
    grunt.loadNpmTasks('grunt-contrib-cssmin');
+   grunt.loadNpmTasks('grunt-image');
    grunt.loadNpmTasks('grunt-contrib-sass');
    grunt.loadNpmTasks('grunt-contrib-uglify');
    grunt.loadNpmTasks('grunt-contrib-watch');
