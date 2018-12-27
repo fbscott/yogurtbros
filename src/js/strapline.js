@@ -1,7 +1,22 @@
 /*****************************************************************************
  * strapline.js
- * Be Happy, Be Healthy, Be You slogan at top of page.
  * @type {Object}
+ * 
+ * Description:
+ * - Site slogan: Be Happy, Be Healthy, Be You!
+ * - Iterates through slogan "parts" and updates the DOM accordingly.
+ * - Current configuration loops through only once. Can be configured for
+ *   continuous looping by uncommenting the following:
+ *       updateStrapline(arr, ++i % arr.length, delay);
+ *   and commenting the following:
+ *       updateStrapline(arr, ++i, delay);
+ * 
+ * JS Dependencies:
+ * - None. Vanilla JS.
+ *
+ * DOM Dependencies:
+ * - Element with ID "js-strapline"
+ *   E.g., <span id="js-strapline">&nbsp;</span>
  ****************************************************************************/
 YB.strapline = {
     sloganArr: ['Be Happy!', 'Be Healthy!', 'Be You!'],
