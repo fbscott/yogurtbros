@@ -9,4 +9,4 @@
 
 # Ignore these while developing
 /src/js
-/src/img
+/assets/img
