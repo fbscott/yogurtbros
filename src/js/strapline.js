@@ -44,3 +44,6 @@ YB.strapline = {
     }
 // args
 })(YB.strapline.sloganArr, 0, 3000);
+
+// YB.strapline.el.classList.remove('move-strapline-out');
+// YB.strapline.el.classList.add('move-strapline-out');

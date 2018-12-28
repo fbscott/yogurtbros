@@ -1,69 +1,53 @@
 /*****************************************************************************
  * grid
  ****************************************************************************/
-// breakpoints
-$breakpoints: (
-   xsmall:  $xsmall-breakpoint,
-   small:   $small-breakpoint,
-   medium:  $medium-breakpoint,
-   large:   $large-breakpoint,
-   xlarge:  $xlarge-breakpoint
-);
-
 // number of columns
 $columns: 12;
 
-// media query mixin
-@mixin break($size) {  
-  @media (min-width: map-get($breakpoints, $size)) {
-    @content;
-  }
-}
-
 .row {
-  position: relative;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: $max-screen-width;
+   position: relative;
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 0;
+   margin-bottom: 0;
+   max-width: $max-screen-width;
   .row {
-    width: auto;
-    margin-left: -$column-gutter;
-    margin-right: -$column-gutter;
-    margin-top: 0;
-    margin-bottom: 0;
-    max-width: none
-  }
-  &:before, &:after {
-    content: " ";
-    display: table
-  }
-  &:after {
-    clear: both
-  }
+      width: auto;
+      margin-left: -$column-gutter;
+      margin-right: -$column-gutter;
+      margin-top: 0;
+      margin-bottom: 0;
+      max-width: none
+   }
+   &:before, &:after {
+      content: " ";
+      display: table
+   }
+   &:after {
+      clear: both
+   }
 }
 
 .column, .columns {
-  padding-left: $column-gutter;
-  padding-right: $column-gutter;
-  width: 100%;
-  float: left
+   padding-left: $column-gutter;
+   padding-right: $column-gutter;
+   width: 100%;
+   float: left
 }
 
 // loop over breakpoints
 @each $key, $value in $breakpoints {
-  // create media queries
-  @include break($key) {
-    // nest column widths
-    @for $i from 1 through $columns {
-      .#{$key}-#{$i} {
-        width: #{$i / $columns * 100%};
+   // create media queries
+   @include break($key) {
+      // nest column widths
+      @for $i from 1 through $columns {
+         .#{$key}-#{$i} {
+            width: #{$i / $columns * 100%};
+         }
+         .#{$key}-offset-#{$i} {
+            margin-left: #{$i / $columns * 100%};
+         }
       }
-      .#{$key}-offset-#{$i} {
-        margin-left: #{$i / $columns * 100%};
-      }
-    }
-  }
+   }
 }

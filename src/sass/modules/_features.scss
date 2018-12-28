@@ -1,12 +1,20 @@
 /*****************************************************************************
  * features
  ****************************************************************************/
+// module-specific settings
+$feature-primary-color: rgba(147,175,42,0.75);
+$feature-secondary-color: $white;
+$feature-border-color: $feature-secondary-color;
 
 .standard {
+   img {
+      border: remCalc(8) solid $feature-border-color;
+      box-shadow: 0px remCalc(2) remCalc(3) 0px rgba(0,0,0,0.5);
+   }
    .standard-num {
       font-family: OswaldBold;
    }
-   .standard.label {
+   .standard-label {
       // font-family: OswaldBold;
    }
 }

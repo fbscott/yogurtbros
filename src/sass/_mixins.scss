@@ -121,3 +121,10 @@
 @mixin margin($margin) {
   margin: $margin;
 }
+
+// media query
+@mixin break($size) {  
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}

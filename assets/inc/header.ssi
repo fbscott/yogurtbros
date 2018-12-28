@@ -9,7 +9,7 @@
         <div class="column medium-9 medium-offset-3 strapline">
           <div class="row">
             <div class="columns medium-6 large-7">
-              <p class="align-vertical"><span id="js-strapline">&nbsp;</span></p>
+              <p id="js-strapline" class="align-vertical">&nbsp;</p>
             </div><!-- end .column -->
             <div class="columns medium-6 large-5">
               <nav class="align-vertical">

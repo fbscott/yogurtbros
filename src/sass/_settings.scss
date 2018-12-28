@@ -20,6 +20,15 @@ $medium-breakpoint: remCalc(768);
 $large-breakpoint:  remCalc(1024);
 $xlarge-breakpoint: remCalc(1600);
 
+// breakpoints
+$breakpoints: (
+   xsmall:  $xsmall-breakpoint,
+   small:   $small-breakpoint,
+   medium:  $medium-breakpoint,
+   large:   $large-breakpoint,
+   xlarge:  $xlarge-breakpoint
+);
+
 $small-range:     (0, 40em);
 $medium-range:    (40.063em, remCalc(1023));
 $large-range:     (remCalc(1024), 90em);
@@ -30,38 +39,13 @@ $max-screen-width: remCalc(1200);
 
 $screen: "only screen";
 
-$xsmall-range:  (0, $xsmall-breakpoint);
-$small-range:   ($xsmall-breakpoint  + remCalc(1), $small-breakpoint);
-$medium-range:  ($small-breakpoint  + remCalc(1), $medium-breakpoint);
-$large-range:   ($medium-breakpoint + remCalc(1), $large-breakpoint);
-$xlarge-range:  ($large-breakpoint  + remCalc(1), $xlarge-breakpoint);
-$xxlarge-range: ($xlarge-breakpoint + remCalc(1), remCalc(99999999));
-
-$xsmall-up: $screen;
-$xsmall-only: "#{$screen} and (max-width: #{upper-bound($xsmall-range)})";
-
-$small-up: "#{$screen} and (min-width:#{lower-bound($small-range)})";
-$small-only: "#{$screen} and (min-width:#{lower-bound($small-range)}) and (max-width:#{upper-bound($small-range)})";
-
-$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
-$medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})";
-
-$large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
-$large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
-
-$xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
-$xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
-
-$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
-$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
-
 //*************************** Colors *****************************************
 $black:           #000000;
 $charcoal:        #333333;
 $green:           #93af2a;
 $grey:            #4a4a4a;
-$grey-light:      lighten($grey, 15%);
-$grey-very-light: lighten($grey, 52.75%);
+$grey-light:      lighten($grey, 30%);
+$grey-very-light: lighten($grey, 67.5%);
 $grey-dark:       darken($grey, 10%);
 $grey-very-dark:  darken($grey, 25%);
 $orange:          #f15a22;
@@ -73,7 +57,7 @@ $text-color:               $grey-light;
 
 //*************************** Font-Sizes *************************************
 $font-face:             '';
-$font-face-face:       'Lobster';
+$font-face-face:        'Lobster';
 $font-weight:           400;
 $font-size:             remCalc(16);
 $font-stack-fallbacks:  Helvetica, Arial, Sans-Serif;
@@ -115,5 +99,5 @@ $h1-padding-bottom:     remCalc(10);
 
 //*************************** Properties *************************************
 $properties:            margin, padding;
-$sides:                 top, right, bottom, left;
-$sides-gird-overrides:  right, left;
+$sides:                 top, bottom, left, right;
+$sides-gird-overrides:  left, right;

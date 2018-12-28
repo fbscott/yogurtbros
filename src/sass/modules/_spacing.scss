@@ -1,45 +1,40 @@
 /*****************************************************************************
  * spacing
  ****************************************************************************/
-
 // mod-specific vars
 $margin-and-padding-start:       1;
-$margin-and-padding-end:         10;
-$margin-and-padding-multiplier:  8;
+$margin-and-padding-end:         5;
+$margin-and-padding-multiplier:  10;
 
 // mixins
 @mixin spacing-classes($size, $property) {
    @for $i from $margin-and-padding-start through $margin-and-padding-end {
       @each $side in $sides {
-         .#{$property}-#{$side}-#{$i * $margin-and-padding-multiplier}-on-#{$size} {
-           #{$property}-#{$side}: (remCalc($i * $margin-and-padding-multiplier));
+         .#{$property}-#{$i * $margin-and-padding-multiplier}-#{$side}-on-#{$size} {
+            #{$property}-#{$side}: (remCalc($i * $margin-and-padding-multiplier));
          }
-         .#{$property}-#{$side}-neg#{$i * -$margin-and-padding-multiplier}-on-#{$size} {
-           #{$property}-#{$side}: (remCalc($i * -$margin-and-padding-multiplier));
+         .#{$property}-neg#{$i * -$margin-and-padding-multiplier}-#{$side}-on-#{$size} {
+            #{$property}-#{$side}: (remCalc($i * -$margin-and-padding-multiplier));
          }
-      }
-   }
-}
-@mixin no-spacing-classes($size, $property) {
-   @each $side in $sides {
-      .#{$property}-#{$side}-0-on-#{$size} {
-        #{$property}-#{$side}: 0;
       }
    }
 }
 
-// formulae
-@each $property in $properties {
-   @media #{$small-up} {
-      @include spacing-classes(small, $property);
-      @include no-spacing-classes (small, $property);
+@mixin no-spacing-classes($size, $property) {
+   @each $side in $sides {
+      .#{$property}-0-#{$side}-on-#{$size} {
+         #{$property}-#{$side}: 0;
+      }
    }
-   @media #{$medium-up} {
-      @include spacing-classes(medium, $property);
-      @include no-spacing-classes (medium, $property);
-   }
-   @media #{$large-up} {
-      @include spacing-classes(large, $property);
-      @include no-spacing-classes (large, $property);
+}
+
+// loop over breakpoints
+@each $key, $value in $breakpoints {
+   // create media queries
+   @include break($key) {
+      @each $property in $properties {
+         @include spacing-classes(#{$key}, $property);
+         @include no-spacing-classes (#{$key}, $property);
+      }
    }
 }
