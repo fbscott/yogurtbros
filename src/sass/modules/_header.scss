@@ -24,6 +24,21 @@ header {
    }
    nav {
       float: right;
+      color: $white;
+      text-transform: uppercase;
+      font-family: OswaldRegular;
+      font-size: 18px;
+      a {
+         color: $white;
+         text-decoration: none;
+         margin: 0 remCalc(7);
+         &:first-of-type {
+            margin-left: 0px;
+         }
+         &:last-of-type {
+            margin-right: 0px;
+         }
+      }
    }
    .header-content {
       border-top: remCalc(8) solid $header-border-color;
@@ -39,6 +54,11 @@ header {
       height: 100px;
       div {
          height: 100%;
+      }
+      p {
+         color: $white;
+         font-family: Lobster;
+         font-size: 72px;
       }
    }
 }

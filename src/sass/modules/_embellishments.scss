@@ -14,10 +14,10 @@
       position: absolute; 
       z-index: -2; /* Always behind the main block */
       top: 80%; /* Set to 0 if you want a shadow on the top too */
-      bottom: -5px; /* Just leave this alone */
-      left: 25%; /* Adjustable; monkey with left and right, but keep 'em equal */
+      bottom: -3px; /* Just leave this alone */
+      left: 30%; /* Adjustable; monkey with left and right, but keep 'em equal */
       // right: 5%;
-      width: 50%;
+      width: 40%;
 
       /* Adjustable; tweak the angle and blur to taste */
       /*    -webkit-box-shadow:0 0 15px rgba(0,0,0,0.6); */
