@@ -1,0 +1,14 @@
+/*****************************************************************************
+ * overrides
+ ****************************************************************************/
+.nowrap {white-space: nowrap;}
+
+// loop over breakpoints
+@each $key, $value in $ranges {
+//    // create media queries
+   @include range($value) {
+      .nowrap-on-#{$key} {
+         white-space: nowrap;
+      }
+   }
+}

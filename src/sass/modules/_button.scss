@@ -1,0 +1,40 @@
+/*****************************************************************************
+ * buttons
+ ****************************************************************************/
+%button {
+   background-color: $orange;
+   border: none;
+   color: $white;
+   padding: remCalc(19) remCalc(32) remCalc(15) remCalc(32);
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-transform: uppercase;
+   font-family: OswaldHeavy;
+   font-size: remCalc(24);
+   line-height: 1;
+}
+
+button, .button {
+   @extend %button;
+   span.accent {
+      text-transform: initial;
+      font-family: GreatVibes;
+      font-size: remCalc(24);
+      padding: 0 remCalc(5) 0 remCalc(2);
+      position: relative;
+      top: remCalc(-2);
+   }
+   &.expand {
+      width: 100%;
+   }
+   &.small {
+      
+   }
+}
+
+input[type=button] {
+   @extend button;
+   padding-bottom: 20px;
+}

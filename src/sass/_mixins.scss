@@ -128,3 +128,10 @@
     @content;
   }
 }
+
+// media query
+@mixin range($value) {  
+  @media #{$value} {
+    @content;
+  }
+}

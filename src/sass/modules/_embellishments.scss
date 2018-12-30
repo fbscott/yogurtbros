@@ -1,3 +1,6 @@
+/*****************************************************************************
+ * embellishments
+ ****************************************************************************/
 .curved-drop-shadow {
    position: relative;
    // width: 40%;
@@ -28,4 +31,52 @@
       /*    -moz-border-radius:100px / 10px; */
       border-radius: 50%;
    }
+}
+
+.double-border {
+   position: relative;
+   border: 1px solid $orange;
+   padding: remCalc(40);
+   &::before {
+      content: " ";
+      position: absolute;
+      z-index: -1;
+      top: remCalc(2);
+      left: remCalc(2);
+      right: remCalc(2);
+      bottom: remCalc(2);
+      border: 1px solid $orange;
+   }
+   p:last-of-type {
+      margin-bottom: 0;
+   }
+}
+
+// .circle {
+//    width: 100px;
+//    height: 100px;
+//    position: relative;
+//    overflow: hidden;
+//    border-radius: 50%;
+// }
+
+.circle {
+  position: relative;
+  width: 85px;
+  height: 85px;
+  overflow: hidden;
+  @include border-radius(50%);
+  @include align-vertical(absolute, "Y", 50%, -50%);
+}
+.circle img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.5);
+
+}
+.circle img.portrait {
+  width: 100%;
+  height: auto;
 }

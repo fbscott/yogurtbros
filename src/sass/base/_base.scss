@@ -28,6 +28,12 @@ h1 {
 	padding-bottom: $h1-padding-bottom;
 }
 
+h2 {
+   color: $orange;
+   font-family: Lobster;
+   font-size: 40px;
+}
+
 p {
    margin-bottom: remCalc(30);
    line-height: 1.5;

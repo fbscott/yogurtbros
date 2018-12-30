@@ -2,7 +2,6 @@
  * features
  ****************************************************************************/
 // module-specific settings
-$feature-primary-color: rgba(147,175,42,0.75);
 $feature-secondary-color: $white;
 $feature-border-color: $feature-secondary-color;
 
@@ -11,10 +10,40 @@ $feature-border-color: $feature-secondary-color;
       border: remCalc(8) solid $feature-border-color;
       box-shadow: 0px remCalc(2) remCalc(3) 0px rgba(0,0,0,0.5);
    }
+   span {
+      display: inline-block;
+   }
    .standard-num {
+      color: $orange;
       font-family: OswaldBold;
+      font-size: remCalc(40);
+      margin: 0 remCalc(10);
+      &:first-of-type {
+         margin-left: 0px;
+      }
    }
    .standard-label {
-      // font-family: OswaldBold;
+      color: $green;
+      text-transform: uppercase;
+      font-family: OswaldRegular;
+      font-size: remCalc(30);
+   }
+}
+
+.featured {
+   p {
+      font-size: remCalc(14);
+      line-height: initial;
+      &.title {
+         margin-bottom: remCalc(12);
+         text-transform: uppercase;
+         font-size: remCalc(18);
+         font-family: OswaldHeavy;
+      }
+   }
+   .feature {
+      &:not(:first-of-type) {
+         margin-top: remCalc(50);
+      }
    }
 }

@@ -10,25 +10,78 @@
 
   <!--#include virtual="assets/inc/header.ssi" -->
 
-  <section class="row padding-50-top-on-small padding-50-bottom-on-small bg-color-greyVeryLight">
-    <div class="columns small-6 standard">
-      <!--#include virtual="assets/inc/num-flavors.ssi" --> <span class="standard-label">flavors</span>
-      <!--#include virtual="assets/inc/num-toppings.ssi" --> <span class="standard-label">toppings</span>
-      <!--#include virtual="assets/inc/num-syrups.ssi" --> <span class="standard-label">syrups</span>
-      <img src="/assets/img/M&M.jpg" alt="yogurt cup with toppings">
+  <section class="row margin-50-top-on-small margin-50-bottom-on-small">
+
+    <div class="columns medium-6 standard">
+      <span class="standard-num"><!--#include virtual="assets/inc/num-flavors.ssi" --></span>
+      <span class="standard-label">flavors</span>
+      <span class="standard-num"><!--#include virtual="assets/inc/num-toppings.ssi" --></span>
+      <span class="standard-label">toppings</span>
+      <span class="standard-num"><!--#include virtual="assets/inc/num-syrups.ssi" --></span>
+      <span class="standard-label">syrups</span>
+<!-- Remove in-line styling - SWC -->
+      <img style="width:100%;" src="/assets/img/feature_01.jpg" alt="yogurt cup with toppings" class="margin-30-top-on-small">
+<!-- Remove in-line styling - SWC -->
     </div>
-    <div class="columns small-6">
+
+    <div class="columns medium-6 featured margin-40-top-on-small margin-0-top-on-medium">
+
+      <h2>Featured Flavors</h2>
+
+      <div class="double-border margin-30-top-on-small margin-30-bottom-on-small">
+
+        <div class="row feature">
+          <div class="columns small-3">
+            <div class="circle">
+              <img src="/assets/img/hot_chocolate.jpg" alt="hot chocolate">
+            </div>
+          </div>
+          <div class="columns small-9 small-offset-3">
+            <p class="title">Hot Chocolate</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta ligula sed tempor egestas.</p>
+          </div>
+        </div>
+
+        <div class="row feature">
+          <div class="columns small-3">
+            <div class="circle">
+              <img src="/assets/img/mint.jpg" alt="mint">
+            </div>
+          </div>
+          <div class="columns small-9 small-offset-3">
+            <p class="title">Mint</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta ligula sed tempor egestas.</p>
+          </div>
+        </div>
+
+        <div class="row feature">
+          <div class="columns small-3">
+            <div class="circle">
+              <img src="/assets/img/pumpkin_spice.jpg" alt="pumpkin spice">
+            </div>
+          </div>
+          <div class="columns small-9 small-offset-3">
+            <p class="title">Pumpkin Spice</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta ligula sed tempor egestas.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="columns small-6">
+          <input type="button" class="expand" value="derp"></button>
+        </div>
+        <div class="columns small-6">
+          <a href="javascript:void(0);" class="button expand">view <span class="accent">all</span> toppings</a>
+        </div>
+      </div>
+
     </div>
+
   </section>
 
-  <div class="row">
-    <div class="column">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta ligula sed tempor egestas. Aenean tortor nunc, fermentum in convallis ut, maximus quis dolor. Morbi erat erat, imperdiet a nunc ut, accumsan mollis ipsum. Cras ligula mi, ultricies a dictum id, dictum vitae purus. Donec vitae volutpat nisl, nec rhoncus dolor. Aliquam in mollis turpis. Nulla facilisi. Sed varius tincidunt consectetur. Morbi tempus tempus ante, vitae interdum diam viverra quis. Aenean hendrerit quam nisi, et dignissim felis tristique non. Etiam mi elit, molestie sit amet nunc nec, viverra imperdiet sapien. Praesent molestie, sapien vitae bibendum eleifend, nisl orci gravida elit, sed ornare tellus ligula vel mi.</p>
-      <p>Maecenas quis euismod justo. Nullam maximus nisi vitae enim sollicitudin vehicula. Ut ultricies eros placerat placerat mattis. Integer in lorem egestas, tempus dui eu, semper diam. Donec aliquam dignissim eros a hendrerit. Sed semper odio interdum risus sollicitudin, eu vestibulum libero cursus. Integer placerat ut nunc quis aliquet. Phasellus cursus consequat mattis. Donec eget tortor vestibulum, ullamcorper lacus in, dictum risus. In scelerisque sodales sagittis. Phasellus at rutrum nibh. Praesent quis enim nisl. Mauris porta varius tortor, ac blandit magna vestibulum sit amet.</p>
-    </div><!-- end .column -->
-  </div><!-- end .row -->
-
-  <!--#include virtual="assets/inc/footer.ssi" -->
+  <!--include virtual="assets/inc/footer.ssi" -->
   <!--#include virtual="assets/inc/source-scripts.ssi" -->
 
   <!-- page-specific scripts -->

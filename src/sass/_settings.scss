@@ -14,13 +14,36 @@ $browser-context: 16; // Default
 $column-gutter: remCalc(15) !default;
 
 //*************************** Breakpoints ************************************
+// We use these functions to get the ranges for the media queries variables.
+@function lower-bound($range){
+   @if length($range) <= 0 {
+      @return 0;
+   }
+   @return nth($range, 1);
+}
+
+@function upper-bound($range) {
+   @if length($range) < 2 {
+      @return 999em;
+   }
+   @return nth($range, 2);
+}
+
+// breakpoints
 $xsmall-breakpoint: remCalc(320);
 $small-breakpoint:  remCalc(400);
 $medium-breakpoint: remCalc(768);
 $large-breakpoint:  remCalc(1024);
 $xlarge-breakpoint: remCalc(1600);
 
-// breakpoints
+// add one (1) to each breakpoint
+$xsmall-breakpoint-plus: remCalc(321);
+$small-breakpoint-plus:  remCalc(401);
+$medium-breakpoint-plus: remCalc(769);
+$large-breakpoint-plus:  remCalc(1025);
+$xlarge-breakpoint-plus: remCalc(1601);
+
+// breakpoints object
 $breakpoints: (
    xsmall:  $xsmall-breakpoint,
    small:   $small-breakpoint,
@@ -29,15 +52,68 @@ $breakpoints: (
    xlarge:  $xlarge-breakpoint
 );
 
-$small-range:     (0, 40em);
-$medium-range:    (40.063em, remCalc(1023));
-$large-range:     (remCalc(1024), 90em);
-$xlarge-range:    (90.063em, 120em);
-$xxlarge-range:   (120.063em, 99999999em);
+// ranges
+$xsmall-range:  (0, $xsmall-breakpoint); 
+// $small-range:   ($xsmall-breakpoint + remCalc(1), $small-breakpoint);
+$small-range:   ($xsmall-breakpoint-plus, $small-breakpoint);
+// $medium-range:  ($small-breakpoint  + remCalc(1), $medium-breakpoint);
+$medium-range:  ($small-breakpoint-plus, $medium-breakpoint);
+// $large-range:   ($medium-breakpoint + remCalc(1), $large-breakpoint);
+$large-range:   ($medium-breakpoint-plus, $large-breakpoint);
+// $xlarge-range:  ($large-breakpoint  + remCalc(1), $xlarge-breakpoint);
+$xlarge-range:  ($large-breakpoint-plus, $xlarge-breakpoint);
+// $xxlarge-range: ($xlarge-breakpoint + remCalc(1), remCalc(99999999));
+$xxlarge-range: ($xlarge-breakpoint-plus, remCalc(99999999));
 
 $max-screen-width: remCalc(1200);
 
 $screen: "only screen";
+$all:    "all";
+
+$xsmall-up:    $screen;
+$small-up:     "#{$all} and (min-width:#{lower-bound($small-range)})";
+$medium-up:    "#{$all} and (min-width:#{lower-bound($medium-range)})";
+$large-up:     "#{$all} and (min-width:#{lower-bound($large-range)})";
+$xlarge-up:    "#{$all} and (min-width:#{lower-bound($xlarge-range)})";
+$xxlarge-up:   "#{$all} and (min-width:#{lower-bound($xxlarge-range)})";
+
+$xsmall-down:    $screen;
+$small-down:     "#{$all} and (max-width:#{upper-bound($small-range)})";
+$medium-down:    "#{$all} and (max-width:#{upper-bound($medium-range)})";
+$large-down:     "#{$all} and (max-width:#{upper-bound($large-range)})";
+$xlarge-down:    "#{$all} and (max-width:#{upper-bound($xlarge-range)})";
+$xxlarge-down:   "#{$all} and (max-width:#{upper-bound($xxlarge-range)})";
+
+$xsmall-only:  "#{$all} and (max-width:#{$xsmall-range})";
+$small-only:   "#{$all} and (min-width:#{lower-bound($small-range)}) and (max-width:#{upper-bound($small-range)})";
+$medium-only:  "#{$all} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})";
+$large-only:   "#{$all} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
+$xlarge-only:  "#{$all} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
+$xxlarge-only: "#{$all} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
+
+// ranges object
+$ranges: (
+   xsmall-up:    $xsmall-up,
+   small-up:     $small-up,
+   medium-up:    $medium-up,
+   large-up:     $large-up,
+   xlarge-up:    $xlarge-up,
+   xxlarge-up:   $xxlarge-up,
+
+   xsmall-down:  $xsmall-down,
+   small-down:   $small-down,
+   medium-down:  $medium-down,
+   large-down:   $large-down,
+   xlarge-down:  $xlarge-down,
+   xxlarge-down: $xxlarge-down,
+
+   xsmall-only:  $xsmall-only,
+   small-only:   $small-only,
+   medium-only:  $medium-only,
+   large-only:   $large-only,
+   xlarge-only:  $xlarge-only,
+   xxlarge-only: $xxlarge-only
+);
 
 //*************************** Colors *****************************************
 $black:           #000000;
@@ -45,7 +121,7 @@ $charcoal:        #333333;
 $green:           #93af2a;
 $grey:            #4a4a4a;
 $grey-light:      lighten($grey, 30%);
-$grey-very-light: lighten($grey, 67.5%);
+$grey-very-light: lighten($grey, 63%);
 $grey-dark:       darken($grey, 10%);
 $grey-very-dark:  darken($grey, 25%);
 $orange:          #f15a22;
