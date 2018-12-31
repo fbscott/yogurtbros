@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+//*************************** Functions **************************************
+@import "./functions";
+
 //*************************** Variables and Mixins ***************************
 @import "./settings";
 @import "./mixins";
@@ -22,9 +25,9 @@
 @import "./modules/background";
 @import "./modules/features";
 @import "./modules/embellishments";
-@import "./modules/overrides";
 
 //*************************** States *****************************************
+@import "./states/overrides";
 // @import "./states/overrides_sc";
 // @import "states/ie";
 // @import "states/print";

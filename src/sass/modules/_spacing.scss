@@ -9,10 +9,16 @@ $margin-and-padding-multiplier:  10;
 // mixins
 @mixin spacing-classes($size, $property) {
    @for $i from $margin-and-padding-start through $margin-and-padding-end {
-      @each $side in $sides {
+      // e.g., margin-10-on-xsmall {margin: 0.625rem, 0;}
+      .#{$property}-#{$i * $margin-and-padding-multiplier}-on-#{$size} {
+         #{$property}: (remCalc($i * $margin-and-padding-multiplier)), 0;
+      }
+      @each $side in $sides-all {
+         // e.g., margin-10-top-on-xsmall {margin: 0.625rem;}
          .#{$property}-#{$i * $margin-and-padding-multiplier}-#{$side}-on-#{$size} {
             #{$property}-#{$side}: (remCalc($i * $margin-and-padding-multiplier));
          }
+         // e.g., margin-neg-10-top-on-xsmall {margin: -0.625rem;}
          .#{$property}-neg#{$i * -$margin-and-padding-multiplier}-#{$side}-on-#{$size} {
             #{$property}-#{$side}: (remCalc($i * -$margin-and-padding-multiplier));
          }
@@ -21,7 +27,8 @@ $margin-and-padding-multiplier:  10;
 }
 
 @mixin no-spacing-classes($size, $property) {
-   @each $side in $sides {
+   @each $side in $sides-all {
+      // e.g., margin-0-top-on-xsmall {margin: 0;}
       .#{$property}-0-#{$side}-on-#{$size} {
          #{$property}-#{$side}: 0;
       }
@@ -33,8 +40,8 @@ $margin-and-padding-multiplier:  10;
    // create media queries
    @include break($key) {
       @each $property in $properties {
-         @include spacing-classes(#{$key}, $property);
          @include no-spacing-classes (#{$key}, $property);
+         @include spacing-classes(#{$key}, $property);
       }
    }
 }

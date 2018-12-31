@@ -5,7 +5,7 @@
 
 // loop over breakpoints
 @each $key, $value in $ranges {
-//    // create media queries
+   // create media queries
    @include range($value) {
       .nowrap-on-#{$key} {
          white-space: nowrap;

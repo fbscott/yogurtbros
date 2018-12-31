@@ -14,34 +14,26 @@ $browser-context: 16; // Default
 $column-gutter: remCalc(15) !default;
 
 //*************************** Breakpoints ************************************
-// We use these functions to get the ranges for the media queries variables.
-@function lower-bound($range){
-   @if length($range) <= 0 {
-      @return 0;
-   }
-   @return nth($range, 1);
-}
-
-@function upper-bound($range) {
-   @if length($range) < 2 {
-      @return 999em;
-   }
-   @return nth($range, 2);
-}
+// values
+$xsmall: 320;
+$small:  400;
+$medium: 768;
+$large:  1024;
+$xlarge: 1600;
 
 // breakpoints
-$xsmall-breakpoint: remCalc(320);
-$small-breakpoint:  remCalc(400);
-$medium-breakpoint: remCalc(768);
-$large-breakpoint:  remCalc(1024);
-$xlarge-breakpoint: remCalc(1600);
+$xsmall-breakpoint: remCalc($xsmall);
+$small-breakpoint:  remCalc($small);
+$medium-breakpoint: remCalc($medium);
+$large-breakpoint:  remCalc($large);
+$xlarge-breakpoint: remCalc($xlarge);
 
 // add one (1) to each breakpoint
-$xsmall-breakpoint-plus: remCalc(321);
-$small-breakpoint-plus:  remCalc(401);
-$medium-breakpoint-plus: remCalc(769);
-$large-breakpoint-plus:  remCalc(1025);
-$xlarge-breakpoint-plus: remCalc(1601);
+$xsmall-breakpoint-plus: remCalc($xsmall + 1);
+$small-breakpoint-plus:  remCalc($small  + 1);
+$medium-breakpoint-plus: remCalc($medium + 1);
+$large-breakpoint-plus:  remCalc($large  + 1);
+$xlarge-breakpoint-plus: remCalc($xlarge + 1);
 
 // breakpoints object
 $breakpoints: (
@@ -54,15 +46,10 @@ $breakpoints: (
 
 // ranges
 $xsmall-range:  (0, $xsmall-breakpoint); 
-// $small-range:   ($xsmall-breakpoint + remCalc(1), $small-breakpoint);
 $small-range:   ($xsmall-breakpoint-plus, $small-breakpoint);
-// $medium-range:  ($small-breakpoint  + remCalc(1), $medium-breakpoint);
 $medium-range:  ($small-breakpoint-plus, $medium-breakpoint);
-// $large-range:   ($medium-breakpoint + remCalc(1), $large-breakpoint);
 $large-range:   ($medium-breakpoint-plus, $large-breakpoint);
-// $xlarge-range:  ($large-breakpoint  + remCalc(1), $xlarge-breakpoint);
 $xlarge-range:  ($large-breakpoint-plus, $xlarge-breakpoint);
-// $xxlarge-range: ($xlarge-breakpoint + remCalc(1), remCalc(99999999));
 $xxlarge-range: ($xlarge-breakpoint-plus, remCalc(99999999));
 
 $max-screen-width: remCalc(1200);
@@ -174,6 +161,7 @@ $h1-padding-bottom:     remCalc(10);
 // Note: module settings should go at the top of each individual module partials.
 
 //*************************** Properties *************************************
-$properties:            margin, padding;
-$sides:                 top, bottom, left, right;
-$sides-gird-overrides:  left, right;
+$properties: margin, padding;
+$sides-all:  top, bottom, left, right;
+$sides-tb:   top, bottom;
+$sides-lr:   left, right;
