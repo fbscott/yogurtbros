@@ -9,9 +9,10 @@ $margin-and-padding-multiplier:  10;
 // mixins
 @mixin spacing-classes($size, $property) {
    @for $i from $margin-and-padding-start through $margin-and-padding-end {
-      // e.g., margin-10-on-xsmall {margin: 0.625rem, 0;}
+      // e.g., margin-10-on-xsmall {margin-top: 0.625rem; margin-bottom: 0.625rem;}
       .#{$property}-#{$i * $margin-and-padding-multiplier}-on-#{$size} {
-         #{$property}: (remCalc($i * $margin-and-padding-multiplier)) 0;
+         #{$property}-top: (remCalc($i * $margin-and-padding-multiplier));
+         #{$property}-bottom: (remCalc($i * $margin-and-padding-multiplier));
       }
       @each $side in $sides-all {
          // e.g., margin-10-top-on-xsmall {margin: 0.625rem;}

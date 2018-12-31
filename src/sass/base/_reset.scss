@@ -4,7 +4,6 @@
  * v2.0 | 20110126
  * License: none (public domain)
  ****************************************************************************/
-
 *, *:before, *:after {
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
@@ -40,4 +39,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+img {
+   font-size: 0;
 }

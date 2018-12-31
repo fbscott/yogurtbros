@@ -35,6 +35,7 @@ $feature-border-color: $feature-secondary-color;
       font-size: remCalc(14);
       line-height: initial;
       &.title {
+         margin-top: initial;
          margin-bottom: remCalc(12);
          text-transform: uppercase;
          font-size: remCalc(18);
