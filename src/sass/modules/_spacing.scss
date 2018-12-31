@@ -11,7 +11,7 @@ $margin-and-padding-multiplier:  10;
    @for $i from $margin-and-padding-start through $margin-and-padding-end {
       // e.g., margin-10-on-xsmall {margin: 0.625rem, 0;}
       .#{$property}-#{$i * $margin-and-padding-multiplier}-on-#{$size} {
-         #{$property}: (remCalc($i * $margin-and-padding-multiplier)), 0;
+         #{$property}: (remCalc($i * $margin-and-padding-multiplier)) 0;
       }
       @each $side in $sides-all {
          // e.g., margin-10-top-on-xsmall {margin: 0.625rem;}
