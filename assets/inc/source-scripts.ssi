@@ -1,3 +1,4 @@
 <script src="assets/js/lib/underscore_1.9.1/underscore-min.js"></script>
 <script src="assets/js/namespace.js"></script>
 <script src="assets/js/strapline.js"></script>
+<script src="assets/js/toppings.js"></script>

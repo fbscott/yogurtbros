@@ -8,5 +8,5 @@
 .sass-cache/
 
 # Ignore these while developing
-/src/js
+/src/js/modules
 /assets/img
