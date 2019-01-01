@@ -123,7 +123,7 @@ module.exports = function(grunt) {
          scripts: {
             files: ['src/**/*.js'],
             // tasks: ['concat:js', 'browserify', 'uglify'],
-            tasks: ['babel', 'browserify', 'uglify'],
+            tasks: ['babel', 'uglify'],
             options: {
                spawn: false,
             }
@@ -160,5 +160,6 @@ module.exports = function(grunt) {
    // Register Tasks
    grunt.registerTask('concat-js', ['concat:js']);
    grunt.registerTask('concat-css', ['concat:css']);
-   grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'babel', 'browserify', 'uglify']);
+   // grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'babel', 'browserify', 'uglify']);
+   grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'babel', 'uglify']);
 };
