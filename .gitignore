@@ -10,3 +10,6 @@
 # Ignore these while developing
 /src/js/modules
 /assets/img
+
+# Merge conflict files
+*.orig

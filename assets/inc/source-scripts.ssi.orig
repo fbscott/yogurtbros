@@ -1,9 +1,0 @@
-<script src="assets/js/lib/underscore_1.9.1/underscore-min.js"></script>
-<<<<<<< HEAD
-<script src="assets/js/namespace.js"></script>
-<script src="assets/js/strapline.js"></script>
-<script src="assets/js/toppings.js"></script>
-=======
-<script src="assets/js/namespace-compiled.js"></script>
-<script src="assets/js/strapline-compiled.js"></script>
->>>>>>> grunt_add_babel
