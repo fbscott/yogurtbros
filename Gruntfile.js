@@ -4,6 +4,24 @@ module.exports = function(grunt) {
    grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
 
+      // 'babel': {
+      babel: {
+         options: {
+            // sourceMap: true
+            // presets: ['es2015']
+         },
+         dist: {
+            files: [{
+               // "assets/js/yb-main.js": "src/js/yb-main.js"
+               expand: true,
+               cwd: 'src/js/',
+               src: ['*.js'],
+               dest: 'assets/js/',
+               ext: '-compiled.js'
+            }]
+         }
+      },
+
       browserify: {
          build: {
             src: 'src/js/modules/object.js',
@@ -13,8 +31,8 @@ module.exports = function(grunt) {
 
       concat: {
          js: {
-            src: ['src/js/*.js'],
-            dest: 'assets/js/yb.js'
+            src: ['assets/js/*-compiled.js'],
+            dest: 'assets/js/*-min.js'
          },
          css: {
             src: ['src/css/*.css'],
@@ -94,8 +112,8 @@ module.exports = function(grunt) {
              */
             files: [{
                expand: true,
-               cwd: 'src/js',
-               src: '*.js', // '**/*.js' for sub directories
+               cwd: 'assets/js',
+               src: '*-compiled.js', // '**/*.js' for sub directories
                dest: 'assets/js'
             }]
          }
@@ -105,7 +123,7 @@ module.exports = function(grunt) {
          scripts: {
             files: ['src/**/*.js'],
             // tasks: ['concat:js', 'browserify', 'uglify'],
-            tasks: ['browserify', 'uglify'],
+            tasks: ['babel', 'uglify'],
             options: {
                spawn: false,
             }
@@ -122,6 +140,7 @@ module.exports = function(grunt) {
    });
 
    // Load Plugins
+   grunt.loadNpmTasks('grunt-babel');
    grunt.loadNpmTasks('grunt-browserify');
    grunt.loadNpmTasks('grunt-contrib-concat');
    grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -141,5 +160,6 @@ module.exports = function(grunt) {
    // Register Tasks
    grunt.registerTask('concat-js', ['concat:js']);
    grunt.registerTask('concat-css', ['concat:css']);
-   grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'browserify', 'uglify']);
+   // grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'babel', 'browserify', 'uglify']);
+   grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'babel', 'uglify']);
 };

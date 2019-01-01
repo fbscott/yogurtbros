@@ -14,6 +14,7 @@
    font-family: OswaldHeavy;
    font-size: remCalc(24);
    line-height: 1;
+   @include transition(background-color 300ms ease);
 }
 
 button, .button {
@@ -26,11 +27,16 @@ button, .button {
       position: relative;
       top: remCalc(-2);
    }
+   &:hover {
+      background-color: lighten($orange, 7%);
+      @include transition(background-color 300ms ease);
+   }
    &.expand {
       width: 100%;
    }
    &.small {
-      
+      font-size: remCalc(16);
+      padding: remCalc(15);
    }
 }
 
