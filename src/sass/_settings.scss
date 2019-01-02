@@ -114,11 +114,11 @@ $grey-very-dark:  darken($grey, 25%);
 $orange:          #f15a22;
 $white:           #FFFFFF;
 
-//*************************** Element Colors *********************************
+$font-primary-color:       $charcoal;
 $background-color-primary: $white;
 $text-color:               $grey-light;
 
-//*************************** Font-Sizes *************************************
+//*************************** Fonts & Icons **********************************
 $font-face:             '';
 $font-face-face:        'Lobster';
 $font-weight:           400;
@@ -152,6 +152,35 @@ $li-line-height:        remCalc(14);
 $default-line-height:   remCalc(14);
 
 $side-nav-font-size:    remCalc(13);
+
+// icons
+$icon-home3:         "\e902";
+$icon-newspaper:     "\e904";
+$icon-image:         "\e90d";
+$icon-images:        "\e90e";
+$icon-camera:        "\e90f";
+$icon-qrcode:        "\e938";
+$icon-phone:         "\e942";
+$icon-phone-hang-up: "\e943";
+$icon-envelop:       "\e945";
+$icon-location:      "\e947";
+$icon-location2:     "\e948";
+$icon-calendar:      "\e953";
+$icon-mobile:        "\e958";
+$icon-spoon-knife:   "\e9a3";
+$icon-leaf:          "\e9a4";
+$icon-facebook:      "\ea90";
+$icon-facebook2:     "\ea91";
+$icon-instagram:     "\ea92";
+$icon-twitter:       "\ea96";
+$icon-blogger:       "\eab7";
+$icon-blogger2:      "\eab8";
+$icon-tumblr:        "\eab9";
+$icon-tumblr2:       "\eaba";
+$icon-linkedin:      "\eac9";
+$icon-linkedin2:     "\eaca";
+$icon-pinterest:     "\ead1";
+$icon-pinterest2:    "\ead2";
 
 //*************************** Margin and Padding *****************************
 $h1-padding-top:        remCalc(10);

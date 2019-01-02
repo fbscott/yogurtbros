@@ -4,7 +4,22 @@
  ****************************************************************************/
 footer {
    position: absolute;
-   bottom: 0;
-   height: remCalc(150);
+   padding: remCalc(40) 0;
+   // bottom: 0;
+   // height: remCalc(150);
    width: 100%;
+   text-align: center;
+   [class^="icon-"], [class*=" icon-"] {
+      /* YB overrides */
+      font-size: 1.5rem;
+      font-size: 1.75rem;
+      margin: 1.5625rem 0px 1.5625rem 0px;
+      display: block;
+   }
+   p {
+      margin: 0;
+   }
+   a {
+      text-decoration: none;
+   }
 }

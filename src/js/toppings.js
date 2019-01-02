@@ -18,9 +18,9 @@ YB.toppings = {
 // YB.toppings.classLists.add();
 // YB.toppings.style.background = 'url(/assets/img/M&M.jpg)';
 
-for (var i = 0; i < YB.toppings.el.length; i++) {
-    var _el = YB.toppings.el[i];
-    var _bgImg = _el.getAttribute('data-img');
+// for (var i = 0; i < YB.toppings.el.length; i++) {
+//     var _el = YB.toppings.el[i];
+//     var _bgImg = _el.getAttribute('data-img');
 
-    _el.style.background = 'url(' + _bgImg + ')';
-}
+//     _el.style.background = 'url(' + _bgImg + ')';
+// }

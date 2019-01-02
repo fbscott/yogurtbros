@@ -37,7 +37,12 @@ h2 {
 p {
    margin-bottom: remCalc(30);
    line-height: 1.5;
+   color: $font-primary-color;
    &:first-of-type {
       margin-top: remCalc(30);
    }
+}
+
+a {
+   color: $font-primary-color;
 }
