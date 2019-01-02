@@ -9,8 +9,8 @@
  * - None. Vanilla JS.
  *
  * DOM Dependencies:
- * - p, span, etc. with class "js-copyright"
- *   e.g., <span class="js-copyright"></span>
+ * - p, span, etc. with id "js-copyright"
+ *   e.g., <span id="js-copyright"></span>
  ****************************************************************************/
 // Footer copyright date
 YB.footer = function(copyright) {
