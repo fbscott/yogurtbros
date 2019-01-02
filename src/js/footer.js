@@ -12,7 +12,6 @@
  * - p, span, etc. with class "js-copyright"
  *   e.g., <span class="js-copyright"></span>
  ****************************************************************************/
-
 // Footer copyright date
 YB.footer = function(copyright) {
     // Copyright span

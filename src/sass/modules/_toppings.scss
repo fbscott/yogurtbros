@@ -7,6 +7,9 @@
    // height: 100px;
    margin-bottom: 15px;
    overflow: hidden;
+   &:last-of-type {
+      margin-bottom: 0;
+   }
    img {
       position: absolute;
       max-width: 100%;

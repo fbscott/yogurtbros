@@ -20,23 +20,31 @@
    }
 }
 
-.double-border {
+@mixin double-border($color) {
    position: relative;
-   border: 1px solid $orange;
+   border: 1px solid $color;
    padding: remCalc(40);
    &::before {
       content: " ";
       position: absolute;
-      z-index: -1;
+      // z-index: -1;
       top: remCalc(2);
       left: remCalc(2);
       right: remCalc(2);
       bottom: remCalc(2);
-      border: 1px solid $orange;
+      border: 1px solid $color;
    }
    p:last-of-type {
       margin-bottom: 0;
    }
+}
+
+.double-border-orange {
+   @include double-border($orange);
+}
+
+.double-border-white {
+   @include double-border($white);
 }
 
 // .circle {
