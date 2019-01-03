@@ -10,69 +10,75 @@
 
   <!--#include virtual="assets/inc/header.ssi" -->
 
-  <section class="row padding-50-on-small">
+  <section class="row padding-50-on-small flex">
 
     <div class="columns medium-6 standard">
-      <span class="standard-num"><!--#include virtual="assets/inc/num-flavors.ssi" --></span>
-      <span class="standard-label">flavors</span>
-      <span class="standard-num"><!--#include virtual="assets/inc/num-toppings.ssi" --></span>
-      <span class="standard-label">toppings</span>
-      <span class="standard-num"><!--#include virtual="assets/inc/num-syrups.ssi" --></span>
-      <span class="standard-label">syrups</span>
-<!-- Remove in-line styling - SWC -->
-      <img style="width:100%;" src="/assets/img/feature_01.jpg" alt="yogurt cup with toppings" class="margin-30-top-on-small">
-<!-- Remove in-line styling - SWC -->
+      <div class="text-center">
+        <span class="standard-num"><!--#include virtual="assets/inc/num-flavors.ssi" --></span>
+        <span class="standard-label">flavors</span>
+        <span class="standard-num"><!--#include virtual="assets/inc/num-toppings.ssi" --></span>
+        <span class="standard-label">toppings</span>
+        <span class="standard-num"><!--#include virtual="assets/inc/num-syrups.ssi" --></span>
+        <span class="standard-label">syrups</span>
+      </div>
+      <img src="/assets/img/feature_01.jpg" alt="yogurt cup with toppings" class="margin-30-top-on-small">
     </div>
 
     <div class="columns medium-6 featured margin-40-top-on-small margin-0-top-on-medium">
 
-      <h2>Featured Flavors</h2>
-
-      <div class="double-border-carrot margin-30-on-small">
-
-        <div class="row feature">
-          <div class="columns xsmall-4 small-3">
-            <div class="circle">
-              <img src="/assets/img/hot_chocolate.jpg" alt="hot chocolate">
-            </div>
-          </div>
-          <div class="columns xsmall-8 small-9 xsmall-offset-4 small-offset-3">
-            <p class="title">Hot Chocolate</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta ligula sed tempor egestas.</p>
-          </div>
-        </div>
-
-        <div class="row feature">
-          <div class="columns xsmall-4 small-3">
-            <div class="circle">
-              <img src="/assets/img/mint.jpg" alt="mint">
-            </div>
-          </div>
-          <div class="columns xsmall-8 small-9 xsmall-offset-4 small-offset-3">
-            <p class="title">Mint</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta ligula sed tempor egestas.</p>
-          </div>
-        </div>
-
-        <div class="row feature">
-          <div class="columns xsmall-4 small-3">
-            <div class="circle">
-              <img src="/assets/img/pumpkin_spice.jpg" alt="pumpkin spice">
-            </div>
-          </div>
-          <div class="columns xsmall-8 small-9 xsmall-offset-4 small-offset-3">
-            <p class="title">Pumpkin Spice</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta ligula sed tempor egestas.</p>
-          </div>
-        </div>
-
-      </div>
-
       <div class="row">
-        <div class="columns small-6">
+        <div class="column">
+          <h2 class="margin-30-bottom-on-small text-center">Featured Flavors</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="double-border-carrot">
+
+            <div class="row feature">
+              <div class="columns xsmall-4 small-3">
+                <div class="circle">
+                  <img src="/assets/img/hot_chocolate.jpg" alt="hot chocolate">
+                </div>
+              </div>
+              <div class="columns xsmall-8 small-9 xsmall-offset-4 small-offset-3">
+                <p class="title">Hot Chocolate</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta ligula sed tempor egestas.</p>
+              </div>
+            </div>
+
+            <div class="row feature">
+              <div class="columns xsmall-4 small-3">
+                <div class="circle">
+                  <img src="/assets/img/mint.jpg" alt="mint">
+                </div>
+              </div>
+              <div class="columns xsmall-8 small-9 xsmall-offset-4 small-offset-3">
+                <p class="title">Mint</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta ligula sed tempor egestas.</p>
+              </div>
+            </div>
+
+            <div class="row feature">
+              <div class="columns xsmall-4 small-3">
+                <div class="circle">
+                  <img src="/assets/img/pumpkin_spice.jpg" alt="pumpkin spice">
+                </div>
+              </div>
+              <div class="columns xsmall-8 small-9 xsmall-offset-4 small-offset-3">
+                <p class="title">Pumpkin Spice</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta ligula sed tempor egestas.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="columns small-6 margin-30-top-on-small">
           <a href="javascript:void(0);" class="button expand">view <span class="accent">all</span> flavors</a>
         </div>
-        <div class="columns small-6">
+        <div class="columns small-6 margin-30-top-on-small">
           <a href="javascript:void(0);" class="button expand">view <span class="accent">all</span> toppings</a>
         </div>
       </div>
@@ -101,7 +107,7 @@
           <div class="js-toppings topping">
             <img src="/assets/img/Strawberry.jpg" alt="">
             <div class="topping-call-out">
-              <p>Fresh Fruit</p>
+              <p>Fresh Fruit &hellip;</p>
             </div>
             <div class="topping-content">
               <p>Did you know strawberries are<br />an excellent source of vitamin C?</p>
@@ -112,7 +118,7 @@
           <div class="js-toppings topping">
             <img src="/assets/img/M&M.jpg" alt="">
             <div class="topping-call-out right">
-              <p>Fresh Fruit</p>
+              <p>&hellip; and Candy &hellip;</p>
             </div>
             <div class="topping-content">
               <p>Still a kid at heart?<br />Add some candy to your life!</p>
@@ -123,7 +129,7 @@
           <div class="js-toppings topping">
             <img src="/assets/img/Snowcaps.jpg" alt="">
             <div class="topping-call-out">
-              <p>Fresh Fruit</p>
+              <p>&hellip; and Chocolate. Oh My!</p>
             </div>
             <div class="topping-content">
               <p>Frozen Yogurt without Snowcaps is<br />like Colorado without mountains.</p>
@@ -149,8 +155,13 @@
       <div class="columns medium-4">
 
         <div class="relative double-border-casper">
-          <h2 class="text-color-casper text-center">We're Winners!</h2>
-          <p class="text-color-casper">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin sodales nulla, a semper eros eleifend tincidunt.</p>
+          <h2 class="text-color-casper text-center margin-40-bottom-on-small">We're Winners!</h2>
+          <div class="row">
+            <div class="columns small-4"><img src="/assets/img/award_a_list.jpg" alt="A-List Award"></div>
+            <div class="columns small-4"><img src="/assets/img/award_fam_fav.png" alt="Family Favorite Award"></div>
+            <div class="columns small-4"><img src="/assets/img/award_talk_town.jpg" alt="Talk of the Town Award"></div>
+          </div>
+          <p class="text-color-casper margin-0-top-on-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin sodales nulla, a semper eros eleifend tincidunt.</p>
           <p class="text-color-casper">Ut eget turpis ultricies, malesuada ligula non, eleifend metus. Proin tristique erat a leo porttitor, ac porta leo tempus.</p>
           <a href="javascript:void(0);" class="button secondary expand margin-30-top-on-small">Learn More</a>
         </div>
