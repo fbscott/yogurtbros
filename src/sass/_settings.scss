@@ -103,20 +103,30 @@ $ranges: (
 );
 
 //*************************** Colors *****************************************
-$black:           #000000;
-$charcoal:        #333333;
-$green:           #93af2a;
-$grey:            #4a4a4a;
-$grey-light:      lighten($grey, 30%);
-$grey-very-light: lighten($grey, 63%);
-$grey-dark:       darken($grey, 10%);
-$grey-very-dark:  darken($grey, 25%);
-$orange:          #f15a22;
-$white:           #FFFFFF;
+$casper:    #ffffff;
+$vader:     #000000;
+$kiwi:      #93af2a;
+$carrot:    #f15a22;
+$charcoal:  lighten($vader, 20%);
+$smoke:     darken($casper, 4%);
+$ash:       lighten($vader, 30%);
 
-$font-primary-color:       $charcoal;
-$background-color-primary: $white;
-$text-color:               $grey-light;
+$color-primary:                     $carrot;
+$color-secondary:                   $kiwi;
+$color-primary-font:                $charcoal;
+$color-secondary-font:              $casper;
+$color-cta-font:                    $color-primary;
+$color-accent-font:                 $color-secondary;
+$color-primary-button:              $color-secondary-font;
+$color-bg-primary-button:           $color-primary;
+$color-bg-primary-button-hover:     lighten($color-bg-primary-button, 10%);
+$color-secondary-button:            $color-primary-font;
+$color-bg-secondary-button:         $casper;
+$color-bg-secondary-button-hover:   darken($color-bg-secondary-button, 10%);
+$color-primary-a:                   $color-primary;
+$color-primary-a-hover:             lighten($color-primary-a, 7%);
+$color-primary-background:          $casper;
+$color-secondary-background:        $charcoal;
 
 //*************************** Fonts & Icons **********************************
 $font-face:             '';

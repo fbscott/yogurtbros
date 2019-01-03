@@ -2,19 +2,20 @@
  * features
  ****************************************************************************/
 // module-specific settings
-$feature-secondary-color: $white;
-$feature-border-color: $feature-secondary-color;
+$feature-color-border: $casper;
+$feature-color-font-primary: $color-cta-font;
+$feature-color-font-secondary: $color-accent-font;
 
 .standard {
    img {
-      border: remCalc(8) solid $feature-border-color;
+      border: remCalc(8) solid $feature-color-border;
       box-shadow: 0px remCalc(2) remCalc(3) 0px rgba(0,0,0,0.5);
    }
    span {
       display: inline-block;
    }
    .standard-num {
-      color: $orange;
+      color: $feature-color-font-primary;
       font-family: OswaldBold;
       font-size: remCalc(40);
       margin: 0 remCalc(10);
@@ -23,7 +24,7 @@ $feature-border-color: $feature-secondary-color;
       }
    }
    .standard-label {
-      color: $green;
+      color: $feature-color-font-secondary;
       text-transform: uppercase;
       font-family: OswaldRegular;
       font-size: remCalc(30);

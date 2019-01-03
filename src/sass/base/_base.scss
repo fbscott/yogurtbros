@@ -1,16 +1,15 @@
 /*****************************************************************************
  * base
  ****************************************************************************/
+%base-content {
+   color: $color-primary-font;
+}
 
 html {
    height: 100%; // to keep footer at bottom of page
-   background-color: $grey-very-light;
+   background-color: $smoke;
 	body {
 		font-family: $font-stack;
-		// font-weight: $body-font-weight;
-		// font-size: $rem-base;
-		// color: $text-color;
-		// background-color: $background-color-primary;
       height: 100%; // to keep footer at bottom of page
 		overflow-y: scroll;
       #container {
@@ -29,22 +28,22 @@ h1 {
 }
 
 h2 {
-   color: $orange;
+   color: $carrot;
    font-family: Lobster;
    font-size: 40px;
 }
 
 p {
+   @extend %base-content;
    margin-bottom: remCalc(30);
    line-height: 1.5;
-   color: $font-primary-color;
    &:first-of-type {
       margin-top: remCalc(30);
    }
 }
 
 a {
-   color: $font-primary-color;
+   @extend %base-content;
 }
 
 .flex {

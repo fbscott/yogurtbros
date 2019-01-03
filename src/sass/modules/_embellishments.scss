@@ -3,7 +3,7 @@
  ****************************************************************************/
 .curved-drop-shadow {
    position: relative;
-   background: $grey-very-light;
+   background: $smoke;
    -webkit-box-shadow: 0 1px remCalc(4) rgba(0, 0, 0, 0.3), 0 0 remCalc(40) rgba(0, 0, 0, 0.1) inset;
    -moz-box-shadow:    0 1px remCalc(4) rgba(0, 0, 0, 0.3), 0 0 remCalc(40) rgba(0, 0, 0, 0.1) inset;
    box-shadow:         0 1px remCalc(4) rgba(0, 0, 0, 0.3), 0 0 remCalc(40) rgba(0, 0, 0, 0.1) inset;
@@ -39,12 +39,12 @@
    }
 }
 
-.double-border-orange {
-   @include double-border($orange);
+.double-border-carrot {
+   @include double-border($carrot);
 }
 
-.double-border-white {
-   @include double-border($white);
+.double-border-casper {
+   @include double-border($casper);
 }
 
 // .circle {
@@ -77,7 +77,7 @@
  
 a {
    &.raquo {
-      color: $orange;
+      color: $color-primary-a;
       font-style: italic;
       font-weight: 600;
    }

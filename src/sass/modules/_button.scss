@@ -1,10 +1,10 @@
 /*****************************************************************************
  * buttons
  ****************************************************************************/
-%button {
-   background-color: $orange;
+button, .button {
+   background-color: $color-bg-primary-button;
    border: none;
-   color: $white;
+   color: $color-primary-button;
    padding: remCalc(19) remCalc(32) remCalc(15) remCalc(32);
    text-align: center;
    text-decoration: none;
@@ -14,21 +14,10 @@
    font-family: OswaldHeavy;
    font-size: remCalc(24);
    line-height: 1;
+   position: relative;
    @include transition(background-color 300ms ease);
-}
-
-button, .button {
-   @extend %button;
-   span.accent {
-      text-transform: initial;
-      font-family: GreatVibes;
-      font-size: remCalc(24);
-      padding: 0 remCalc(5) 0 remCalc(2);
-      position: relative;
-      top: remCalc(-2);
-   }
    &:hover {
-      background-color: lighten($orange, 7%);
+      background-color: $color-bg-primary-button-hover;
       @include transition(background-color 300ms ease);
    }
    &.expand {
@@ -37,6 +26,23 @@ button, .button {
    &.small {
       font-size: remCalc(16);
       padding: remCalc(15);
+   }
+   &.secondary {
+      color: $color-secondary-button;
+      background-color: $color-bg-secondary-button;
+      @include transition(background-color 300ms ease);
+      &:hover {
+         background-color: $color-bg-secondary-button-hover;
+         @include transition(background-color 300ms ease);
+      }
+   }
+   span.accent {
+      text-transform: initial;
+      font-family: GreatVibes;
+      font-size: remCalc(24);
+      padding: 0 remCalc(5) 0 remCalc(2);
+      position: relative;
+      top: remCalc(-2);
    }
 }
 

@@ -1,0 +1,17 @@
+/*****************************************************************************
+ * backgrounds
+ ****************************************************************************/
+$colors: (
+   vader:      $vader,
+   charcoal:   $charcoal,
+   kiwi:       $kiwi,
+   ash:        $ash,
+   smoke:      $smoke,
+   carrot:     $carrot,
+   casper:     $casper
+);
+
+@each $key, $value in $colors {
+   .bg-color-#{$key} {background-color: #{$value};}
+   .text-color-#{$key} {color: #{$value};}
+}

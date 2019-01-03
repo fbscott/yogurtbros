@@ -2,9 +2,8 @@
  * header
  ****************************************************************************/
 // module-specific settings
-$header-primary-color: rgba(147,175,42,0.75);
-$header-secondary-color: $white;
-$header-border-color: $header-secondary-color;
+$header-color-primary: rgba(147,175,42,0.75); // green
+$header-color-border: $casper;
 
 header {
    padding-top: remCalc(180);
@@ -24,12 +23,12 @@ header {
    }
    nav {
       float: right;
-      color: $white;
+      color: $color-secondary-font;
       text-transform: uppercase;
       font-family: OswaldRegular;
       font-size: 18px;
       a {
-         color: $white;
+         color: $color-secondary-font;
          text-decoration: none;
          margin: 0 remCalc(7);
          &:first-of-type {
@@ -41,10 +40,9 @@ header {
       }
    }
    .header-content {
-      border-top: remCalc(8) solid $header-border-color;
-      border-bottom: remCalc(8) solid $header-border-color;
-      background-color: $header-primary-color;
-      // box-shadow: 0px 0px remCalc(5) 0px rgba(0,0,0,0.5);
+      border-top: remCalc(8) solid $header-color-border;
+      border-bottom: remCalc(8) solid $header-color-border;
+      background-color: $header-color-primary;
    }
    .logo {
       z-index: 1;
@@ -56,7 +54,7 @@ header {
          height: 100%;
       }
       p {
-         color: $white;
+         color: $color-secondary-font;
          font-family: Lobster;
          font-size: 72px;
          margin: initial;
