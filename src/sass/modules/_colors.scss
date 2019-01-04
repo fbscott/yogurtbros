@@ -14,4 +14,11 @@ $colors: (
 @each $key, $value in $colors {
    .bg-color-#{$key} {background-color: #{$value};}
    .text-color-#{$key} {color: #{$value};}
+   .overlay-#{$key} {
+      background-color: rgba($value, 0.3);
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+   }
 }
