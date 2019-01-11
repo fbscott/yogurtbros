@@ -3,9 +3,11 @@
 
 # Built/compiled files
 # Grunt build to create these files
-/assets/js
 /assets/css
+/assets/js
+/assets/fonts
 .sass-cache/
+/zip
 
 # Ignore these while developing
 /src/js/modules

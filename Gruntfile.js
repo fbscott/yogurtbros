@@ -29,14 +29,27 @@ module.exports = function(grunt) {
          }
       },
 
-      concat: {
-         js: {
-            src: ['assets/js/*-compiled.js'],
-            dest: 'assets/js/*-min.js'
+      clean: {
+         css: {
+            src: 'assets/css/'
          },
+         js: {
+            src: 'assets/js/'
+         },
+         zip: {
+            src: 'zip/'
+         }
+         // folderTwo: ["assetsOne/js/", "assetsTwo/js/"]
+      },
+
+      concat: {
          css: {
             src: ['src/css/*.css'],
             dest: 'assets/css/main.css'
+         },
+         js: {
+            src: ['assets/js/*-compiled.js'],
+            dest: 'assets/js/*-min.js'
          }
       },
 
@@ -123,18 +136,22 @@ module.exports = function(grunt) {
          scripts: {
             files: ['src/**/*.js'],
             // tasks: ['concat:js', 'browserify', 'uglify'],
-            tasks: ['babel', 'uglify'],
+            tasks: ['clean-js', 'babel', 'uglify'],
             options: {
                spawn: false,
             }
          },
          styles: {
             files: ['src/**/*.css', 'src/**/*.scss'],
-            tasks: ['sass', 'cssmin'],
+            tasks: ['clean-css', 'sass', 'cssmin'],
             options: {
                spawn: false,
             }
          }
+      },
+
+      zip: {
+         'zip/yb.zip': ['assets/**/*.*', 'index.html', 'index.htm', '.htaccess']
       }
 
    });
@@ -142,12 +159,14 @@ module.exports = function(grunt) {
    // Load Plugins
    grunt.loadNpmTasks('grunt-babel');
    grunt.loadNpmTasks('grunt-browserify');
+   grunt.loadNpmTasks('grunt-contrib-clean');
    grunt.loadNpmTasks('grunt-contrib-concat');
    grunt.loadNpmTasks('grunt-contrib-cssmin');
    grunt.loadNpmTasks('grunt-image');
    grunt.loadNpmTasks('grunt-contrib-sass');
    grunt.loadNpmTasks('grunt-contrib-uglify');
    grunt.loadNpmTasks('grunt-contrib-watch');
+   grunt.loadNpmTasks('grunt-zip');
 
    // Sample Tasks
    grunt.registerTask('run', function() {
@@ -158,8 +177,11 @@ module.exports = function(grunt) {
    });
 
    // Register Tasks
-   grunt.registerTask('concat-js', ['concat:js']);
    grunt.registerTask('concat-css', ['concat:css']);
+   grunt.registerTask('concat-js', ['concat:js']);
+   grunt.registerTask('clean-css', ['clean:css']);
+   grunt.registerTask('clean-js', ['clean:js']);
    // grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'babel', 'browserify', 'uglify']);
-   grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'babel', 'uglify']);
+   // grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'babel', 'uglify']);
+   grunt.registerTask('default', ['clean', 'babel', 'uglify', 'sass', 'cssmin', 'image', 'zip']);
 };
