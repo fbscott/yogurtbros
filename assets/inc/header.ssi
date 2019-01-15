@@ -2,11 +2,11 @@
     <div class="header-content curved-drop-shadow">
       <div class="row">
 
-        <div class="columns medium-4 logo">
+        <div class="columns medium-3 logo">
           <a href="javascript:void(0);"><img src="/assets/img/logo.png" alt="Yogurt Brothers Logo"></a>
         </div><!-- end .column -->
 
-        <div class="column medium-8 medium-offset-4 strapline">
+        <div class="column medium-9 medium-offset-3 strapline">
           <div class="row">
             <div class="columns medium-6">
               <p id="js-strapline" class="align-vertical nowrap">&nbsp;</p>
