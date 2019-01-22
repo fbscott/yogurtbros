@@ -8,10 +8,11 @@
 
         <div class="column medium-9 medium-offset-3 strapline">
           <div class="row">
-            <div class="columns medium-6">
-              <p id="js-strapline" class="align-vertical nowrap">&nbsp;</p>
+            <div class="columns medium-7 text-center">
+              <!-- <p id="js-strapline" class="align-vertical nowrap">&nbsp;</p> -->
+              <p class="align-vertical nowrap">Be Happy. Be Healthy. Be you.</p>
             </div><!-- end .column -->
-            <div class="columns medium-6">
+            <div class="columns medium-5">
               <nav class="align-vertical">
                 <a href="javascript:void(0);">Home</a> |
                 <a href="javascript:void(0);">About Us</a> |

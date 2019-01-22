@@ -6,7 +6,7 @@ $header-color-primary: rgba(147,175,42,0.75); // green
 $header-color-border: $casper;
 
 header {
-   padding-top: remCalc(100);
+   padding-top: remCalc(88);
    position: relative;
    &::after {
       content: "";
@@ -49,14 +49,14 @@ header {
       @include align-vertical($position: absolute, $valueA: "", $valueB: -35%);
    }
    .strapline {
-      height: 100px;
+      height: 80px;
       div {
          height: 100%;
       }
       p {
          color: $color-secondary-font;
          font-family: Lobster;
-         font-size: 72px;
+         font-size: remCalc(40);
          margin: initial;
       }
    }

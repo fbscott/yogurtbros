@@ -7,13 +7,13 @@
         <a href="javascript:void(0);" target="_blank"><span class="icon-pinterest"></span></a>
       </div>
       <div class="small-2 medium-1 columns">
-        <a href="javascript:void(0);" target="_blank"><span class="icon-linkedin"></span></a>
+        <a href="https://twitter.com/yogurtbrothers" target="_blank"><span class="icon-twitter"></span></a>
       </div>
       <div class="small-2 medium-1 columns">
-        <a href="javascript:void(0);" target="_blank"><span class="icon-instagram"></span></a>
+        <a href="https://www.instagram.com/yogurtbrothers/" target="_blank"><span class="icon-instagram"></span></a>
       </div>
       <div class="small-2 medium-1 columns">
-        <a href="javascript:void(0);" target="_blank"><span class="icon-facebook2"></span></a>
+        <a href="https://www.facebook.com/yogurtbros/" target="_blank"><span class="icon-facebook2"></span></a>
       </div>
     </div>
     <p>Copyright &copy; <span id="js-copyright"></span> YogurtBrothers.com</p>
