@@ -1,18 +1,15 @@
 <footer class="row">
-  <div class="column">
+  <div class="column medium-6 medium-offset-3">
     <h2>Yogurt Brothers, Inc.</h2>
     <p>Est. 2007</p>
     <div class="row">
-      <div class="small-2 medium-1 columns small-offset-2 medium-offset-4">
-        <a href="javascript:void(0);" target="_blank"><span class="icon-pinterest"></span></a>
-      </div>
-      <div class="small-2 medium-1 columns">
+      <div class="medium-2 columns medium-offset-3">
         <a href="https://twitter.com/yogurtbrothers" target="_blank"><span class="icon-twitter"></span></a>
       </div>
-      <div class="small-2 medium-1 columns">
+      <div class="medium-2 columns">
         <a href="https://www.instagram.com/yogurtbrothers/" target="_blank"><span class="icon-instagram"></span></a>
       </div>
-      <div class="small-2 medium-1 columns">
+      <div class="medium-2 columns">
         <a href="https://www.facebook.com/yogurtbros/" target="_blank"><span class="icon-facebook2"></span></a>
       </div>
     </div>
