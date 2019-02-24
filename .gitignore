@@ -12,6 +12,7 @@
 # Ignore these while developing
 /src/js/modules
 /assets/img
+*.docx
 
 # Merge conflict files
 *.orig
