@@ -36,6 +36,36 @@ $columns: 12;
    float: left
 }
 
+@for $i from 1 through $columns {
+   .grid-start-#{$i} {
+      grid-column-start: #{$i};
+   }
+   .grid-end-#{$i} {
+      grid-column-end: #{$i};
+   }
+}
+
+.module > *:nth-child(1) {
+   grid-area: 3 / 1 / 4 / 2;
+}
+.module > *:nth-child(2) {
+   grid-area: 1 / 1 / 2 / 3;
+}
+.module > *:nth-child(3) {
+   grid-area: 3 / 2 / 4 / 3;
+}
+.module > *:nth-child(4) {
+   grid-area: 4 / 1 / 5 / 2;
+}
+.module > *:nth-child(5) {
+   grid-area: 2 / 1 / 3 / 3;
+   min-height: 300px;
+   width: 100%;
+}
+.module > *:nth-child(6) {
+   grid-area: 4 / 2 / 5 / 3;
+}
+
 // loop over breakpoints
 @each $key, $value in $breakpoints {
    // create media queries
@@ -47,6 +77,40 @@ $columns: 12;
          }
          .#{$key}-offset-#{$i} {
             margin-left: #{$i / $columns * 100%};
+         }
+      }
+      @if $key == 'medium' {
+         @for $i from 2 through 4 {
+            .grid-container-#{$i} {
+               display: grid;
+               grid-template-columns: repeat(2, 1fr);
+               grid-gap: 30px;
+               margin: 0 auto;
+            }
+         }
+      } @else if $key == 'large' {
+         @for $i from 2 through 4 {
+            .grid-container-#{$i} {
+               grid-template-columns: repeat(#{$i}, 1fr);
+            }
+         }
+         .module > *:nth-child(1) {
+            grid-area: 1 / 1 / 2 / 2;
+         }
+         .module > *:nth-child(2) {
+            grid-area: 1 / 2 / 2 / 3;
+         }
+         .module > *:nth-child(3) {
+            grid-area: 1 / 3 / 2 / 4;
+         }
+         .module > *:nth-child(4) {
+            grid-area: 2 / 1 / 3 / 2;
+         }
+         .module > *:nth-child(5) {
+            grid-area: 2 / 2 / 3 / 3;
+         }
+         .module > *:nth-child(6) {
+            grid-area: 2 / 3 / 3 / 4;
          }
       }
    }
