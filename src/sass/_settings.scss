@@ -16,10 +16,10 @@ $column-gutter: remCalc(15) !default;
 //*************************** Breakpoints ************************************
 // values
 $xsmall: 320;
-$small:  400;
-$medium: 768;
+$small:  450;
+$medium: 850;
 $large:  1024;
-$xlarge: 1600;
+$xlarge: 1200;
 
 // breakpoints
 $xsmall-breakpoint: remCalc($xsmall);
@@ -29,11 +29,11 @@ $large-breakpoint:  remCalc($large);
 $xlarge-breakpoint: remCalc($xlarge);
 
 // add one (1) to each breakpoint
-$xsmall-breakpoint-plus: remCalc($xsmall + 1);
-$small-breakpoint-plus:  remCalc($small  + 1);
-$medium-breakpoint-plus: remCalc($medium + 1);
-$large-breakpoint-plus:  remCalc($large  + 1);
-$xlarge-breakpoint-plus: remCalc($xlarge + 1);
+$xsmall-breakpoint-minus: remCalc($xsmall - 1);
+$small-breakpoint-minus:  remCalc($small  - 1);
+$medium-breakpoint-minus: remCalc($medium - 1);
+$large-breakpoint-minus:  remCalc($large  - 1);
+$xlarge-breakpoint-minus: remCalc($xlarge - 1);
 
 // breakpoints object
 $breakpoints: (
@@ -45,14 +45,14 @@ $breakpoints: (
 );
 
 // ranges
-$xsmall-range:  (0, $xsmall-breakpoint); 
-$small-range:   ($xsmall-breakpoint-plus, $small-breakpoint);
-$medium-range:  ($small-breakpoint-plus, $medium-breakpoint);
-$large-range:   ($medium-breakpoint-plus, $large-breakpoint);
-$xlarge-range:  ($large-breakpoint-plus, $xlarge-breakpoint);
-$xxlarge-range: ($xlarge-breakpoint-plus, remCalc(99999999));
+$xsmall-range:  (0, $xsmall-breakpoint-minus); 
+$small-range:   ($xsmall-breakpoint, $small-breakpoint-minus);
+$medium-range:  ($small-breakpoint, $medium-breakpoint-minus);
+$large-range:   ($medium-breakpoint, $large-breakpoint-minus);
+$xlarge-range:  ($large-breakpoint, $xlarge-breakpoint-minus);
+$xxlarge-range: ($xlarge-breakpoint, remCalc(99999999));
 
-$max-screen-width: remCalc(1200);
+$max-screen-width: remCalc($xlarge);
 
 $screen: "only screen";
 $all:    "all";

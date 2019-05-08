@@ -6,6 +6,26 @@ $feature-color-border: $casper;
 $feature-color-font-primary: $color-cta-font;
 $feature-color-font-secondary: $color-accent-font;
 
+#features {
+   position: relative;
+   overflow: hidden;
+   &::after {
+      content: "";
+      background-image: url('/assets/img/wood_paneling.jpg');
+      background-size: cover;
+      background-position-y: 65%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1; 
+      -webkit-filter: blur(remCalc(2));
+      filter: blur(remCalc(2));
+      @include opacity(0.25);
+   }
+}
+
 .standard {
    img {
       border: remCalc(8) solid $feature-color-border;
@@ -17,8 +37,8 @@ $feature-color-font-secondary: $color-accent-font;
    .standard-num {
       color: $feature-color-font-primary;
       font-family: OswaldBold;
-      font-size: remCalc(40);
-      margin: 0 remCalc(10);
+      font-size: 7vw;
+      margin: 0 remCalc(5);
       &:first-of-type {
          margin-left: 0px;
       }
@@ -27,7 +47,7 @@ $feature-color-font-secondary: $color-accent-font;
       color: $feature-color-font-secondary;
       text-transform: uppercase;
       font-family: OswaldRegular;
-      font-size: remCalc(30);
+      font-size: 5.5vw;
    }
 }
 
@@ -36,7 +56,7 @@ $feature-color-font-secondary: $color-accent-font;
       font-size: remCalc(14);
       line-height: initial;
       &.title {
-         margin-top: initial;
+         // margin-top: initial;
          margin-bottom: remCalc(12);
          text-transform: uppercase;
          font-size: remCalc(18);
@@ -46,6 +66,49 @@ $feature-color-font-secondary: $color-accent-font;
    .feature {
       &:not(:first-of-type) {
          margin-top: remCalc(50);
+      }
+   }
+}
+
+@media only screen and (min-width: $small-breakpoint) {
+   .standard {
+      .standard-num {
+         margin: 0 remCalc(10);
+         font-size: remCalc(30);
+      }
+      .standard-label {
+         font-size: remCalc(24);
+      }
+   }
+   .featured {
+      p {
+         &.title {
+            margin-top: initial;
+         }
+      }
+   }
+}
+
+@media only screen and (min-width: $medium-breakpoint) {
+   .standard {
+      .standard-num {
+         margin: 0 remCalc(10);
+         font-size: 3.25vw;
+      }
+      .standard-label {
+         font-size: 2.25vw;
+      }
+   }
+}
+
+@media only screen and (min-width: $xlarge-breakpoint) {
+   .standard {
+      .standard-num {
+         margin: 0 remCalc(10);
+         font-size: remCalc(39);
+      }
+      .standard-label {
+         font-size: remCalc(27);
       }
    }
 }

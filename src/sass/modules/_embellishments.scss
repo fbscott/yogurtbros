@@ -1,22 +1,24 @@
 /*****************************************************************************
  * embellishments
  ****************************************************************************/
-.curved-drop-shadow {
-   position: relative;
-   background: $smoke;
-   -webkit-box-shadow: 0 1px remCalc(4) rgba(0, 0, 0, 0.3), 0 0 remCalc(40) rgba(0, 0, 0, 0.1) inset;
-   -moz-box-shadow:    0 1px remCalc(4) rgba(0, 0, 0, 0.3), 0 0 remCalc(40) rgba(0, 0, 0, 0.1) inset;
-   box-shadow:         0 1px remCalc(4) rgba(0, 0, 0, 0.3), 0 0 remCalc(40) rgba(0, 0, 0, 0.1) inset;
-   &::before {
-      content: "";
-      position: absolute;
-      z-index: -2;
-      top: 80%;
-      bottom: -3px;
-      left: 30%;
-      width: 40%;
-      border-radius: 50%;
-      @include box-shadow(0, 10px, 15px, 0, rgba(0,0,0,0.6));
+@media only screen and (min-width: $medium-breakpoint) {
+   .curved-drop-shadow {
+      position: relative;
+      background: $smoke;
+      -webkit-box-shadow: 0 1px remCalc(4) rgba(0, 0, 0, 0.3), 0 0 remCalc(40) rgba(0, 0, 0, 0.1) inset;
+      -moz-box-shadow:    0 1px remCalc(4) rgba(0, 0, 0, 0.3), 0 0 remCalc(40) rgba(0, 0, 0, 0.1) inset;
+      box-shadow:         0 1px remCalc(4) rgba(0, 0, 0, 0.3), 0 0 remCalc(40) rgba(0, 0, 0, 0.1) inset;
+      &::before {
+         content: "";
+         position: absolute;
+         z-index: -2;
+         top: 80%;
+         bottom: -3px;
+         left: 30%;
+         width: 40%;
+         border-radius: 50%;
+         @include box-shadow(0, 10px, 15px, 0, rgba(0,0,0,0.6));
+      }
    }
 }
 
@@ -55,22 +57,24 @@
 //    border-radius: 50%;
 // }
 
-.circle {
-   position: relative;
-   width: 85px;
-   height: 85px;
-   overflow: hidden;
-   @include border-radius(50%);
-   @include align-vertical(absolute, "Y", 50%, -50%);
-   img {
-      height: 100%;
-      width: auto;
-      object-fit: cover;
-      object-position: center;
-      transform: scale(1.5);
-      &.portrait {
-         width: 100%;
-         height: auto;
+@media only screen and (min-width: $small-breakpoint) {
+   .circle {
+      position: relative;
+      width: 85px;
+      height: 85px;
+      overflow: hidden;
+      @include border-radius(50%);
+      @include align-vertical(absolute, "Y", 50%, -50%);
+      img {
+         height: 100%;
+         width: auto;
+         object-fit: cover;
+         object-position: center;
+         transform: scale(1.5);
+         &.portrait {
+            width: 100%;
+            height: auto;
+         }
       }
    }
 }
