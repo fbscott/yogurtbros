@@ -49,3 +49,14 @@ a {
 strong {
    font-weight: 900;
 }
+
+table, th, td {
+  border: 1px solid $color-secondary-font;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+th, td {
+  padding: remCalc(20);
+  text-align: center;
+}
