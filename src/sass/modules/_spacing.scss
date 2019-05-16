@@ -11,17 +11,17 @@ $margin-and-padding-multiplier:  10;
    @for $i from $margin-and-padding-start through $margin-and-padding-end {
       // e.g., margin-10-on-xsmall {margin-top: 0.625rem; margin-bottom: 0.625rem;}
       .#{$property}-#{$i * $margin-and-padding-multiplier}-on-#{$size} {
-         #{$property}-top: (remCalc($i * $margin-and-padding-multiplier));
-         #{$property}-bottom: (remCalc($i * $margin-and-padding-multiplier));
+         #{$property}-top: (remCalc($i * $margin-and-padding-multiplier)) !important;
+         #{$property}-bottom: (remCalc($i * $margin-and-padding-multiplier)) !important;
       }
       @each $side in $sides-all {
          // e.g., margin-10-top-on-xsmall {margin: 0.625rem;}
          .#{$property}-#{$i * $margin-and-padding-multiplier}-#{$side}-on-#{$size} {
-            #{$property}-#{$side}: (remCalc($i * $margin-and-padding-multiplier));
+            #{$property}-#{$side}: (remCalc($i * $margin-and-padding-multiplier)) !important;
          }
          // e.g., margin-neg-10-top-on-xsmall {margin: -0.625rem;}
          .#{$property}-neg#{$i * -$margin-and-padding-multiplier}-#{$side}-on-#{$size} {
-            #{$property}-#{$side}: (remCalc($i * -$margin-and-padding-multiplier));
+            #{$property}-#{$side}: (remCalc($i * -$margin-and-padding-multiplier)) !important;
          }
       }
    }
@@ -31,7 +31,7 @@ $margin-and-padding-multiplier:  10;
    @each $side in $sides-all {
       // e.g., margin-0-top-on-xsmall {margin: 0;}
       .#{$property}-0-#{$side}-on-#{$size} {
-         #{$property}-#{$side}: 0;
+         #{$property}-#{$side}: 0 !important;
       }
    }
 }

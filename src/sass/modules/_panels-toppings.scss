@@ -1,0 +1,73 @@
+/*****************************************************************************
+ * panels-toppings
+ ****************************************************************************/
+$color-panel-bg: $color-primary-background;
+
+
+// loop over breakpoints
+@each $key, $value in $breakpoints {
+   // create media queries
+   @include break($key) {
+      @if $key == 'small' {
+         .panels-toppings {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: remCalc(30);
+         }
+      }
+      @else if $key == 'medium' {
+         .panels-toppings {
+            grid-template-columns: auto auto auto;
+            & > div {
+               background-color: $color-panel-bg;
+            }
+            div.topping-content {
+               padding: remCalc(15);
+            }
+         }
+         .panels-toppings > *:nth-child(3n-1) {
+               display: -webkit-box;
+               display: -moz-box;
+               display: box;
+               -webkit-box-orient: vertical;
+                  -moz-box-orient: vertical;
+                       box-orient: vertical;
+            & > div:first-of-type {
+               -webkit-box-ordinal-group: 2;
+                  -moz-box-ordinal-group: 2;
+                       box-ordinal-group: 2;
+            }
+         }
+      } @else if $key == 'large' {
+         .panels-toppings {
+            grid-template-columns: auto auto auto auto;
+         }
+         .panels-toppings > *:nth-child(3n-1) {
+               display: initial;
+               display: initial;
+               display: initial;
+               -webkit-box-orient: initial;
+                  -moz-box-orient: initial;
+                       box-orient: initial;
+            & > div:first-of-type {
+               -webkit-box-ordinal-group: initial;
+                  -moz-box-ordinal-group: initial;
+                       box-ordinal-group: initial;
+            }
+         }
+         .panels-toppings > *:nth-child(even) {
+               display: -webkit-box;
+               display: -moz-box;
+               display: box;
+               -webkit-box-orient: vertical;
+                  -moz-box-orient: vertical;
+                       box-orient: vertical;
+            & > div:first-of-type {
+               -webkit-box-ordinal-group: 2;
+                  -moz-box-ordinal-group: 2;
+                       box-ordinal-group: 2;
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,43 @@
+/*****************************************************************************
+ * backgrounds
+ ****************************************************************************/
+
+#paneling {
+   position: relative;
+   overflow: hidden;
+   &::after {
+      content: "";
+      background-image: url('/assets/img/wood_paneling.jpg');
+      background-size: cover;
+      background-position-y: 65%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1; 
+      -webkit-filter: blur(remCalc(2));
+      filter: blur(remCalc(2));
+      @include opacity(0.25);
+   }
+}
+
+#fruit {
+   position: relative;
+   overflow: hidden;
+   &::after {
+      content: "";
+      background-image: url('/assets/img/fruit.jpg');
+      background-size: cover;
+      background-position-y: 65%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1; 
+      -webkit-filter: blur(remCalc(2));
+      filter: blur(remCalc(2));
+      @include opacity(0.15);
+   }
+}

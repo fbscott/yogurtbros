@@ -60,8 +60,8 @@
 @media only screen and (min-width: $small-breakpoint) {
    .circle {
       position: relative;
-      width: 85px;
-      height: 85px;
+      width: remCalc(85);
+      height: remCalc(85);
       overflow: hidden;
       @include border-radius(50%);
       @include align-vertical(absolute, "Y", 50%, -50%);
