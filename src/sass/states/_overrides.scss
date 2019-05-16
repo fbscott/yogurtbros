@@ -18,20 +18,19 @@
       }
    }
 }
-
 .absolute {
    position: absolute;
 }
-
 .relative {
    position: relative;
    height: 100%;
 }
-
 .overflow-hidden {
    overflow: hidden;
 }
-
 .text-center {
    text-align: center;
+}
+.inline-block {
+   display: inline-block;
 }

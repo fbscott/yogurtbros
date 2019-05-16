@@ -1,3 +1,19 @@
 /*****************************************************************************
  * toppings
  ****************************************************************************/
+$toppings-toggle-bg: $color-primary-background;
+
+ul.toppings-toggle {
+   display: inline-block;
+   li {
+      display: inline-block;
+      &:not(:last-of-type) {
+         margin-right: remCalc(50);
+      }
+      a {
+         text-decoration: none;
+         padding: remCalc(10) remCalc(20);
+         background-color: $toppings-toggle-bg;
+      }
+   }
+}
