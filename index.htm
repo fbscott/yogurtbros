@@ -8,28 +8,29 @@
 </head>
 <body><div id="container">
 
-  <!--#include virtual="assets/inc/header.ssi" -->
+  <!--#include virtual="assets/inc/header.htm" -->
 
   <!--------------------------------- features --------------------------------->
-  <section class="row padding-50-on-small flex">
+  <section id="features" class="padding-50-on-xsmall">
+    <div class="row">
     <!-- left -->
-    <div class="columns medium-6 standard">
+    <div class="columns medium-6 large-5 standard">
       <div class="text-center">
-        <span class="standard-num"><!--#include virtual="assets/inc/num-flavors.ssi" --></span>
+        <span class="standard-num"><!--#include virtual="assets/inc/num-flavors.htm" --></span>
         <span class="standard-label">flavors</span>
-        <span class="standard-num"><!--#include virtual="assets/inc/num-toppings.ssi" --></span>
+        <span class="standard-num"><!--#include virtual="assets/inc/num-toppings.htm" --></span>
         <span class="standard-label">toppings</span>
-        <span class="standard-num"><!--#include virtual="assets/inc/num-syrups.ssi" --></span>
+        <span class="standard-num"><!--#include virtual="assets/inc/num-syrups.htm" --></span>
         <span class="standard-label">syrups</span>
       </div>
-      <img src="/assets/img/feature_01.jpg" alt="yogurt cup with toppings" class="margin-30-top-on-small">
+      <img src="/assets/img/feature_01.jpg" alt="yogurt cup with toppings" class="margin-30-top-on-xsmall">
     </div>
     <!-- end left -->
     <!-- right -->
-    <div class="columns medium-6 featured margin-40-top-on-small margin-0-top-on-medium">
+    <div class="columns medium-6 large-7 featured margin-40-top-on-xsmall margin-0-top-on-medium">
       <div class="row">
         <div class="column">
-          <h2 class="margin-30-bottom-on-small text-center">Featured Flavors</h2>
+          <h2 class="margin-30-bottom-on-xsmall text-center">Featured Flavors</h2>
         </div>
       </div>
       <div class="row">
@@ -37,12 +38,12 @@
           <div class="double-border-carrot">
             <!-- feature one -->
             <div class="row feature">
-              <div class="columns xsmall-4 small-3">
+              <div class="columns small-3">
                 <div class="circle">
                   <img src="/assets/img/hot_chocolate.jpg" alt="hot chocolate">
                 </div>
               </div>
-              <div class="columns xsmall-8 small-9 xsmall-offset-4 small-offset-3">
+              <div class="columns small-9 small-offset-3">
                 <p class="title">Hot Chocolate</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta ligula sed tempor egestas.</p>
               </div>
@@ -50,12 +51,12 @@
             <!-- end feature one -->
             <!-- feature two -->
             <div class="row feature">
-              <div class="columns xsmall-4 small-3">
+              <div class="columns small-3">
                 <div class="circle">
                   <img src="/assets/img/mint.jpg" alt="mint">
                 </div>
               </div>
-              <div class="columns xsmall-8 small-9 xsmall-offset-4 small-offset-3">
+              <div class="columns small-9 small-offset-3">
                 <p class="title">Mint</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta ligula sed tempor egestas.</p>
               </div>
@@ -63,12 +64,12 @@
             <!-- end feature two -->
             <!-- feature three -->
             <div class="row feature">
-              <div class="columns xsmall-4 small-3">
+              <div class="columns small-3">
                 <div class="circle">
                   <img src="/assets/img/pumpkin_spice.jpg" alt="pumpkin spice">
                 </div>
               </div>
-              <div class="columns xsmall-8 small-9 xsmall-offset-4 small-offset-3">
+              <div class="columns small-9 small-offset-3">
                 <p class="title">Pumpkin Spice</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta ligula sed tempor egestas.</p>
               </div>
@@ -78,134 +79,148 @@
         </div>
       </div>
       <div class="row">
-        <div class="columns small-6 margin-30-top-on-small">
+        <div class="columns large-6 margin-30-top-on-xsmall">
           <a href="javascript:void(0);" class="button expand">view <span class="accent">all</span> flavors</a>
         </div>
-        <div class="columns small-6 margin-30-top-on-small">
+        <div class="columns large-6 margin-30-top-on-xsmall">
           <a href="javascript:void(0);" class="button expand">view <span class="accent">all</span> toppings</a>
         </div>
       </div>
     </div>
     <!-- end right -->
+    </div>
   </section>
   <!--------------------------------- end features ----------------------------->
-  <!--------------------------------- toppings, visit, awards ------------------>
-  <section class="bg-color-charcoal padding-50-on-small">
-    <!-- headings -->
-    <div class="row text-center">
-      <div class="columns medium-4">
-        <h2 class="margin-30-bottom-on-small">Popular Toppings</h2>
-      </div>
-      <div class="columns medium-4">
-        <h2 class="margin-30-bottom-on-small">Visit Us</h2>
-      </div>
-      <div class="columns medium-4">
-        <h2 class="margin-30-bottom-on-small">Award Winning!</h2>
+  <!--------------------------------- store hours ------------------------------>
+  <section id="hours" class="padding-50-on-xsmall">
+  <div class="overlay-vader"></div>
+    <div class="row">
+      <div class="column large-8 large-offset-2">
+        <h2 class="margin-30-bottom-on-xsmall text-center text-color-carrot">Store Hours</h2>
+        <div class="relative">
+          <table class="text-color-casper">
+            <tr>
+              <th>Mon - Thurs</th>
+              <td>11:00 AM - 9:00PM</td>
+            </tr>
+            <tr>
+              <th>Fri &amp; Sat</th>
+              <td>11:00 AM - 11:00PM</td>
+            </tr>
+            <tr>
+              <th>Sunday</th>
+              <td>11:00 AM - 6:00PM</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
-    <!-- end headings -->
-    <div class="row flex overflow-hidden">
-      <!-- toppings -->
-      <div class="columns medium-4">
-        <div class="relative">
+  </section>
+  <!--------------------------------- end store hours -------------------------->
+  <!--------------------------------- toppings, visit, awards ------------------>
+  <section class="bg-color-charcoal">
+    <div class="row">
+      <div class="column">
+        <div class="grid-container-3 module margin-50-on-xsmall">
 
-          <div class="topping">
-            <img src="/assets/img/Strawberry.jpg" alt="">
-            <div class="topping-call-out">
-              <p>Fresh Fruit &hellip;</p>
+          <h2 class="text-center margin-30-on-xsmall margin-10-bottom-on-medium">Popular Toppings</h2>
+
+          <div>
+            <div class="topping">
+              <img src="/assets/img/Strawberry.jpg" alt="">
+              <div class="topping-call-out">
+                <p>Fresh Fruit &hellip;</p>
+              </div>
+              <div class="topping-content">
+                <p>Did you know strawberries are<br />an excellent source of vitamin C?</p>
+                <a href="javascript:void(0);" class="button small expand">See More!</a>
+              </div>
             </div>
-            <div class="topping-content">
-              <p>Did you know strawberries are<br />an excellent source of vitamin C?</p>
-              <a href="javascript:void(0);" class="button small expand">See More!</a>
+            
+            <div class="topping">
+              <img src="/assets/img/M&M.jpg" alt="">
+              <div class="topping-call-out right">
+                <p>&hellip; and Candy &hellip;</p>
+              </div>
+              <div class="topping-content">
+                <p>Still a kid at heart?<br />Add some candy to your life!</p>
+                <a href="javascript:void(0);" class="button small expand">See More!</a>
+              </div>
             </div>
-          </div>
-          
-          <div class="topping">
-            <img src="/assets/img/M&M.jpg" alt="">
-            <div class="topping-call-out right">
-              <p>&hellip; and Candy &hellip;</p>
+            
+            <div class="topping">
+              <img src="/assets/img/Snowcaps.jpg" alt="">
+              <div class="topping-call-out">
+                <p>&hellip; and Chocolate. Oh My!</p>
+              </div>
+              <div class="topping-content">
+                <p>Frozen Yogurt without Snowcaps is<br />like Colorado without mountains.</p>
+                <a href="javascript:void(0);" class="button small expand">See More!</a>
+              </div>
             </div>
-            <div class="topping-content">
-              <p>Still a kid at heart?<br />Add some candy to your life!</p>
-              <a href="javascript:void(0);" class="button small expand">See More!</a>
-            </div>
-          </div>
-          
-          <div class="topping">
-            <img src="/assets/img/Snowcaps.jpg" alt="">
-            <div class="topping-call-out">
-              <p>&hellip; and Chocolate. Oh My!</p>
-            </div>
-            <div class="topping-content">
-              <p>Frozen Yogurt without Snowcaps is<br />like Colorado without mountains.</p>
-              <a href="javascript:void(0);" class="button small expand">See More!</a>
+
+            <div class="topping">
+              <img src="/assets/img/M&M.jpg" alt="">
+              <div class="topping-call-out right">
+                <p>&hellip; and Candy &hellip;</p>
+              </div>
+              <div class="topping-content">
+                <p>Still a kid at heart?<br />Add some candy to your life!</p>
+                <a href="javascript:void(0);" class="button small expand">See More!</a>
+              </div>
             </div>
           </div>
 
-          <div class="topping">
-            <img src="/assets/img/M&M.jpg" alt="">
-            <div class="topping-call-out right">
-              <p>&hellip; and Candy &hellip;</p>
-            </div>
-            <div class="topping-content">
-              <p>Still a kid at heart?<br />Add some candy to your life!</p>
-              <a href="javascript:void(0);" class="button small expand">See More!</a>
-            </div>
-          </div>
+          <h2 class="text-center margin-30-on-xsmall margin-10-bottom-on-medium">Visit Us</h2>
 
-        </div>
-      </div>
-      <!-- end toppings -->
-      <!-- visit -->
-      <div class="columns medium-4">
-        <div class="relative">
-          <iframe src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.249630160088!2d-105.04914018461933!3d39.91342947942679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b8a6d0323920b%3A0x1449f03246683d8c!2s4680+W+120th+Ave%2C+Westminster%2C+CO+80020!5e0!3m2!1sen!2sus!4v1546282718354"
-                  width = "100%"
-                  height = "100%"
-                  frameborder = "0"
-                  id = "js-map"
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.249630160088!2d-105.04914018461933!3d39.91342947942679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b8a6d0323920b%3A0x1449f03246683d8c!2s4680+W+120th+Ave%2C+Westminster%2C+CO+80020!5e0!3m2!1sen!2sus!4v1546282718354"
+                  width="100%"
+                  height="100%"
+                  frameborder="0"
+                  id="js-map"
                   allowfullscreen>
           </iframe>
-        </div>
-      </div>
-      <!-- end visit -->
-      <!-- awards -->
-      <div class="columns medium-4">
-        <div class="relative double-border-casper">
-          <h2 class="text-color-casper text-center margin-40-bottom-on-small">We're Winners!</h2>
-          <div class="row">
-            <div class="columns small-4"><img src="/assets/img/award_a_list.jpg" alt="A-List Award"></div>
-            <div class="columns small-4"><img src="/assets/img/award_fam_fav.png" alt="Family Favorite Award"></div>
-            <div class="columns small-4"><img src="/assets/img/award_talk_town.jpg" alt="Talk of the Town Award"></div>
+
+          <h2 class="text-center margin-30-on-xsmall margin-10-bottom-on-medium">Award Winning!</h2>
+
+          <div class="double-border-casper">
+            <h2 class="text-color-casper text-center margin-40-bottom-on-xsmall">We're Winners!</h2>
+            <div class="row">
+              <img class="column xsmall-4" src="/assets/img/award_a_list.jpg" alt="A-List Award">
+              <img class="column xsmall-4" src="/assets/img/award_fam_fav.png" alt="Family Favorite Award">
+              <img class="column xsmall-4" src="/assets/img/award_talk_town.jpg" alt="Talk of the Town Award">
+            </div>
+            <p class="text-color-casper margin-0-top-on-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin sodales nulla, a semper eros eleifend tincidunt.</p>
+            <p class="text-color-casper">Ut eget turpis ultricies, malesuada ligula non, eleifend metus. Proin tristique erat a leo porttitor, ac porta leo tempus.</p>
+            <a href="javascript:void(0);" class="button secondary expand margin-30-top-on-xsmall">Learn More</a>
           </div>
-          <p class="text-color-casper margin-0-top-on-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin sodales nulla, a semper eros eleifend tincidunt.</p>
-          <p class="text-color-casper">Ut eget turpis ultricies, malesuada ligula non, eleifend metus. Proin tristique erat a leo porttitor, ac porta leo tempus.</p>
-          <a href="javascript:void(0);" class="button secondary expand margin-30-top-on-small">Learn More</a>
-        </div>
-      </div>
-      <!-- end awards -->
-    </div><!-- end flex -->
+
+        </div><!-- end grid-container-3 -->
+      </div><!-- end column -->
+    </div><!-- end row -->
   </section>
   <!--------------------------------- end toppings, visit, awards -------------->
   <!--------------------------------- notifications ---------------------------->
-  <section id="notifications">
-    <div class="overlay-casper"></div>
-    <div class="row padding-50-on-small">
-      <div class="columns small-9">
-        <h2>Sign-up for News, Offers, and Special Events</h2>
-        <p>Text <strong>YOBRO</strong> to <strong>33222</strong> from your mobile device and signup to receive notifications direct to your phone.</p>
-        <p class="margin-0-bottom-on-small"><strong>Fine Print:</strong></p>
-        <p>We promise not to spam you, and when you signup receive <strong>5oz FREE</strong> on your next visit to Yogurt Brothers.</p>
+  <div class="relative">
+    <section id="notifications">
+      <div class="overlay-casper"></div>
+      <div class="row padding-50-on-xsmall">
+        <div class="columns medium-8 large-9">
+          <h2>Sign-up for News, Offers, and Special Events</h2>
+          <p>Text <strong>YOBRO</strong> to <strong>33222</strong> from your mobile device and signup to receive notifications direct to your phone.</p>
+          <p class="margin-0-bottom-on-small"><strong>Fine Print:</strong></p>
+          <p>We promise not to spam you, and when you signup receive <strong>5oz FREE</strong> on your next visit to Yogurt Brothers.</p>
+        </div>
       </div>
-      <div class="columns small-3">
-        
-      </div>
+    </section>
+    <div class="hide-on-medium-down">
+      <!--#include virtual="assets/inc/sms.htm" -->
     </div>
-  </section>
+  </div>
   <!--------------------------------- end notifications ------------------------>
 
-  <!--#include virtual="assets/inc/footer.ssi" -->
-  <!--#include virtual="assets/inc/source-scripts.ssi" -->
+  <!--#include virtual="assets/inc/footer.htm" -->
+  <!--#include virtual="assets/inc/source-scripts.htm" -->
 
   <!-- page-specific scripts -->
   <!-- end page-specific scripts -->

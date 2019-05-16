@@ -6,7 +6,6 @@ $header-color-primary: rgba(147,175,42,0.75); // green
 $header-color-border: $casper;
 
 header {
-   padding-top: remCalc(88);
    position: relative;
    &::after {
       content: "";
@@ -21,16 +20,22 @@ header {
       z-index: -1; 
       @include opacity(0.5);
    }
+   img {
+      max-width: remCalc(160);
+      display: block;
+      margin: 0 auto;
+   }
    nav {
-      float: right;
       color: $color-secondary-font;
+      margin: 20px 0;
       text-transform: uppercase;
       font-family: OswaldRegular;
       font-size: 18px;
+      text-align: center;
       a {
          color: $color-secondary-font;
          text-decoration: none;
-         margin: 0 remCalc(7);
+         margin: 0 remCalc(5);
          &:first-of-type {
             margin-left: 0px;
          }
@@ -40,28 +45,56 @@ header {
       }
    }
    .header-content {
-      border-top: remCalc(8) solid $header-color-border;
-      border-bottom: remCalc(8) solid $header-color-border;
       background-color: $header-color-primary;
    }
-   .logo {
-      z-index: 1;
-      @include align-vertical($position: absolute, $valueA: "", $valueB: -35%);
-   }
-   .strapline {
-      height: 80px;
-      div {
-         height: 100%;
+}
+
+// @media only screen and (min-width: remCalc(525)) {
+//    header {
+//       img {
+//          max-width: remCalc(160);
+//       }
+//    }
+// }
+
+@media only screen and (min-width: $medium-breakpoint) {
+   header {
+      padding-top: remCalc(88);
+      img {
+         max-width: 100%;
       }
-      p {
-         color: $color-secondary-font;
-         font-family: Lobster;
-         font-size: remCalc(40);
+      nav {
+         float: right;
          margin: initial;
+         text-align: initial;
+         a {
+            margin: 0 remCalc(7);
+         }
+      }
+      .header-content {
+         border-top: remCalc(8) solid $header-color-border;
+         border-bottom: remCalc(8) solid $header-color-border;
+      }
+      .logo {
+         z-index: 1;
+         @include align-vertical($position: absolute, $valueA: "", $valueB: -35%);
+      }
+      .strapline {
+         height: 80px;
+         div {
+            height: 100%;
+         }
+         p {
+            color: $color-secondary-font;
+            font-family: Lobster;
+            font-size: remCalc(40);
+            margin: initial;
+         }
       }
    }
 }
 
+/*
 .move-strapline-in {
    top: 50% !important;
    @include opacity(1);
@@ -113,3 +146,4 @@ header {
       @include opacity(0);
    }
 }
+*/

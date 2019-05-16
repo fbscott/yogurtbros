@@ -49,3 +49,21 @@ a {
 strong {
    font-weight: 900;
 }
+
+table {
+   width: 100%;
+   background-color: rgba(255, 255, 255, 0.5);
+}
+
+table, th, td {
+   color: $color-primary-font;
+   border: 1px solid $color-primary-font;
+   font-weight: bold;
+   border-collapse: collapse;
+   margin: 0 auto;
+}
+
+th, td {
+   padding: remCalc(20);
+   text-align: center;
+}

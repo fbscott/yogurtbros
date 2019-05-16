@@ -10,6 +10,12 @@
       .nowrap-on-#{$key} {
          white-space: nowrap;
       }
+      .hide-on-#{$key} {
+         visibility: hidden;
+      }
+      .show-on-#{$key} {
+         visibility: initial;
+      }
    }
 }
 

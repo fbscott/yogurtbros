@@ -15,8 +15,8 @@
       right: 0;
       position: absolute;
       z-index: -1; 
-      -webkit-filter: blur(remCalc(8)) grayscale(100%);
-      filter: blur(remCalc(8)) grayscale(100%);
+      -webkit-filter: blur(remCalc(6)) grayscale(80%);
+      filter: blur(remCalc(6)) grayscale(80%);
       @include opacity(0.5);
    }
    p {
@@ -24,4 +24,9 @@
          margin-bottom: 0;
       }
    }
+}
+img.sms {
+   position: absolute;
+   bottom: remCalc(0);
+   right: remCalc(15);
 }
