@@ -4,16 +4,15 @@
 $toppings-toggle-bg: $color-primary-background;
 
 ul.toppings-toggle {
-   display: inline-block;
+   display: flex;
+   justify-content: space-between;
    li {
       display: inline-block;
-      &:not(:last-of-type) {
-         margin-right: remCalc(50);
-      }
       a {
          text-decoration: none;
          padding: remCalc(10) remCalc(20);
          background-color: $toppings-toggle-bg;
+         display: inline-block;
       }
    }
 }

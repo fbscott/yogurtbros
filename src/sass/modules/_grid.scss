@@ -36,6 +36,14 @@ $columns: 12;
    float: left
 }
 
+[class*="column"]+[class*="column"]:last-child {
+    float: right
+}
+
+[class*="column"]+[class*="column"].end {
+    float: left
+}
+
 @for $i from 1 through $columns {
    .grid-start-#{$i} {
       grid-column-start: #{$i};
