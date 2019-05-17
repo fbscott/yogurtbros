@@ -3,7 +3,6 @@
  ****************************************************************************/
 $color-panel-bg: $color-primary-background;
 
-
 // loop over breakpoints
 @each $key, $value in $breakpoints {
    // create media queries
@@ -23,8 +22,7 @@ $color-panel-bg: $color-primary-background;
             grid-template-columns: auto auto;
             grid-gap: remCalc(30);
          }
-      }
-      @else if $key == 'medium' {
+      } @else if $key == 'medium' {
          .panels-toppings {
             grid-template-columns: auto auto auto;
          }
