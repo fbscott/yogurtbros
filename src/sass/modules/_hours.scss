@@ -1,27 +1,3 @@
 /*****************************************************************************
  * hours
  ****************************************************************************/
-#hours {
-   position: relative;
-   overflow: hidden;
-   &::after {
-      content: "";
-      background-image: url('/assets/img/DSC_2905CR.jpg');
-      background-size: cover;
-      background-position-y: 65%;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      position: absolute;
-      z-index: -1; 
-      -webkit-filter: blur(remCalc(3)) grayscale(100%);
-      filter: blur(remCalc(3)) grayscale(100%);
-      @include opacity(0.5);
-   }
-   p {
-      &:last-of-type {
-         margin-bottom: 0;
-      }
-   }
-}
