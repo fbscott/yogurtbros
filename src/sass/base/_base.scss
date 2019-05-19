@@ -19,18 +19,20 @@ html {
 	}
 }
 
-h1 {
-	font-size: $h1-font-size;
-	line-height: $h1-line-height;
-	font-weight: bold;
-	padding-top: $h1-padding-top;
-	padding-bottom: $h1-padding-bottom;
-}
-
-h2 {
+h1, h2 {
    color: $carrot;
    font-family: Lobster;
    font-size: 40px;
+}
+
+h3 {
+   font-family: OswaldHeavy;
+   font-size: 24px;
+}
+
+h4 {
+   font-family: OswaldMedium;
+   font-size: 18px;
 }
 
 p {
