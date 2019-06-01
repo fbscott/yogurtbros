@@ -25,25 +25,25 @@ header {
       display: block;
       margin: 0 auto;
    }
-   nav {
-      color: $color-secondary-font;
-      margin: 20px 0;
-      text-transform: uppercase;
-      font-family: OswaldRegular;
-      font-size: 18px;
-      text-align: center;
-      a {
-         color: $color-secondary-font;
-         text-decoration: none;
-         margin: 0 remCalc(5);
-         &:first-of-type {
-            margin-left: 0px;
-         }
-         &:last-of-type {
-            margin-right: 0px;
-         }
-      }
-   }
+   // nav {
+   //    color: $color-secondary-font;
+   //    margin: 20px 0;
+   //    text-transform: uppercase;
+   //    font-family: OswaldRegular;
+   //    font-size: 18px;
+   //    text-align: center;
+   //    a {
+   //       color: $color-secondary-font;
+   //       text-decoration: none;
+   //       margin: 0 remCalc(5);
+   //       &:first-of-type {
+   //          margin-left: 0px;
+   //       }
+   //       &:last-of-type {
+   //          margin-right: 0px;
+   //       }
+   //    }
+   // }
    .header-content {
       background-color: $header-color-primary;
    }
@@ -63,14 +63,14 @@ header {
       img {
          max-width: 100%;
       }
-      nav {
-         float: right;
-         margin: initial;
-         text-align: initial;
-         a {
-            margin: 0 remCalc(7);
-         }
-      }
+      // nav {
+      //    float: right;
+      //    margin: initial;
+      //    text-align: initial;
+      //    a {
+      //       margin: 0 remCalc(7);
+      //    }
+      // }
       .header-content {
          border-top: remCalc(8) solid $header-color-border;
          border-bottom: remCalc(8) solid $header-color-border;
