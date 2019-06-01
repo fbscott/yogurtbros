@@ -36,6 +36,9 @@ module.exports = function(grunt) {
          js: {
             src: 'assets/js/'
          },
+         img: {
+            src: 'assets/img/'
+         },
          zip: {
             src: 'zip/'
          }
@@ -133,6 +136,13 @@ module.exports = function(grunt) {
       },
 
       watch: {
+         image: {
+            files: ['src/**/*.jpg', 'src/**/*.png'],
+            tasks: ['clean-img', 'image'],
+            options: {
+               spawn: false,
+            }            
+         },
          scripts: {
             files: ['src/**/*.js'],
             // tasks: ['concat:js', 'browserify', 'uglify'],
@@ -151,7 +161,7 @@ module.exports = function(grunt) {
       },
 
       zip: {
-         'zip/yb.zip': ['assets/**/*.*', 'index.html', 'index.htm', '.htaccess']
+         'zip/yb.zip': ['assets/**/*.*', '**/*.html', '**/*.htm', '.htaccess']
       }
 
    });
@@ -180,6 +190,7 @@ module.exports = function(grunt) {
    grunt.registerTask('concat-css', ['concat:css']);
    grunt.registerTask('concat-js', ['concat:js']);
    grunt.registerTask('clean-css', ['clean:css']);
+   grunt.registerTask('clean-img', ['clean:img']);
    grunt.registerTask('clean-js', ['clean:js']);
    // grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'babel', 'browserify', 'uglify']);
    // grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'babel', 'uglify']);

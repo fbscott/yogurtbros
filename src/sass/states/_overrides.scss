@@ -11,18 +11,18 @@
          white-space: nowrap;
       }
       .hide-on-#{$key} {
-         display: hidden;
+         visibility: hidden;
       }
       .show-on-#{$key} {
-         display: initial;
+         visibility: initial;
       }
    }
 }
 .hide {
-   display: none;
+   visibility: none;
 }
 .show {
-   display: initial;
+   visibility: initial;
 }
 .absolute {
    position: absolute;
