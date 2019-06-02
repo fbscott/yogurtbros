@@ -27,12 +27,17 @@ $color-panel-bg: $color-primary-background;
             grid-template-columns: auto auto auto;
          }
          .panels-toppings > *:nth-child(3n-1) {
+               position: relative;
                display: -webkit-box;
                display: -moz-box;
                display: box;
                -webkit-box-orient: vertical;
                   -moz-box-orient: vertical;
                        box-orient: vertical;
+            img {
+               position: absolute;
+               bottom: 0;
+            }
             & > div:first-of-type {
                -webkit-box-ordinal-group: 2;
                   -moz-box-ordinal-group: 2;
@@ -44,12 +49,17 @@ $color-panel-bg: $color-primary-background;
             grid-template-columns: auto auto auto auto;
          }
          .panels-toppings > *:nth-child(3n-1) {
+               position: initial;
                display: initial;
                display: initial;
                display: initial;
                -webkit-box-orient: initial;
                   -moz-box-orient: initial;
                        box-orient: initial;
+            img {
+               position: initial;
+               bottom: initial;
+            }
             & > div:first-of-type {
                -webkit-box-ordinal-group: initial;
                   -moz-box-ordinal-group: initial;
@@ -57,12 +67,17 @@ $color-panel-bg: $color-primary-background;
             }
          }
          .panels-toppings > *:nth-child(even) {
+               position: relative;
                display: -webkit-box;
                display: -moz-box;
                display: box;
                -webkit-box-orient: vertical;
                   -moz-box-orient: vertical;
                        box-orient: vertical;
+            img {
+               position: absolute;
+               bottom: 0;
+            }
             & > div:first-of-type {
                -webkit-box-ordinal-group: 2;
                   -moz-box-ordinal-group: 2;
