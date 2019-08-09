@@ -1,0 +1,42 @@
+/*****************************************************************************
+ * overrides
+ ****************************************************************************/
+.nowrap {white-space: nowrap;}
+
+// loop over breakpoints
+@each $key, $value in $ranges {
+   // create media queries
+   @include range($value) {
+      .nowrap-on-#{$key} {
+         white-space: nowrap;
+      }
+      .hide-on-#{$key} {
+         display: none;
+      }
+      .show-on-#{$key} {
+         display: initial;
+      }
+   }
+}
+.hide {
+   display: none;
+}
+.show {
+   display: initial;
+}
+.absolute {
+   position: absolute;
+}
+.relative {
+   position: relative;
+   height: 100%;
+}
+.overflow-hidden {
+   overflow: hidden;
+}
+.text-center {
+   text-align: center;
+}
+.inline-block {
+   display: inline-block;
+}

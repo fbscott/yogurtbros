@@ -1,19 +1,222 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="assets/css/main.css">
+<!--#include virtual="/assets/inc/page-open.htm" -->
   <title>Yogurt Brothers</title>
 </head>
-<body>
-<div class="row">
-  <div class="column medium-3 large-6">
-    <h1>Yogurt Brothers</h1>
+<body><div id="container">
+
+  <!--#include virtual="/assets/inc/header.htm" -->
+
+  <!--------------------------------- features --------------------------------->
+  <section id="bg-paneling" class="padding-50-on-xsmall">
+    <div class="row">
+    <!-- left -->
+    <div class="columns medium-6 large-5 standard">
+      <div class="text-center">
+        <span class="standard-num"><!--#include virtual="/assets/inc/num-flavors.htm" --></span>
+        <span class="standard-label">flavors</span>
+        <span class="standard-num"><!--#include virtual="/assets/inc/num-toppings.htm" --></span>
+        <span class="standard-label">toppings</span>
+        <span class="standard-num"><!--#include virtual="/assets/inc/num-syrups.htm" --></span>
+        <span class="standard-label">syrups</span>
+      </div>
+      <img src="/assets/img/feature_01.jpg" alt="yogurt cup with toppings" class="margin-30-top-on-xsmall">
+    </div>
+    <!-- end left -->
+    <!-- right -->
+    <div class="columns medium-6 large-7 featured margin-40-top-on-xsmall margin-0-top-on-medium">
+      <div class="row">
+        <div class="column">
+          <h2 class="margin-30-bottom-on-xsmall text-center">Featured Flavors</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="double-border-carrot">
+            <!-- feature one -->
+            <div class="row feature">
+              <div class="columns small-3">
+                <div class="circle">
+                  <img src="/assets/img/hot_chocolate.jpg" alt="hot chocolate">
+                </div>
+              </div>
+              <div class="columns small-9 small-offset-3">
+                <p class="title">Hot Chocolate</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta ligula sed tempor egestas.</p>
+              </div>
+            </div>
+            <!-- end feature one -->
+            <!-- feature two -->
+            <div class="row feature">
+              <div class="columns small-3">
+                <div class="circle">
+                  <img src="/assets/img/mint.jpg" alt="mint">
+                </div>
+              </div>
+              <div class="columns small-9 small-offset-3">
+                <p class="title">Mint</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta ligula sed tempor egestas.</p>
+              </div>
+            </div>
+            <!-- end feature two -->
+            <!-- feature three -->
+            <div class="row feature">
+              <div class="columns small-3">
+                <div class="circle">
+                  <img src="/assets/img/pumpkin_spice.jpg" alt="pumpkin spice">
+                </div>
+              </div>
+              <div class="columns small-9 small-offset-3">
+                <p class="title">Pumpkin Spice</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta ligula sed tempor egestas.</p>
+              </div>
+            </div>
+            <!-- end feature three -->
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="columns large-6 margin-30-top-on-xsmall">
+          <a href="/ingredients/flavors.htm" class="button expand">view <span class="accent">all</span> flavors</a>
+        </div>
+        <div class="columns large-6 margin-30-top-on-xsmall">
+          <a href="/ingredients/toppings.htm" class="button expand">view <span class="accent">all</span> toppings</a>
+        </div>
+      </div>
+    </div>
+    <!-- end right -->
+    </div>
+  </section>
+  <!--------------------------------- end features ----------------------------->
+  <!--------------------------------- store hours ------------------------------>
+  <section id="bg-dining-room" class="padding-50-on-xsmall">
+    <div class="row">
+      <div class="column large-8 large-offset-2">
+        <h2 class="margin-30-bottom-on-xsmall text-center text-color-carrot">Store Hours</h2>
+        <div class="relative">
+          <table class="text-color-casper">
+            <tr>
+              <th>Mon - Thurs</th>
+              <td>11:00 AM - 9:00PM</td>
+            </tr>
+            <tr>
+              <th>Fri &amp; Sat</th>
+              <td>11:00 AM - 11:00PM</td>
+            </tr>
+            <tr>
+              <th>Sunday</th>
+              <td>11:00 AM - 6:00PM</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--------------------------------- end store hours -------------------------->
+  <!--------------------------------- toppings, visit, awards ------------------>
+  <section class="bg-color-charcoal">
+    <div class="row">
+      <div class="column">
+        <div class="grid-container-3 panels-home margin-50-on-xsmall">
+
+          <h2 class="text-center margin-30-on-xsmall margin-10-bottom-on-medium">Popular Toppings</h2>
+
+          <div>
+            <div class="hover-box">
+              <img src="/assets/img/Strawberry.jpg" alt="">
+              <div class="hover-box-call-out">
+                <p>Fresh Fruit</p>
+              </div>
+              <div class="hover-box-content">
+                <p>Did you know strawberries are<br />an excellent source of vitamin C?</p>
+                <a href="/ingredients/toppings.htm" class="button small expand">See More!</a>
+              </div>
+            </div>
+            
+            <div class="hover-box">
+              <img src="/assets/img/M&M.jpg" alt="">
+              <div class="hover-box-call-out right">
+                <p>Candy</p>
+              </div>
+              <div class="hover-box-content">
+                <p>Still a kid at heart?<br />Add some candy to your life!</p>
+                <a href="/ingredients/toppings.htm" class="button small expand">See More!</a>
+              </div>
+            </div>
+            
+            <div class="hover-box">
+              <img src="/assets/img/Mochi.jpg" alt="">
+              <div class="hover-box-call-out">
+                <p>And Other Toppings</p>
+              </div>
+              <div class="hover-box-content">
+                <p>Frozen Yogurt without Snowcaps is<br />like Colorado without mountains.</p>
+                <a href="/ingredients/toppings.htm" class="button small expand">See More!</a>
+              </div>
+            </div>
+
+            <!-- <div class="hover-box">
+              <img src="/assets/img/M&M.jpg" alt="">
+              <div class="hover-box-call-out right">
+                <p> and Candy </p>
+              </div>
+              <div class="hover-box-content">
+                <p>Still a kid at heart?<br />Add some candy to your life!</p>
+                <a href="/ingredients/toppings.htm" class="button small expand">See More!</a>
+              </div>
+            </div> -->
+          </div>
+
+          <h2 class="text-center margin-30-on-xsmall margin-10-bottom-on-medium">Visit Us</h2>
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.249630160088!2d-105.04914018461933!3d39.91342947942679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b8a6d0323920b%3A0x1449f03246683d8c!2s4680+W+120th+Ave%2C+Westminster%2C+CO+80020!5e0!3m2!1sen!2sus!4v1546282718354"
+                  width="100%"
+                  height="100%"
+                  frameborder="0"
+                  id="js-map"
+                  allowfullscreen>
+          </iframe>
+
+          <h2 class="text-center margin-30-on-xsmall margin-10-bottom-on-medium">Award Winning!</h2>
+
+          <div class="double-border-casper">
+            <h2 class="text-color-casper text-center margin-40-bottom-on-xsmall">We're Winners!</h2>
+            <div class="row">
+              <img class="column xsmall-4" src="/assets/img/award_a_list.jpg" alt="A-List Award">
+              <img class="column xsmall-4" src="/assets/img/award_fam_fav.png" alt="Family Favorite Award">
+              <img class="column xsmall-4" src="/assets/img/award_talk_town.jpg" alt="Talk of the Town Award">
+            </div>
+            <p class="text-color-casper margin-0-top-on-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sollicitudin sodales nulla, a semper eros eleifend tincidunt.</p>
+            <p class="text-color-casper">Ut eget turpis ultricies, malesuada ligula non, eleifend metus. Proin tristique erat a leo porttitor, ac porta leo tempus.</p>
+            <a href="javascript:void(0);" onclick="alert('This feature coming soon!');" class="button secondary expand margin-30-top-on-xsmall">Learn More</a>
+          </div>
+
+        </div><!-- end grid-container-3 -->
+      </div><!-- end column -->
+    </div><!-- end row -->
+  </section>
+  <!--------------------------------- end toppings, visit, awards -------------->
+  <!--------------------------------- notifications ---------------------------->
+  <div class="relative">
+    <section id="bg-cup-1">
+      <div class="overlay-casper"></div>
+      <div class="row padding-50-on-xsmall">
+        <div class="columns medium-8 large-9">
+          <h2>Sign-up for News, Offers, and Special Events</h2>
+          <p>Text <strong>YOBRO</strong> to <strong>33222</strong> from your mobile device and signup to receive notifications direct to your phone.</p>
+          <p class="margin-0-bottom-on-small"><strong>Fine Print:</strong></p>
+          <p>We promise not to spam you, and when you signup receive <strong>5oz FREE</strong> on your next visit to Yogurt Brothers.</p>
+        </div>
+      </div>
+    </section>
+    <div class="hide-on-medium-down">
+      <!--#include virtual="/assets/inc/sms.htm" -->
+    </div>
   </div>
-  <div class="column medium-9 large-6">
-    <h1>Yogurt Brothers</h1>
-  </div>
-</div>
-</body>
+  <!--------------------------------- end notifications ------------------------>
+
+  <!--#include virtual="/assets/inc/footer.htm" -->
+  <!--#include virtual="/assets/inc/source-scripts.htm" -->
+
+  <!-- page-specific scripts -->
+  <!-- end page-specific scripts -->
+</div><!-- end #container --></body>
 </html>

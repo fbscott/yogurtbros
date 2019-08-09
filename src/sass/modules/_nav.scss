@@ -1,0 +1,127 @@
+/*****************************************************************************
+ * navigation
+ ****************************************************************************/
+nav#main-nav {
+   color: $color-secondary-font;
+   margin-bottom: remCalc(20);
+   text-transform: uppercase;
+   font-family: OswaldRegular;
+   font-size: 5.5vw;
+   text-align: center;
+   z-index: 10;
+   a {
+      color: $color-secondary-font;
+      text-decoration: none;
+      padding: remCalc(8);
+      // margin: 0 remCalc(5);
+      // &:first-of-type {
+      //    margin-left: 0px;
+      // }
+      // &:last-of-type {
+      //    margin-right: 0px;
+      // }
+      // &:not(:first-of-type),
+      // &:not(:last-of-type) {
+      //    margin: 0 remCalc(8);
+      // }
+      &:not(:last-of-type) {
+         &:after {
+            content: "|";
+            position: absolute;
+            white-space: pre;
+            margin: 0 remCalc(8);
+         }
+      }
+      &:hover {
+         color: #000000;
+      }
+   }
+   .dropdown {
+      display: inline-block;
+      // overflow: hidden;
+      position: relative;
+      // &:after {
+      //    content: "|";
+      //    position: absolute;
+      //    white-space: pre;
+      //    margin: 0 remCalc(8);
+      // }
+      &:hover {
+         .dropdown-content {
+            display: block;
+         }
+      }
+      & > a {
+         &:after {
+            content: "|";
+            position: absolute;
+            white-space: pre;
+            margin: 0 remCalc(8);
+         }
+         &:hover {
+            color: #000000;
+         }
+      }
+      a {
+         border: none;
+         outline: none;
+         color: white;
+         // padding: 14px 16px;
+         background-color: inherit;
+         font-family: inherit;
+         // margin: 0;
+      }
+      .dropdown-content {
+         display: none;
+         position: absolute;
+         background-color: #f9f9f9;
+         min-width: remCalc(100);
+         box-shadow: 0px remCalc(8) 1remCalc(6) 0px rgba(0,0,0,0.2);
+         z-index: 1;
+         a {
+            float: none;
+            color: black;
+            // padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            &:hover {
+               background-color: #ddd;
+            }
+            &:after {
+               content: initial;
+            }
+         }
+      }
+   }
+}
+
+@media only screen and (min-width: $small-breakpoint) {
+   nav#main-nav {
+      font-size: remCalc(23);
+   }
+}
+
+@media only screen and (min-width: $medium-breakpoint) {
+   nav#main-nav {
+      font-size: 2vw;
+      float: right;
+      margin: initial;
+      text-align: initial;
+      // a {
+      //    margin: 0 remCalc(7);
+      // }
+   }
+}
+
+@media only screen and (min-width: $large-breakpoint) {
+   nav#main-nav {
+      font-size: 1.75vw;
+   }
+}
+
+@media only screen and (min-width: $xlarge-breakpoint) {
+   nav#main-nav {
+      font-size: remCalc(24);
+   }
+}

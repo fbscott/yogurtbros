@@ -1,67 +1,71 @@
 /*****************************************************************************
- * Base
+ * base
  ****************************************************************************/
+%base-content {
+   color: $color-primary-font;
+}
 
 html {
+   height: 100%; // to keep footer at bottom of page
+   background-color: $smoke;
 	body {
-		// font-family: $font-family-sans-serif;
-		// font-weight: $body-font-weight;
-		// font-size: $rem-base;
-		// color: $text-color;
-		// background-color: $background-color-primary;
+		font-family: $font-stack;
+      height: 100%; // to keep footer at bottom of page
 		overflow-y: scroll;
+      #container {
+         min-height: 100%; // to keep footer at bottom of page
+         position: relative; // to keep footer at bottom of page
+      }
 	}
 }
 
-h1 {
-	font-size: $h1-font-size;
-	line-height: $h1-line-height;
-	font-weight: bold;
-	padding-top: $h1-padding-top;
-	padding-bottom: $h1-padding-bottom;
+h1, h2 {
+   color: $carrot;
+   font-family: Lobster;
+   font-size: 40px;
 }
-// h2 {
-// 	font-size: $h2-font-size;
-// 	line-height: $h2-line-height;
-// 	font-weight: bold;
-// 	padding-bottom: $h2-padding-bottom;
-// }
-// h3 {
-// 	font-size: $h3-font-size;
-// 	line-height: $h3-line-height;
-// 	font-weight: bold;
-// 	// padding-top: $h3-padding-top;
-// }
-// h4 {
-// 	font-size: $h4-font-size;
-// 	line-height: $h4-line-height;
-// 	font-weight: bold;
-// }
-// h5 {
-// 	font-size: $h5-font-size;
-// 	line-height: $h5-line-height;
-// 	font-weight: bold;
-// }
-// h6 {
-// 	font-size: $h6-font-size;
-// 	line-height: $h6-line-height;
-// 	font-weight: bold;
-// }
-// a {
-// 	font-size: $a-font-size;
-// 	line-height: $a-line-height;
-// 	text-decoration: none;
-// 	color: $text-color;
-// }
-// p {
-// 	font-size: $p-font-size;
-// 	line-height: $p-line-height;
-// 	padding-bottom: $p-padding-bottom;
-// }
-// li {
-// 	font-size: $li-font-size;
-// 	line-height: $li-line-height;
-// }
-// a, p, li {
-// 	line-height: $default-line-height;
-// }
+
+h3 {
+   font-family: OswaldHeavy;
+   font-size: 24px;
+}
+
+h4 {
+   font-family: OswaldMedium;
+   font-size: 18px;
+}
+
+p {
+   @extend %base-content;
+   margin-bottom: remCalc(30);
+   line-height: 1.5;
+   &:first-of-type {
+      margin-top: remCalc(30);
+   }
+}
+
+a {
+   @extend %base-content;
+}
+
+strong {
+   font-weight: 900;
+}
+
+table {
+   width: 100%;
+   background-color: rgba(255, 255, 255, 0.5);
+}
+
+table, th, td {
+   color: $color-primary-font;
+   border: 1px solid $color-primary-font;
+   font-weight: bold;
+   border-collapse: collapse;
+   margin: 0 auto;
+}
+
+th, td {
+   padding: remCalc(20);
+   text-align: center;
+}

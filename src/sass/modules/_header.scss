@@ -1,0 +1,157 @@
+/*****************************************************************************
+ * header
+ ****************************************************************************/
+// module-specific settings
+$header-color-primary: rgba(147,175,42,0.75); // green
+$header-color-border: $casper;
+
+header {
+   position: relative;
+   &::after {
+      content: "";
+      background-image: url('/assets/img/DSC_2902CR.jpg');
+      background-size: cover;
+      background-position-y: 55%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1; 
+      @include opacity(0.5);
+   }
+   img {
+      max-width: remCalc(160);
+      display: block;
+      margin: 0 auto;
+   }
+   .strapline {
+      p {
+         color: $color-secondary-font;
+         font-family: Lobster;
+         font-size: 7.5vw;
+      }
+   }
+   .header-content {
+      background-color: $header-color-primary;
+   }
+}
+
+@media only screen and (min-width: $small-breakpoint) {
+   header {
+      .strapline {
+         p {
+            font-size: remCalc(32);
+         }
+      }
+   }
+}
+
+@media only screen and (min-width: $medium-breakpoint) {
+   header {
+      padding-top: remCalc(88);
+      img {
+         max-width: 100%;
+      }
+      // nav {
+      //    float: right;
+      //    margin: initial;
+      //    text-align: initial;
+      //    a {
+      //       margin: 0 remCalc(7);
+      //    }
+      // }
+      .header-content {
+         border-top: remCalc(8) solid $header-color-border;
+         border-bottom: remCalc(8) solid $header-color-border;
+      }
+      .logo {
+         z-index: 1;
+         @include align-vertical($position: absolute, $valueA: "", $valueB: -35%);
+      }
+      .strapline {
+         height: 80px;
+         div {
+            height: 100%;
+         }
+         p {
+            font-size: 3vw;
+            margin: initial;
+         }
+      }
+   }
+}
+
+@media only screen and (min-width: $large-breakpoint) {
+   header {
+      .strapline {
+         p {
+            font-size: remCalc(34);
+         }
+      }
+   }
+}
+
+@media only screen and (min-width: $xlarge-breakpoint) {
+   header {
+      .strapline {
+         p {
+            font-size: remCalc(40);
+         }
+      }
+   }
+}
+
+/*
+.move-strapline-in {
+   top: 50% !important;
+   @include opacity(1);
+   animation-name: in;
+   animation-duration: .5s;
+}
+
+.move-strapline-out {
+   top: 50% !important;
+   @include opacity(0);
+   animation-name: out;
+   animation-duration: .5s;
+}
+
+@keyframes in {
+   0%   {
+      top: 150%;
+      @include opacity(0);
+   }
+   25%  {
+      top: 100%;
+      @include opacity(.5);
+   }
+   50%  {
+      top: 65%;
+      @include opacity(.9);
+   }
+   100% {
+      top: 50%;
+      @include opacity(1);
+   }
+}
+
+@keyframes out {
+   0%   {
+      top: 50%;
+      @include opacity(1);
+   }
+   25%  {
+      top: 45%;
+      @include opacity(.9);
+   }
+   50%  {
+      top: 0%;
+      @include opacity(.5);
+   }
+   100% {
+      top: -50%;
+      @include opacity(0);
+   }
+}
+*/

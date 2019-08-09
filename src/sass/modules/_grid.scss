@@ -1,63 +1,90 @@
 /*****************************************************************************
- * Grid
+ * grid
  ****************************************************************************/
-// breakpoints
-$breakpoints: (
-  small:  $small-breakpoint,
-  medium: $medium-breakpoint,
-  large:  $large-breakpoint
-);
-
 // number of columns
 $columns: 12;
 
-// media query mixin
-@mixin break($size) {  
-  @media (min-width: map-get($breakpoints, $size)) {
-    @content;
-  }
-}
-
 .row {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: $max-screen-width;
+   position: relative;
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 0;
+   margin-bottom: 0;
+   max-width: $max-screen-width;
   .row {
-    width: auto;
-    margin-left: -$column-gutter;
-    margin-right: -$column-gutter;
-    margin-top: 0;
-    margin-bottom: 0;
-    max-width: none
-  }
-  &:before, &:after {
-    content: " ";
-    display: table
-  }
-  &:after {
-    clear: both
-  }
+      width: auto;
+      margin-left: -$column-gutter;
+      margin-right: -$column-gutter;
+      margin-top: 0;
+      margin-bottom: 0;
+      max-width: none
+   }
+   &:before, &:after {
+      content: " ";
+      display: table
+   }
+   &:after {
+      clear: both
+   }
 }
 
 .column, .columns {
-  padding-left: $column-gutter;
-  padding-right: $column-gutter;
-  width: 100%;
-  float: left
+   padding-left: $column-gutter;
+   padding-right: $column-gutter;
+   width: 100%;
+   float: left
+}
+
+[class*="column"]+[class*="column"]:last-child {
+    float: right
+}
+
+[class*="column"]+[class*="column"].end {
+    float: left
+}
+
+@for $i from 1 through $columns {
+   .grid-start-#{$i} {
+      grid-column-start: #{$i};
+   }
+   .grid-end-#{$i} {
+      grid-column-end: #{$i};
+   }
 }
 
 // loop over breakpoints
 @each $key, $value in $breakpoints {
-  // create media queries
-  @include break($key) {
-    // nest column widths
-    @for $i from 1 through $columns {
-      .#{$key}-#{$i} {
-        width: #{$i / $columns * 100%};
+   // create media queries
+   @include break($key) {
+      // nest column widths
+      @for $i from 1 through $columns {
+         .#{$key}-#{$i} {
+            width: #{$i / $columns * 100%};
+         }
+         .#{$key}-offset-#{$i} {
+            margin-left: #{$i / $columns * 100%};
+         }
       }
-    }
-  }
+      @if $key == 'medium' {
+         @for $i from 2 through 4 {
+            .grid-container-#{$i} {
+               display: grid;
+               grid-template-columns: repeat(2, 1fr);
+               grid-gap: 30px;
+               margin: 0 auto;
+            }
+         }
+      } @else if $key == 'large' {
+         @for $i from 2 through 4 {
+            .grid-container-#{$i} {
+               grid-template-columns: repeat(#{$i}, 1fr);
+            }
+         }
+      }
+   }
+}
+
+.flex {
+   display: flex;
 }

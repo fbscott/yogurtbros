@@ -1,26 +1,44 @@
 @charset "UTF-8";
 
+//*************************** Functions **************************************
+@import "./functions";
+
 //*************************** Variables and Mixins ***************************
 @import "./settings";
-@import "mixins";
+@import "./mixins";
 
 //*************************** Base *******************************************
 @import "./base/reset";
 @import "./base/base";
 
 //*************************** Fonts ******************************************
-// @import "./base/font-family_sc";
-// @import "./base/font-icons_sc";
+@import "./fonts/font-family";
+@import "./fonts/font-icons";
+@import "./fonts/font-sizes";
 
 //*************************** Modules ****************************************
 @import "./modules/grid";
-// @import "./modules/panels_sc";
-// @import "./modules/homePanels_sc";
-// @import "./modules/margin_sc";
+@import "./modules/header";
+@import "./modules/nav";
+@import "./modules/footer";
+@import "./modules/images";
+@import "./modules/backgrounds";
+@import "./modules/button";
+@import "./modules/spacing";
+@import "./modules/alignments";
+@import "./modules/hours";
+@import "./modules/panels-home";
+@import "./modules/panels-toppings";
+@import "./modules/hover-box";
+@import "./modules/features";
+@import "./modules/toppings";
+@import "./modules/notifications";
+@import "./modules/embellishments";
+@import "./modules/text";
 
 //*************************** States *****************************************
-// @import "./states/overrides_sc";
-// @import "states/ie";
-// @import "states/print";
+@import "./states/overrides";
+// @import "./states/ie";
+// @import "./states/print";
 
 //*************************** Themes *****************************************

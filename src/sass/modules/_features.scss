@@ -1,0 +1,94 @@
+/*****************************************************************************
+ * features
+ ****************************************************************************/
+// module-specific settings
+$feature-color-border: $casper;
+$feature-color-font-primary: $color-cta-font;
+$feature-color-font-secondary: $color-accent-font;
+
+.standard {
+   img {
+      border: remCalc(8) solid $feature-color-border;
+      box-shadow: 0px remCalc(2) remCalc(3) 0px rgba(0,0,0,0.5);
+   }
+   span {
+      display: inline-block;
+   }
+   .standard-num {
+      color: $feature-color-font-primary;
+      font-family: OswaldBold;
+      font-size: 7vw;
+      margin: 0 remCalc(5);
+      &:first-of-type {
+         margin-left: 0px;
+      }
+   }
+   .standard-label {
+      color: $feature-color-font-secondary;
+      text-transform: uppercase;
+      font-family: OswaldRegular;
+      font-size: 5.5vw;
+   }
+}
+
+.featured {
+   p {
+      font-size: remCalc(14);
+      line-height: initial;
+      &.title {
+         // margin-top: initial;
+         margin-bottom: remCalc(12);
+         text-transform: uppercase;
+         font-size: remCalc(18);
+         font-family: OswaldHeavy;
+      }
+   }
+   .feature {
+      &:not(:first-of-type) {
+         margin-top: remCalc(50);
+      }
+   }
+}
+
+@media only screen and (min-width: $small-breakpoint) {
+   .standard {
+      .standard-num {
+         margin: 0 remCalc(10);
+         font-size: remCalc(30);
+      }
+      .standard-label {
+         font-size: remCalc(24);
+      }
+   }
+   .featured {
+      p {
+         &.title {
+            margin-top: initial;
+         }
+      }
+   }
+}
+
+@media only screen and (min-width: $medium-breakpoint) {
+   .standard {
+      .standard-num {
+         margin: 0 remCalc(10);
+         font-size: 3.25vw;
+      }
+      .standard-label {
+         font-size: 2.25vw;
+      }
+   }
+}
+
+@media only screen and (min-width: $xlarge-breakpoint) {
+   .standard {
+      .standard-num {
+         margin: 0 remCalc(10);
+         font-size: remCalc(39);
+      }
+      .standard-label {
+         font-size: remCalc(27);
+      }
+   }
+}

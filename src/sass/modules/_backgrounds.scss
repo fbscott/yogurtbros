@@ -1,0 +1,85 @@
+/*****************************************************************************
+ * backgrounds
+ ****************************************************************************/
+%bg-properties {
+   position: relative;
+   overflow: hidden;
+   &::after {
+      content: "";
+      background-size: cover;
+      position: absolute;
+      z-index: -1;
+      // negative position next four properties to accommodate for filter: blur;
+      // gives nice, crisp line for each section.
+      top: remCalc(-5);
+      left: remCalc(-5);
+      bottom: remCalc(-5);
+      right: remCalc(-5);
+   }
+}
+
+#bg-paneling {
+   @extend %bg-properties;
+   &::after {
+      background-image: url('/assets/img/wood_paneling.jpg');
+      background-position-y: 65%;
+      -webkit-filter: blur(remCalc(2));
+              filter: blur(remCalc(2));
+      @include opacity(0.25);
+   }
+}
+
+#bg-fruit {
+   @extend %bg-properties;
+   &::after {
+      background-image: url('/assets/img/fruit.jpg');
+      background-position-y: 65%;
+      -webkit-filter: blur(remCalc(2));
+              filter: blur(remCalc(2));
+      @include opacity(0.15);
+   }
+}
+
+#bg-dining-room {
+   @extend %bg-properties;
+   &::after {
+      background-image: url('/assets/img/DSC_2905CR.jpg');
+      background-position-y: 65%;
+      -webkit-filter: blur(remCalc(3)) grayscale(100%) brightness(0.75);
+              filter: blur(remCalc(3)) grayscale(100%) brightness(0.75);
+      @include opacity(0.5);
+   }
+}
+
+#bg-cup-1 {
+   @extend %bg-properties;
+   &::after {
+      background-image: url('/assets/img/DSC_2057CR.jpg');
+      background-position-y: 65%;
+      -webkit-filter: blur(remCalc(6)) grayscale(85%) brightness(1.5);
+              filter: blur(remCalc(6)) grayscale(85%) brightness(1.5);
+      @include opacity(0.5);
+   }
+}
+
+$bg-colors: (
+   vader:      $vader,
+   charcoal:   $charcoal,
+   kiwi:       $kiwi,
+   ash:        $ash,
+   smoke:      $smoke,
+   carrot:     $carrot,
+   casper:     $casper
+);
+
+@each $key, $value in $bg-colors {
+   .bg-color-#{$key} {background-color: #{$value};}
+   .text-color-#{$key} {color: #{$value};}
+   .overlay-#{$key} {
+      background-color: rgba($value, 0.3);
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+   }
+}

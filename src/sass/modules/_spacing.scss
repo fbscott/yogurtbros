@@ -1,0 +1,48 @@
+/*****************************************************************************
+ * spacing
+ ****************************************************************************/
+// mod-specific vars
+$margin-and-padding-start:       1;
+$margin-and-padding-end:         5;
+$margin-and-padding-multiplier:  10;
+
+// mixins
+@mixin spacing-classes($size, $property) {
+   @for $i from $margin-and-padding-start through $margin-and-padding-end {
+      // e.g., margin-10-on-xsmall {margin-top: 0.625rem; margin-bottom: 0.625rem;}
+      .#{$property}-#{$i * $margin-and-padding-multiplier}-on-#{$size} {
+         #{$property}-top: (remCalc($i * $margin-and-padding-multiplier)) !important;
+         #{$property}-bottom: (remCalc($i * $margin-and-padding-multiplier)) !important;
+      }
+      @each $side in $sides-all {
+         // e.g., margin-10-top-on-xsmall {margin: 0.625rem;}
+         .#{$property}-#{$i * $margin-and-padding-multiplier}-#{$side}-on-#{$size} {
+            #{$property}-#{$side}: (remCalc($i * $margin-and-padding-multiplier)) !important;
+         }
+         // e.g., margin-neg-10-top-on-xsmall {margin: -0.625rem;}
+         .#{$property}-neg#{$i * -$margin-and-padding-multiplier}-#{$side}-on-#{$size} {
+            #{$property}-#{$side}: (remCalc($i * -$margin-and-padding-multiplier)) !important;
+         }
+      }
+   }
+}
+
+@mixin no-spacing-classes($size, $property) {
+   @each $side in $sides-all {
+      // e.g., margin-0-top-on-xsmall {margin: 0;}
+      .#{$property}-0-#{$side}-on-#{$size} {
+         #{$property}-#{$side}: 0 !important;
+      }
+   }
+}
+
+// loop over breakpoints
+@each $key, $value in $breakpoints {
+   // create media queries
+   @include break($key) {
+      @each $property in $properties {
+         @include no-spacing-classes (#{$key}, $property);
+         @include spacing-classes(#{$key}, $property);
+      }
+   }
+}
