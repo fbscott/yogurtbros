@@ -3,10 +3,10 @@
  ****************************************************************************/
 nav#main-nav {
    color: $color-secondary-font;
-   // margin: 20px 0;
+   margin-bottom: remCalc(20);
    text-transform: uppercase;
    font-family: OswaldRegular;
-   font-size: 18px;
+   font-size: 5.5vw;
    text-align: center;
    z-index: 10;
    a {
@@ -95,13 +95,33 @@ nav#main-nav {
       }
    }
 }
+
+@media only screen and (min-width: $small-breakpoint) {
+   nav#main-nav {
+      font-size: remCalc(23);
+   }
+}
+
 @media only screen and (min-width: $medium-breakpoint) {
-   nav {
-   float: right;
-   margin: initial;
-   text-align: initial;
+   nav#main-nav {
+      font-size: 2vw;
+      float: right;
+      margin: initial;
+      text-align: initial;
       // a {
       //    margin: 0 remCalc(7);
       // }
+   }
+}
+
+@media only screen and (min-width: $large-breakpoint) {
+   nav#main-nav {
+      font-size: 1.75vw;
+   }
+}
+
+@media only screen and (min-width: $xlarge-breakpoint) {
+   nav#main-nav {
+      font-size: remCalc(24);
    }
 }

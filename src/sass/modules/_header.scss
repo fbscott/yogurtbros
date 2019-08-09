@@ -25,37 +25,27 @@ header {
       display: block;
       margin: 0 auto;
    }
-   // nav {
-   //    color: $color-secondary-font;
-   //    margin: 20px 0;
-   //    text-transform: uppercase;
-   //    font-family: OswaldRegular;
-   //    font-size: 18px;
-   //    text-align: center;
-   //    a {
-   //       color: $color-secondary-font;
-   //       text-decoration: none;
-   //       margin: 0 remCalc(5);
-   //       &:first-of-type {
-   //          margin-left: 0px;
-   //       }
-   //       &:last-of-type {
-   //          margin-right: 0px;
-   //       }
-   //    }
-   // }
+   .strapline {
+      p {
+         color: $color-secondary-font;
+         font-family: Lobster;
+         font-size: 7.5vw;
+      }
+   }
    .header-content {
       background-color: $header-color-primary;
    }
 }
 
-// @media only screen and (min-width: remCalc(525)) {
-//    header {
-//       img {
-//          max-width: remCalc(160);
-//       }
-//    }
-// }
+@media only screen and (min-width: $small-breakpoint) {
+   header {
+      .strapline {
+         p {
+            font-size: remCalc(32);
+         }
+      }
+   }
+}
 
 @media only screen and (min-width: $medium-breakpoint) {
    header {
@@ -85,10 +75,28 @@ header {
             height: 100%;
          }
          p {
-            color: $color-secondary-font;
-            font-family: Lobster;
-            font-size: remCalc(40);
+            font-size: 3vw;
             margin: initial;
+         }
+      }
+   }
+}
+
+@media only screen and (min-width: $large-breakpoint) {
+   header {
+      .strapline {
+         p {
+            font-size: remCalc(34);
+         }
+      }
+   }
+}
+
+@media only screen and (min-width: $xlarge-breakpoint) {
+   header {
+      .strapline {
+         p {
+            font-size: remCalc(40);
          }
       }
    }

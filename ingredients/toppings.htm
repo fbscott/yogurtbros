@@ -23,7 +23,7 @@
       <div class="column margin-40-top-on-xsmall">
         <div class="row">
           <div class="columns medium-4 large-3">
-            <h3 class="margin-50-right-on-xsmall margin-10-top-on-xsmall">Select Toppings</h3>
+            <h3 class="margin-50-right-on-xsmall margin-10-top-on-xsmall margin-30-bottom-on-xsmall">Select Toppings</h3>
           </div>
           <div class="columns medium-6 large-5 end">
             <ul class="toppings-toggle">
@@ -71,6 +71,7 @@
     };
 
     TOPPINGS.toggles.fruit.addEventListener('click', function() {
+      console.log('clicked fruit');
       TOPPINGS.contents.fruit.classList.remove('hide');
       TOPPINGS.contents.candy.classList.add('hide');
       TOPPINGS.contents.other.classList.add('hide');
@@ -80,6 +81,7 @@
     });
 
     TOPPINGS.toggles.candy.addEventListener('click', function() {
+      console.log('clicked candy');
       TOPPINGS.contents.fruit.classList.add('hide');
       TOPPINGS.contents.candy.classList.remove('hide');
       TOPPINGS.contents.other.classList.add('hide');
@@ -89,6 +91,7 @@
     });
 
     TOPPINGS.toggles.other.addEventListener('click', function() {
+      console.log('clicked other');
       TOPPINGS.contents.fruit.classList.add('hide');
       TOPPINGS.contents.candy.classList.add('hide');
       TOPPINGS.contents.other.classList.remove('hide');
