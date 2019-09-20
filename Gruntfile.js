@@ -64,7 +64,8 @@ module.exports = function(grunt) {
          target: {
             files: {
                'assets/css/main.min.css': ['assets/css/main.css'],
-               'assets/css/yb.min.css': ['src/css/yb.css']
+               'assets/css/wufoo.min.css': ['assets/css/wufoo.css']
+               // 'assets/css/yb.min.css': ['src/css/yb.css']
             }
          }
       },
@@ -101,7 +102,8 @@ module.exports = function(grunt) {
       sass: {
          dist: {
             files: {
-               'assets/css/main.css': ['src/sass/main.scss']
+               'assets/css/main.css': ['src/sass/main.scss'],
+               'assets/css/wufoo.css': ['src/sass/wufoo.scss']
             }
          }
       }﻿,
