@@ -2,6 +2,7 @@
  * panels-toppings
  ****************************************************************************/
 $color-panel-bg: $color-primary-background;
+$color-panel-border: darken($smoke, 10%);
 
 // loop over breakpoints
 @each $key, $value in $breakpoints {
@@ -11,6 +12,7 @@ $color-panel-bg: $color-primary-background;
          .panels-toppings {
             & > div {
                background-color: $color-panel-bg;
+               border: 1px solid $color-panel-border;
             }
             div.topping-content {
                padding: remCalc(15);
@@ -19,12 +21,12 @@ $color-panel-bg: $color-primary-background;
       } @else if $key == 'small' {
          .panels-toppings {
             display: grid;
-            grid-template-columns: auto auto;
+            grid-template-columns: repeat(2, 1fr);
             grid-gap: remCalc(30);
          }
       } @else if $key == 'medium' {
          .panels-toppings {
-            grid-template-columns: auto auto auto;
+            grid-template-columns: repeat(3, 1fr);
          }
          .panels-toppings > *:nth-child(3n-1) {
                position: relative;
@@ -46,7 +48,7 @@ $color-panel-bg: $color-primary-background;
          }
       } @else if $key == 'large' {
          .panels-toppings {
-            grid-template-columns: auto auto auto auto;
+            grid-template-columns: repeat(4, 1fr);
          }
          .panels-toppings > *:nth-child(3n-1) {
                position: initial;
