@@ -1,18 +1,6 @@
 //*************************** emCalc *****************************************
 $browser-context: 16; // Default
 
-// px to em calc
-@function emCalc($pixels, $context: $browser-context) {
-  @return #{$pixels / $context}em;
-}
-
-// px to rem calc
-@function remCalc($pixels, $context: $browser-context) {
-  @return #{$pixels / $context}rem;
-}
-
-$column-gutter: remCalc(15) !default;
-
 //*************************** Breakpoints ************************************
 // values
 $xsmall: 320;
@@ -195,9 +183,10 @@ $icon-pinterest2:    "\ead2";
 //*************************** Margin and Padding *****************************
 $h1-padding-top:        remCalc(10);
 $h1-padding-bottom:     remCalc(10);
+$column-gutter:         remCalc(15) !default;
 
 //*************************** Modules ****************************************
-// Note: module settings should go at the top of each individual module partials.
+// Note: module settings should go at the top of each individual module partial.
 
 //*************************** Properties *************************************
 $properties: margin, padding;

@@ -24,12 +24,30 @@
 .show {
    display: initial;
 }
+.relative {
+   position: relative;
+}
 .absolute {
    position: absolute;
 }
-.relative {
-   position: relative;
-   height: 100%;
+// loop over breakpoints
+@each $key, $value in $breakpoints {
+   // create media queries
+   @include break($key) {
+      @if $key == 'small' {
+         .absolute-#{$key}-up { position: absolute; }
+         .relative-#{$key}-up { position: relative; }
+      } @else if $key == 'medium' {
+         .absolute-#{$key}-up { position: absolute; }
+         .relative-#{$key}-up { position: relative; }
+      } @else if $key == 'large' {
+         .absolute-#{$key}-up { position: absolute; }
+         .relative-#{$key}-up { position: relative; }
+      }
+   }
+}
+.height-full {
+   min-height: 100%;
 }
 .overflow-hidden {
    overflow: hidden;

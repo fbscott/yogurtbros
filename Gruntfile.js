@@ -194,6 +194,7 @@ module.exports = function(grunt) {
    grunt.registerTask('clean-css', ['clean:css']);
    grunt.registerTask('clean-img', ['clean:img']);
    grunt.registerTask('clean-js', ['clean:js']);
+   grunt.registerTask('dev', ['watch']);
    // grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'babel', 'browserify', 'uglify']);
    // grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'babel', 'uglify']);
    grunt.registerTask('default', ['clean', 'babel', 'uglify', 'sass', 'cssmin', 'image', 'zip']);

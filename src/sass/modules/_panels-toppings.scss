@@ -13,6 +13,7 @@ $color-panel-border: darken($smoke, 10%);
             & > div {
                background-color: $color-panel-bg;
                border: 1px solid $color-panel-border;
+               box-shadow: 0px remCalc(2) remCalc(3) 0px rgba(0,0,0,0.125);
             }
             div.topping-content {
                padding: remCalc(15);

@@ -1,3 +1,14 @@
+// We use these functions to convert px to r/em.
+// px to em calc
+@function emCalc($pixels, $context: $browser-context) {
+  @return #{$pixels / $context}em;
+}
+
+// px to rem calc
+@function remCalc($pixels, $context: $browser-context) {
+  @return #{$pixels / $context}rem;
+}
+
 // We use these functions to get the ranges for the media queries variables.
 @function lower-bound($range){
    @if length($range) <= 0 {
