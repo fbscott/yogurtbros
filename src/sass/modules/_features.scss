@@ -15,7 +15,7 @@ $feature-color-font-secondary: $color-accent-font;
       display: inline-block;
    }
    .standard-num {
-      color: $feature-color-font-primary;
+      color: $feature-color-font-secondary;
       font-family: OswaldBold;
       font-size: 7vw;
       margin: 0 remCalc(5);
@@ -24,7 +24,7 @@ $feature-color-font-secondary: $color-accent-font;
       }
    }
    .standard-label {
-      color: $feature-color-font-secondary;
+      color: $feature-color-font-primary;
       text-transform: uppercase;
       font-family: OswaldRegular;
       font-size: 5.5vw;
@@ -41,6 +41,7 @@ $feature-color-font-secondary: $color-accent-font;
          text-transform: uppercase;
          font-size: remCalc(18);
          font-family: OswaldHeavy;
+         color: $color-primary;
       }
    }
    .feature {

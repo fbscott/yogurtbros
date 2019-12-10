@@ -62,19 +62,8 @@
    }
 }
 
-$bg-colors: (
-   vader:      $vader,
-   charcoal:   $charcoal,
-   kiwi:       $kiwi,
-   ash:        $ash,
-   smoke:      $smoke,
-   carrot:     $carrot,
-   casper:     $casper
-);
-
-@each $key, $value in $bg-colors {
+@each $key, $value in $colors {
    .bg-color-#{$key} {background-color: #{$value};}
-   .text-color-#{$key} {color: #{$value};}
    .overlay-#{$key} {
       background-color: rgba($value, 0.3);
       position: absolute;

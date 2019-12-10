@@ -36,19 +36,26 @@
       bottom: remCalc(2);
       border: 1px solid $color;
    }
-   p:last-of-type {
-      margin-bottom: 0;
-   }
+   p:last-of-type { margin-bottom: 0; }
 }
 
-.double-border-carrot {
-   @include double-border($carrot);
+// .double-border-carrot { @include double-border($carrot); }
+@each $key, $value in $colors {
+   .double-border-#{$key} { @include double-border($value); }
 }
 
-.double-border-casper {
-   @include double-border($casper);
+@each $key, $value in $color-hierarchy {
+   .double-border-#{$key} { @include double-border($value); }
 }
 
+.text-shadow-light { text-shadow: 0px 0px remCalc(28) rgba(255, 255, 255, 1); }
+.text-shadow-dark { text-shadow: 0px 0px remCalc(28) rgba(0, 0, 0, 1); }
+
+/**
+ * Can un-comment this declaration when media-query-specific
+ * classes have been defined.
+ * E.g.: .circle-on-medium-up etc.;
+ */
 // .circle {
 //    width: 100px;
 //    height: 100px;

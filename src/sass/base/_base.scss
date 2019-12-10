@@ -20,11 +20,9 @@ html {
 }
 
 h1, h2 {
-   color: $carrot;
+   color: $color-secondary;
    font-family: Lobster;
    font-size: 40px;
-   &.text-shadow-light { text-shadow: 0px 0px remCalc(25) rgba(255, 255, 255, 1); }
-   &.text-shadow-dark { text-shadow: 0px 0px remCalc(25) rgba(0, 0, 0, 1); }
 }
 
 h3 {

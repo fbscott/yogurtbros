@@ -25,8 +25,8 @@
           <div class="columns medium-6 end">
             <ul class="toggle">
               <li><button id="js-toppings-fruit-toggle" class="small">Fresh Fruit</button></li>
-              <li><button id="js-toppings-candy-toggle" class="secondary small">Candy</button></li>
-              <li><button id="js-toppings-other-toggle" class="secondary small">Other Toppings</button></li>
+              <li><button id="js-toppings-candy-toggle" class="tertiary small">Candy</button></li>
+              <li><button id="js-toppings-other-toggle" class="tertiary small">Other Toppings</button></li>
             </ul>
           </div>
         </div>
@@ -68,33 +68,30 @@
     };
 
     TOPPINGS.toggles.fruit.addEventListener('click', function() {
-      console.log('clicked fruit');
       TOPPINGS.contents.fruit.classList.remove('hide');
       TOPPINGS.contents.candy.classList.add('hide');
       TOPPINGS.contents.other.classList.add('hide');
-      TOPPINGS.toggles.fruit.classList.remove('secondary');
-      TOPPINGS.toggles.candy.classList.add('secondary');
-      TOPPINGS.toggles.other.classList.add('secondary');
+      TOPPINGS.toggles.fruit.classList.remove('tertiary');
+      TOPPINGS.toggles.candy.classList.add('tertiary');
+      TOPPINGS.toggles.other.classList.add('tertiary');
     });
 
     TOPPINGS.toggles.candy.addEventListener('click', function() {
-      console.log('clicked candy');
       TOPPINGS.contents.fruit.classList.add('hide');
       TOPPINGS.contents.candy.classList.remove('hide');
       TOPPINGS.contents.other.classList.add('hide');
-      TOPPINGS.toggles.fruit.classList.add('secondary');
-      TOPPINGS.toggles.candy.classList.remove('secondary');
-      TOPPINGS.toggles.other.classList.add('secondary');
+      TOPPINGS.toggles.fruit.classList.add('tertiary');
+      TOPPINGS.toggles.candy.classList.remove('tertiary');
+      TOPPINGS.toggles.other.classList.add('tertiary');
     });
 
     TOPPINGS.toggles.other.addEventListener('click', function() {
-      console.log('clicked other');
       TOPPINGS.contents.fruit.classList.add('hide');
       TOPPINGS.contents.candy.classList.add('hide');
       TOPPINGS.contents.other.classList.remove('hide');
-      TOPPINGS.toggles.fruit.classList.add('secondary');
-      TOPPINGS.toggles.candy.classList.add('secondary');
-      TOPPINGS.toggles.other.classList.remove('secondary');
+      TOPPINGS.toggles.fruit.classList.add('tertiary');
+      TOPPINGS.toggles.candy.classList.add('tertiary');
+      TOPPINGS.toggles.other.classList.remove('tertiary');
     });
   </script>
   <!-- end page-specific scripts -->

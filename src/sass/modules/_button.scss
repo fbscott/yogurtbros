@@ -1,6 +1,19 @@
 /*****************************************************************************
  * buttons
  ****************************************************************************/
+// module-specific settings
+$color-primary-button:            $color-secondary-font;
+$color-bg-primary-button:         $color-secondary;
+$color-bg-primary-button-hover:   lighten($color-bg-primary-button, 10%);
+
+$color-secondary-button:          $color-secondary-font;
+$color-bg-secondary-button:       $color-primary;
+$color-bg-secondary-button-hover: lighten($color-bg-secondary-button, 10%);
+
+$color-tertiary-button:           $color-primary-font;
+$color-bg-tertiary-button:        $casper;
+$color-bg-tertiary-button-hover:  darken($color-bg-tertiary-button, 10%);
+
 button, .button {
    background-color: $color-bg-primary-button;
    border: none;
@@ -33,6 +46,15 @@ button, .button {
       @include transition(background-color 300ms ease);
       &:hover {
          background-color: $color-bg-secondary-button-hover;
+         @include transition(background-color 300ms ease);
+      }
+   }
+   &.tertiary {
+      color: $color-tertiary-button;
+      background-color: $color-bg-tertiary-button;
+      @include transition(background-color 300ms ease);
+      &:hover {
+         background-color: $color-bg-tertiary-button-hover;
          @include transition(background-color 300ms ease);
       }
    }

@@ -1,9 +1,10 @@
 /*****************************************************************************
  * text
  ****************************************************************************/
-.text-color-casper {
-   color: $casper;
+@each $key, $value in $colors {
+   .text-color-#{$key} {color: #{$value};}
 }
-.text-color-charcoal {
-   color: $charcoal;
+
+@each $key, $value in $color-hierarchy {
+   .text-color-#{$key} {color: #{$value};}
 }

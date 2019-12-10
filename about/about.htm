@@ -26,8 +26,8 @@
           <div class="columns large-6 end">
             <ul class="toggle">
               <li><button id="js-about-meet-toggle" class="small">Meet the Vanstorys</button></li>
-              <li><button id="js-about-mission-toggle" class="secondary small">Mission Statement</button></li>
-              <li><button id="js-about-yogurt-toggle" class="secondary small">Our Yogurt</button></li>
+              <li><button id="js-about-mission-toggle" class="tertiary small">Mission Statement</button></li>
+              <li><button id="js-about-yogurt-toggle" class="tertiary small">Our Yogurt</button></li>
             </ul>
           </div>
         </div>
@@ -72,27 +72,27 @@
       ABOUT.contents.meet.classList.remove('hide');
       ABOUT.contents.mission.classList.add('hide');
       ABOUT.contents.yogurt.classList.add('hide');
-      ABOUT.toggles.meet.classList.remove('secondary');
-      ABOUT.toggles.mission.classList.add('secondary');
-      ABOUT.toggles.yogurt.classList.add('secondary');
+      ABOUT.toggles.meet.classList.remove('tertiary');
+      ABOUT.toggles.mission.classList.add('tertiary');
+      ABOUT.toggles.yogurt.classList.add('tertiary');
     });
 
     ABOUT.toggles.mission.addEventListener('click', function() {
       ABOUT.contents.meet.classList.add('hide');
       ABOUT.contents.mission.classList.remove('hide');
       ABOUT.contents.yogurt.classList.add('hide');
-      ABOUT.toggles.meet.classList.add('secondary');
-      ABOUT.toggles.mission.classList.remove('secondary');
-      ABOUT.toggles.yogurt.classList.add('secondary');
+      ABOUT.toggles.meet.classList.add('tertiary');
+      ABOUT.toggles.mission.classList.remove('tertiary');
+      ABOUT.toggles.yogurt.classList.add('tertiary');
     });
 
     ABOUT.toggles.yogurt.addEventListener('click', function() {
       ABOUT.contents.meet.classList.add('hide');
       ABOUT.contents.mission.classList.add('hide');
       ABOUT.contents.yogurt.classList.remove('hide');
-      ABOUT.toggles.meet.classList.add('secondary');
-      ABOUT.toggles.mission.classList.add('secondary');
-      ABOUT.toggles.yogurt.classList.remove('secondary');
+      ABOUT.toggles.meet.classList.add('tertiary');
+      ABOUT.toggles.mission.classList.add('tertiary');
+      ABOUT.toggles.yogurt.classList.remove('tertiary');
     });
   </script>
   <!-- end page-specific scripts -->

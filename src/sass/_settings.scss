@@ -25,11 +25,11 @@ $xlarge-breakpoint-minus: remCalc($xlarge - 1);
 
 // breakpoints object
 $breakpoints: (
-   xsmall:  $xsmall-breakpoint,
-   small:   $small-breakpoint,
-   medium:  $medium-breakpoint,
-   large:   $large-breakpoint,
-   xlarge:  $xlarge-breakpoint
+   xsmall: $xsmall-breakpoint,
+   small:  $small-breakpoint,
+   medium: $medium-breakpoint,
+   large:  $large-breakpoint,
+   xlarge: $xlarge-breakpoint
 );
 
 // ranges
@@ -91,65 +91,80 @@ $ranges: (
 );
 
 //*************************** Colors *****************************************
-$casper:    #ffffff;
-$vader:     #000000;
-$kiwi:      #93af2a;
-$carrot:    #f15a22;
-$charcoal:  lighten($vader, 20%);
-$smoke:     darken($casper, 4%);
-$ash:       lighten($vader, 30%);
+$carrot:   #fe5f00;
+$casper:   #ffffff;
+$kiwi:     #6ed34b;
+$shoes:    #216093;
+$sky:      #93d5e8;
+$vader:    #000000;
+$ash:      lighten($vader, 30%);
+$charcoal: lighten($vader, 20%);
+$smoke:    darken($casper, 4%);
 
-$color-primary:                     $carrot;
-$color-secondary:                   $kiwi;
-$color-primary-font:                $charcoal;
-$color-secondary-font:              $casper;
-$color-cta-font:                    $color-primary;
-$color-accent-font:                 $color-secondary;
-$color-primary-button:              $color-secondary-font;
-$color-bg-primary-button:           $color-primary;
-$color-bg-primary-button-hover:     lighten($color-bg-primary-button, 10%);
-$color-secondary-button:            $color-primary-font;
-$color-bg-secondary-button:         $casper;
-$color-bg-secondary-button-hover:   darken($color-bg-secondary-button, 10%);
-$color-primary-a:                   $color-primary;
-$color-primary-a-hover:             lighten($color-primary-a, 7%);
-$color-primary-background:          $casper;
-$color-secondary-background:        $charcoal;
+$colors: (
+   ash:      $ash,
+   carrot:   $carrot,
+   casper:   $casper,
+   charcoal: $charcoal,
+   kiwi:     $kiwi,
+   shoes:    $shoes,
+   sky:      $sky,
+   smoke:    $smoke,
+   vader:    $vader
+);
+
+$color-primary:                   $shoes;
+$color-secondary:                 $carrot;
+$color-tertiary:                  $kiwi;
+$color-primary-font:              $charcoal;
+$color-secondary-font:            $casper;
+$color-cta-font:                  $color-primary;
+$color-accent-font:               $color-secondary;
+$color-primary-a:                 $color-primary;
+$color-primary-a-hover:           lighten($color-primary-a, 7%);
+$color-primary-background:        $casper;
+$color-secondary-background:      $charcoal;
+
+$color-hierarchy: (
+   primary:   $color-primary,
+   secondary: $color-secondary,
+   tertiary:  $color-tertiary
+);
 
 //*************************** Fonts & Icons **********************************
-$font-face:             '';
-$font-face-face:        'Lobster';
-$font-weight:           400;
-$font-size:             remCalc(16);
-$font-stack-fallbacks:  Helvetica, Arial, Sans-Serif;
+$font-face:            '';
+$font-face-face:       'Lobster';
+$font-weight:          400;
+$font-size:            remCalc(16);
+$font-stack-fallbacks: Helvetica, Arial, Sans-Serif;
 
-$font-stack:            $font-face, $font-stack-fallbacks;
-$font-size-start:       9;
-$font-size-end:         32;
+$font-stack:           $font-face, $font-stack-fallbacks;
+$font-size-start:      9;
+$font-size-end:        32;
 
-$h1-font-size:          remCalc(23);
-$h2-font-size:          remCalc(20);
-$h3-font-size:          remCalc(14);
-$h4-font-size:          remCalc(16);
-$h5-font-size:          remCalc(14);
-$h6-font-size:          remCalc(12);
-$p-font-size:           remCalc(13.5);
-$a-font-size:           remCalc(16);
-$li-font-size:          remCalc(16);
-$default-font-size:     remCalc(16);
+$h1-font-size:         remCalc(23);
+$h2-font-size:         remCalc(20);
+$h3-font-size:         remCalc(14);
+$h4-font-size:         remCalc(16);
+$h5-font-size:         remCalc(14);
+$h6-font-size:         remCalc(12);
+$p-font-size:          remCalc(13.5);
+$a-font-size:          remCalc(16);
+$li-font-size:         remCalc(16);
+$default-font-size:    remCalc(16);
 
-$h1-line-height:        remCalc(24);
-$h2-line-height:        remCalc(20);
-$h3-line-height:        remCalc(16);
-$h4-line-height:        remCalc(16);
-$h5-line-height:        remCalc(14);
-$h6-line-height:        remCalc(12);
-$p-line-height:         remCalc(14);
-$a-line-height:         remCalc(14);
-$li-line-height:        remCalc(14);
-$default-line-height:   remCalc(14);
+$h1-line-height:       remCalc(24);
+$h2-line-height:       remCalc(20);
+$h3-line-height:       remCalc(16);
+$h4-line-height:       remCalc(16);
+$h5-line-height:       remCalc(14);
+$h6-line-height:       remCalc(12);
+$p-line-height:        remCalc(14);
+$a-line-height:        remCalc(14);
+$li-line-height:       remCalc(14);
+$default-line-height:  remCalc(14);
 
-$side-nav-font-size:    remCalc(13);
+$side-nav-font-size:   remCalc(13);
 
 // icons
 $icon-home3:         "\e902";
@@ -181,9 +196,9 @@ $icon-pinterest:     "\ead1";
 $icon-pinterest2:    "\ead2";
 
 //*************************** Margin and Padding *****************************
-$h1-padding-top:        remCalc(10);
-$h1-padding-bottom:     remCalc(10);
-$column-gutter:         remCalc(15) !default;
+$h1-padding-top:    remCalc(10);
+$h1-padding-bottom: remCalc(10);
+$column-gutter:     remCalc(15) !default;
 
 //*************************** Modules ****************************************
 // Note: module settings should go at the top of each individual module partial.

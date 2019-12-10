@@ -2,7 +2,11 @@
  * header
  ****************************************************************************/
 // module-specific settings
-$header-color-primary: rgba(147,175,42,0.75); // green
+// $header-color-primary: rgba(147,175,42,0.75); // kiwi
+// $header-color-primary: rgba(110,211,75,0.75); // kiwi new
+// $header-color-primary: rgba(147,213,232,0.75); // sky
+$header-color-primary: rgba(33,96,147,0.7); // shoes
+// $header-color-primary: rgba(254,95,0,0.75); // carrot
 $header-color-border: $casper;
 
 header {
@@ -51,7 +55,7 @@ header {
    header {
       padding-top: remCalc(88);
       img {
-         max-width: 100%;
+         max-width: 90%;
       }
       // nav {
       //    float: right;
