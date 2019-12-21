@@ -39,7 +39,7 @@
    p:last-of-type { margin-bottom: 0; }
 }
 
-// .double-border-carrot { @include double-border($carrot); }
+// .double-border-traffic-cone { @include double-border($traffic-cone); }
 @each $key, $value in $colors {
    .double-border-#{$key} { @include double-border($value); }
 }

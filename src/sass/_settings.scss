@@ -91,39 +91,43 @@ $ranges: (
 );
 
 //*************************** Colors *****************************************
-$carrot:   #fe5f00;
-$casper:   #ffffff;
-$kiwi:     #6ed34b;
-$shoes:    #216093;
-$sky:      #93d5e8;
-$vader:    #000000;
-$ash:      lighten($vader, 30%);
-$charcoal: lighten($vader, 20%);
-$smoke:    darken($casper, 4%);
+$blueberry:    #236192;
+$casper:       #ffffff;
+$putty:        #f5f1e9;
+$sky:          #99d6ea;
+$slime:        #78d64b;
+$traffic-cone: #ff5e00;
+$vader:        #000000;
+$wet-jeans:    #00313C;
+$ash:          lighten($vader, 30%);
+$charcoal:     lighten($vader, 20%);
+$smoke:        darken($casper, 4%);
 
 $colors: (
-   ash:      $ash,
-   carrot:   $carrot,
-   casper:   $casper,
-   charcoal: $charcoal,
-   kiwi:     $kiwi,
-   shoes:    $shoes,
-   sky:      $sky,
-   smoke:    $smoke,
-   vader:    $vader
+   ash:          $ash,
+   blueberry:    $blueberry,
+   casper:       $casper,
+   charcoal:     $charcoal,
+   putty:        $putty,
+   sky:          $sky,
+   slime:        $slime,
+   smoke:        $smoke,
+   traffic-cone: $traffic-cone,
+   vader:        $vader,
+   wet-jeans:    $wet-jeans
 );
 
-$color-primary:                   $shoes;
-$color-secondary:                 $carrot;
-$color-tertiary:                  $kiwi;
-$color-primary-font:              $charcoal;
-$color-secondary-font:            $casper;
-$color-cta-font:                  $color-primary;
-$color-accent-font:               $color-secondary;
-$color-primary-a:                 $color-primary;
-$color-primary-a-hover:           lighten($color-primary-a, 7%);
-$color-primary-background:        $casper;
-$color-secondary-background:      $charcoal;
+$color-primary:              $blueberry;
+$color-secondary:            $traffic-cone;
+$color-tertiary:             $slime;
+$color-primary-font:         $charcoal;
+$color-secondary-font:       $casper;
+$color-cta-font:             $color-primary;
+$color-accent-font:          $color-secondary;
+$color-primary-a:            $color-primary;
+$color-primary-a-hover:      lighten($color-primary-a, 7%);
+$color-primary-background:   $casper;
+$color-secondary-background: $charcoal;
 
 $color-hierarchy: (
    primary:   $color-primary,
