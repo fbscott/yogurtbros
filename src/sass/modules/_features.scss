@@ -36,7 +36,7 @@ $feature-color-font-secondary: $color-accent-font;
       font-size: remCalc(14);
       line-height: initial;
       &.title {
-         // margin-top: initial;
+         margin-top: remCalc(30);
          margin-bottom: remCalc(12);
          text-transform: uppercase;
          font-size: remCalc(18);

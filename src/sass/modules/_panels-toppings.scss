@@ -2,7 +2,7 @@
  * panels-toppings
  ****************************************************************************/
 $color-panel-bg: $color-primary-background;
-$color-panel-border: darken($smoke, 10%);
+$color-panel-border: darken($smoke, 7%);
 
 // loop over breakpoints
 @each $key, $value in $breakpoints {
@@ -11,6 +11,9 @@ $color-panel-border: darken($smoke, 10%);
       @if $key == 'xsmall' {
          .panels-toppings {
             & > div {
+               &:not(:last-child) {
+                  margin-bottom: remCalc(30);
+               }
                background-color: $color-panel-bg;
                border: 1px solid $color-panel-border;
                box-shadow: 0px remCalc(2) remCalc(3) 0px rgba(0,0,0,0.125);
@@ -21,6 +24,11 @@ $color-panel-border: darken($smoke, 10%);
          }
       } @else if $key == 'small' {
          .panels-toppings {
+            & > div {
+               &:not(:last-child) {
+                  margin-bottom: initial;
+               }
+            }
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: remCalc(30);

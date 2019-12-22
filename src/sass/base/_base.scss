@@ -35,11 +35,15 @@ h4 {
    font-size: 18px;
 }
 
+h1, h2, h3, h4 {
+   margin-bottom: remCalc(30);
+}
+
 p {
    @extend %base-content;
    margin-bottom: remCalc(30);
    line-height: 1.5;
-   &:first-of-type { margin-top: remCalc(30); }
+   // &:first-of-type { margin-top: remCalc(30); }
 }
 
 a { @extend %base-content; }
