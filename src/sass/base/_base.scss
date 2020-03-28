@@ -39,7 +39,12 @@ h1, h2, h3, h4 {
    margin-bottom: remCalc(30);
 }
 
-p {
+ul {
+   list-style: disc;
+   margin-left: remCalc(16);
+}
+
+p, li {
    @extend %base-content;
    margin-bottom: remCalc(30);
    line-height: 1.5;
