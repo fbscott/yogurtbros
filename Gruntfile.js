@@ -63,8 +63,8 @@ module.exports = function(grunt) {
          },
          target: {
             files: {
-               'assets/css/main.min.css': ['assets/css/main.css']
-               // 'assets/css/yb.min.css': ['src/css/yb.css']
+               'assets/css/main.min.css': ['assets/css/main.css'],
+               'assets/css/lib.min.css': ['assets/css/lib.css']
             }
          }
       },
@@ -101,7 +101,8 @@ module.exports = function(grunt) {
       sass: {
          dist: {
             files: {
-               'assets/css/main.css': ['src/sass/main.scss']
+               'assets/css/main.css': ['src/sass/main.scss'],
+               'assets/css/lib.css': ['src/sass/lib.scss']
             }
          }
       }﻿,
