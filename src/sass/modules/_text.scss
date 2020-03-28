@@ -8,3 +8,7 @@
 @each $key, $value in $color-hierarchy {
    .text-color-#{$key} {color: #{$value};}
 }
+
+a.text-decoration-none {
+   text-decoration: none;
+}

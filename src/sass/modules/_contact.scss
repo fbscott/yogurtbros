@@ -1,0 +1,42 @@
+/*****************************************************************************
+ * contact
+ ****************************************************************************/
+%contact {
+   width: 100%;
+   color: $blueberry;
+   background-color: $sky;
+   border: 1px solid $blueberry;
+   margin-bottom: remCalc(15);
+   padding: remCalc(20);
+}
+input[type="text"],
+input[type="email"] {
+   @extend %contact;
+   height: remCalc(30);
+   &::placeholder {
+      font-style: italic;
+      color: lighten($blueberry, 35%);
+   }
+}
+textarea {
+   @extend %contact;
+}
+label {
+   display: block;
+   margin-bottom: remCalc(5);
+}
+p.optional {
+   font-size: remCalc(12);
+   font-style: italic;
+   // color: $ash;
+   margin-bottom: remCalc(15);
+}
+a.contact-link {
+   display: block;
+   background-color: $smoke;
+   margin: remCalc(10) 0;
+   padding: remCalc(20);
+   text-decoration: none;
+   &:hover {
+   }
+}
