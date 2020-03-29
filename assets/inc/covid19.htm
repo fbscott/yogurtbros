@@ -11,6 +11,10 @@
 
   @media (min-width: 60rem) {
 
+    /*#covid19-info a.covid19-info-link {
+      text-decoration: none;
+    }*/
+
     #covid19-info a.covid19-info-link::before {
       content: url(/assets/img/info/coronavirus.png);
       transform: translateY(-50%);
@@ -22,10 +26,15 @@
   }
 </style>
 
-<section id="covid19-info" class="bg-color-kiwi">
+<section id="covid19-info" class="bg-color-putty">
+  <div class="row">
+    <div class="column large-9 large-offset-3">
+      <p class="font-size-30 text-lobster text-color-blueberry">Continuing to Server You via Carside To-Go, DoorDash, and Uber Eats!</p>
+    </div>
+  </div>
   <div class="row">
     <div class="columns medium-4 large-3 large-offset-3 text-center">
-      <p class="margin-20-top-on-xsmall font-size-20"><a class="covid19-info-link" href="/info/covid19.htm">Coronavirus Information</a></p>
+      <p class="margin-20-top-on-xsmall font-size-20"><a class="covid19-info-link raquo" href="/info/covid19.htm">Coronavirus Information</a> &raquo;</p>
     </div>
     <div class="columns medium-4 large-3 text-center">
       <a class="covid19-delivery-link" href="https://www.doordash.com/store/yogurt-brothers-westminster-519121/en-US" target="_blank"><img src="/assets/img/info/doordash.png" alt="door dash" /></a>
