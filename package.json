@@ -1,31 +1,42 @@
 {
-  "name": "Yogurt Brothers",
-  "version": "1.0.0",
-  "description": "Yogurt Brothers site build",
-  "main": "src/js/yb.js",
-  "dependencies": {
-    "grunt": "^1.1.0",
-    "node-sass": "^4.13.1",
-    "sweetalert": "^2.1.2",
-    "underscore": "^1.9.1"
+  "name": "yogurt_brothers",
+  "version": "1.1.0",
+  "description": "yogurt brothers marketing site",
+  "main": "src/js/app.js",
+  "scripts": {
+    "build": "browserify src/js/app.js -o assets/js/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fbscott/yogurtbros.git"
+  },
+  "author": "scott currell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fbscott/yogurtbros/issues"
+  },
+  "homepage": "https://github.com/fbscott/yogurtbros#readme",
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "browserify": "^16.5.0",
+    "grunt": "^1.1.0",
     "grunt-babel": "^8.0.0",
     "grunt-browserify": "^5.3.0",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "^4.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-image": "^4.3.0",
-    "grunt-zip": "^0.18.1"
+    "grunt-image": "^6.1.0",
+    "grunt-zip": "^0.18.2",
+    "node-sass": "^4.13.1"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Scott Currell",
-  "license": "ISC"
+  "dependencies": {
+    "mkdirp": "^1.0.3",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^9.10.7"
+  }
 }

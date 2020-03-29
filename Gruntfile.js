@@ -4,27 +4,21 @@ module.exports = function(grunt) {
    grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
 
-      // 'babel': {
       babel: {
          options: {
-            // sourceMap: true
-            // presets: ['es2015']
+            sourceMap: true,
+            presets: ['es2015']
          },
          dist: {
-            files: [{
-               // "assets/js/yb-main.js": "src/js/yb-main.js"
-               expand: true,
-               cwd: 'src/js/',
-               src: ['*.js'],
-               dest: 'assets/js/',
-               ext: '-compiled.js'
-            }]
+            files: {
+               'assets/js/bundle-es2015.js': 'assets/js/bundle.js'
+            }
          }
       },
 
       browserify: {
          build: {
-            src: 'src/js/modules/object.js',
+            src: 'src/js/app.js',
             dest: 'assets/js/bundle.js'
          }
       },
@@ -42,19 +36,18 @@ module.exports = function(grunt) {
          zip: {
             src: 'zip/'
          }
-         // folderTwo: ["assetsOne/js/", "assetsTwo/js/"]
       },
 
-      concat: {
-         css: {
-            src: ['src/css/*.css'],
-            dest: 'assets/css/main.css'
-         },
-         js: {
-            src: ['assets/js/*-compiled.js'],
-            dest: 'assets/js/*-min.js'
-         }
-      },
+      // concat: {
+      //    css: {
+      //       src: ['src/css/*.css'],
+      //       dest: 'assets/css/main.css'
+      //    },
+      //    js: {
+      //       src: ['assets/js/*-compiled.js'],
+      //       dest: 'assets/js/*-min.js'
+      //    }
+      // },
 
       cssmin: {
          options: {
@@ -70,24 +63,6 @@ module.exports = function(grunt) {
       },
 
       image: {
-         // static: {
-         //    options: {
-         //       optipng: false,
-         //       pngquant: true,
-         //       zopflipng: true,
-         //       jpegRecompress: false,
-         //       mozjpeg: true,
-         //       guetzli: false,
-         //       gifsicle: true,
-         //       svgo: true
-         //    },
-         //    files: {
-         //       'assets/img/img.png': 'src/img/img.png',
-         //       'assets/img/img.jpg': 'src/img/img.jpg',
-         //       'assets/img/img.gif': 'src/img/img.gif',
-         //       'assets/img/img.svg': 'src/img/img.svg'
-         //    }
-         // },
          dynamic: {
             files: [{
                expand: true,
@@ -111,28 +86,23 @@ module.exports = function(grunt) {
          options: {
             banner: '/*! <%= pkg.name %> v<%= pkg.version %> Author: <%= pkg.author %> <%= grunt.template.today("yyyy-mm-dd") %> */'
          },
-         build: {
-            // src: 'src/<%= pkg.name %>.js',
-            // src: 'assets/js/bundle.js',
-            // dest: 'assets/js/bundle.min.js'
-
+         my_target: {
             /**
              * Individual files
              */
-            // files: {
-            //    'assets/js/bundle.min.js': ['assets/js/bundle.js'],
-            //    'assets/js/yb.min.js': ['assets/js/yb.js']
-            // }
+            files: {
+               'assets/js/bundle.min.js': ['assets/js/bundle.js']
+            }
 
             /**
              * Takes each file and minifies them individually
              */
-            files: [{
-               expand: true,
-               cwd: 'assets/js',
-               src: '*-compiled.js', // '**/*.js' for sub directories
-               dest: 'assets/js'
-            }]
+            // files: [{
+            //    expand: true,
+            //    cwd: 'assets/js',
+            //    src: '*-min.js', // '**/*.js' for sub directories
+            //    dest: 'assets/js'
+            // }]
          }
       },
 
@@ -147,7 +117,7 @@ module.exports = function(grunt) {
          scripts: {
             files: ['src/**/*.js'],
             // tasks: ['concat:js', 'browserify', 'uglify'],
-            tasks: ['clean-js', 'babel', 'uglify'],
+            tasks: ['clean-js', 'browserify', 'uglify'],
             options: {
                spawn: false,
             }
@@ -171,7 +141,7 @@ module.exports = function(grunt) {
    grunt.loadNpmTasks('grunt-babel');
    grunt.loadNpmTasks('grunt-browserify');
    grunt.loadNpmTasks('grunt-contrib-clean');
-   grunt.loadNpmTasks('grunt-contrib-concat');
+   // grunt.loadNpmTasks('grunt-contrib-concat');
    grunt.loadNpmTasks('grunt-contrib-cssmin');
    grunt.loadNpmTasks('grunt-image');
    grunt.loadNpmTasks('grunt-contrib-sass');
@@ -180,21 +150,16 @@ module.exports = function(grunt) {
    grunt.loadNpmTasks('grunt-zip');
 
    // Sample Tasks
-   grunt.registerTask('run', function() {
-      console.log('task running');
-   });
-   grunt.registerTask('sleep', function() {
-      console.log('task sleeping');
+   grunt.registerTask('sample', function() {
+      console.log('Task "sample" running . . .');
    });
 
    // Register Tasks
-   grunt.registerTask('concat-css', ['concat:css']);
-   grunt.registerTask('concat-js', ['concat:js']);
+   // grunt.registerTask('concat-css', ['concat:css']);
+   // grunt.registerTask('concat-js', ['concat:js']);
    grunt.registerTask('clean-css', ['clean:css']);
    grunt.registerTask('clean-img', ['clean:img']);
    grunt.registerTask('clean-js', ['clean:js']);
    grunt.registerTask('dev', ['watch']);
-   // grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'babel', 'browserify', 'uglify']);
-   // grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'babel', 'uglify']);
-   grunt.registerTask('default', ['clean', 'babel', 'uglify', 'sass', 'cssmin', 'image', 'zip']);
+   grunt.registerTask('default', ['clean', 'browserify', 'uglify', 'sass', 'cssmin', 'image', 'zip']);
 };

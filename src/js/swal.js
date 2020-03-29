@@ -1,4 +1,4 @@
-/**
+/*****************************************************************************
  * sa.js
  *
  * Sweet Alerts Configurations - Pretty Alert Boxes
@@ -12,17 +12,15 @@
  * - _assets/css/lib.min.css
  * - .js-sa     button/link that will trigger the alert
  * - data-sa    alert content message (optional)
- */
-
-import swal from 'sweetalert';
-
-swal('Hello, World!');
+ ****************************************************************************/
+var YB = require('./namespace.js');
+var swal = require('sweetalert');
 
 YB.sa = function() { // can't use default params due to IE 11 :(
     // alert title
-    var _title = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Functionality Disabled';
+    var _title = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Huston, we have a problem!';
     // alert content
-    var _body  = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'This functionality is disabled in this online demonstration.\n\nPlease contact a Treasury Management representative at (303) 235-1378 or (855) 426-1500 for information about this feature or if you have questions about Internet Cash Management.';
+    var _body  = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'There appears to be an error on this page.\n\nPlease feel free to call us at (303) 466-6562 if this is something we can help with over the phone.\n\nOtherwise, we\'d love to see you in person:\n\n4680 W 120th Ave.\nWestminster, CO 80020\n\nThank You!';
     // alert icon ['warning' 'error', 'success', or 'info']
     var _icon  = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'info';
 
@@ -65,7 +63,7 @@ YB.defineSAArgsAndCall = function() {
 };
 
 // links array
-YB.saElems = document.getElementsByClassName('js-sa');
+YB.saElems = document.getElementsByClassName('js-swal');
 
 // listen for click on all links and add alert callback
 for (var i = 0; i < YB.saElems.length; i++) {

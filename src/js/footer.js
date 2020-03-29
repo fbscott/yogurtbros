@@ -12,6 +12,8 @@
  * - p, span, etc. with id "js-copyright"
  *   e.g., <span id="js-copyright"></span>
  ****************************************************************************/
+var YB = require('./namespace.js');
+
 // Footer copyright date
 YB.footer = function(copyright) {
     // Copyright span
