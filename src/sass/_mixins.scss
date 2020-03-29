@@ -107,13 +107,13 @@
           transform: translate#{$orientation}unquote("(")#{$valueB}unquote(")");
 }
 
-@mixin align-center($position: relative, $orientation: "", $valueA: 50%, $valueB: (-50%, -50%)) {
+@mixin align-center($position: relative, $valueA: 50%, $valueB: 50%) {
   position: $position;
   top: $valueA;
   left: $valueA;
-  -webkit-transform: translate#{$orientation}unquote("(")#{$valueB}unquote(")");
-      -ms-transform: translate#{$orientation}unquote("(")#{$valueB}unquote(")");
-          transform: translate#{$orientation}unquote("(")#{$valueB}unquote(")");
+  -webkit-transform: translate(-#{$valueA}, -#{$valueB});
+      -ms-transform: translate(-#{$valueA}, -#{$valueB});
+          transform: translate(-#{$valueA}, -#{$valueB});
 }
 
 // Margin shorthand version

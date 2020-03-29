@@ -1,9 +1,25 @@
 /*****************************************************************************
  * buttons
  ****************************************************************************/
+// module-specific settings
+$color-primary-button:            $color-secondary-font;
+$color-bg-primary-button:         $color-secondary;
+$color-button-primary-border:     darken($color-bg-primary-button, 7%);
+$color-bg-primary-button-hover:   lighten($color-bg-primary-button, 10%);
+
+$color-secondary-button:          $color-secondary-font;
+$color-bg-secondary-button:       $color-primary;
+$color-button-secondary-border:   darken($color-bg-secondary-button, 7%);
+$color-bg-secondary-button-hover: lighten($color-bg-secondary-button, 10%);
+
+$color-tertiary-button:           $color-primary-font;
+$color-bg-tertiary-button:        $putty;
+$color-button-tertiary-border:    darken($color-bg-tertiary-button, 7%);
+$color-bg-tertiary-button-hover:  darken($color-bg-tertiary-button, 10%);
+
 button, .button {
    background-color: $color-bg-primary-button;
-   border: none;
+   // border: none;
    color: $color-primary-button;
    padding: remCalc(19) remCalc(32) remCalc(15) remCalc(32);
    text-align: center;
@@ -15,6 +31,8 @@ button, .button {
    font-size: remCalc(24);
    line-height: 1;
    position: relative;
+   box-shadow: 0px remCalc(2) remCalc(3) 0px rgba(0,0,0,0.125);
+   border: 1px solid $color-button-primary-border;
    @include transition(background-color 300ms ease);
    &:hover {
       background-color: $color-bg-primary-button-hover;
@@ -30,9 +48,20 @@ button, .button {
    &.secondary {
       color: $color-secondary-button;
       background-color: $color-bg-secondary-button;
+      border: 1px solid $color-button-secondary-border;
       @include transition(background-color 300ms ease);
       &:hover {
          background-color: $color-bg-secondary-button-hover;
+         @include transition(background-color 300ms ease);
+      }
+   }
+   &.tertiary {
+      color: $color-tertiary-button;
+      background-color: $color-bg-tertiary-button;
+      border: 1px solid $color-button-tertiary-border;
+      @include transition(background-color 300ms ease);
+      &:hover {
+         background-color: $color-bg-tertiary-button-hover;
          @include transition(background-color 300ms ease);
       }
    }

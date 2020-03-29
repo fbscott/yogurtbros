@@ -72,6 +72,7 @@
       @include transition(opacity 200ms ease);
       @include align-vertical(absolute, "Y", 50%, -50%);
       p {
+         margin: remCalc(24);
          font-family: OswaldRegular;
          font-size: remCalc(24);
          font-weight: 600;

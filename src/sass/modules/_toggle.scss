@@ -1,9 +1,9 @@
 /*****************************************************************************
  * toppings
  ****************************************************************************/
-$toppings-toggle-bg: $color-primary-background;
+$toggle-bg: $color-primary-background;
 
-ul.toppings-toggle {
+ul.toggle {
    display: flex;
    justify-content: space-between;
    li {
@@ -11,7 +11,7 @@ ul.toppings-toggle {
       a {
          text-decoration: none;
          padding: remCalc(10) remCalc(20);
-         background-color: $toppings-toggle-bg;
+         background-color: $toggle-bg;
          display: inline-block;
       }
    }

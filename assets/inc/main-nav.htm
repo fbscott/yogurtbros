@@ -1,6 +1,6 @@
 <nav id="main-nav" class="align-vertical">
   <a href="/">Home</a>
-  <a href="javascript:void(0);" onclick="alert('This feature coming soon!');">About Us</a>
+  <a href="/about/about.htm">About Us</a>
   <div class="dropdown">
     <a href="javascript:void(0);">Menu</a>
     <div class="dropdown-content">
@@ -8,5 +8,11 @@
       <a href="/ingredients/toppings.htm">Toppings</a>
     </div>
   </div>
-  <a href="javascript:void(0);" onclick="alert('This feature coming soon!');">Contact</a>
+  <a id="js-nav-contact"
+     class="js-swal"
+     data-sa="{
+                'title':'Contact Page Coming Soon!',
+                'body':'Until then, please feel free to call us at (303) 466-6562 or visit our store!\n\nYogurt Brothers\n4680 W 120th Ave.\nWestminster, CO 80020\n\nThank You!'
+              }"
+     href="javascript:void(0);">Contact</a>
 </nav>

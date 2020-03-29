@@ -1,0 +1,16 @@
+/**
+ * Sweet Alerts Overrides
+ * Related files: _assets/js/sa.js
+ * Docs: https://github.com/t4t5/sweetalert
+ *        https://sweetalert.js.org/docs/
+ */
+.swal-overlay {
+  background-color: rgba(0, 0, 0, 0.45);
+}
+.swal-button {
+  border-radius: initial;
+  background-color: $color-primary;
+}
+.swal-button:not([disabled]):hover {
+  background-color: rgb(255, 171, 96);
+}

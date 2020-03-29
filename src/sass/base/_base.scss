@@ -20,7 +20,7 @@ html {
 }
 
 h1, h2 {
-   color: $carrot;
+   color: $color-secondary;
    font-family: Lobster;
    font-size: 40px;
 }
@@ -35,22 +35,27 @@ h4 {
    font-size: 18px;
 }
 
-p {
+h1, h2, h3, h4 {
+   margin-bottom: remCalc(30);
+}
+
+ul {
+   list-style: disc;
+   margin-left: remCalc(16);
+}
+
+p, li {
    @extend %base-content;
    margin-bottom: remCalc(30);
    line-height: 1.5;
-   &:first-of-type {
-      margin-top: remCalc(30);
-   }
+   // &:first-of-type { margin-top: remCalc(30); }
 }
 
-a {
-   @extend %base-content;
-}
+a { @extend %base-content; }
 
-strong {
-   font-weight: 900;
-}
+img { max-width: 100% };
+
+strong { font-weight: 900; }
 
 table {
    width: 100%;
