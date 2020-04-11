@@ -2,19 +2,19 @@
  * font-icons
  ****************************************************************************/
 @font-face {
-  font-family: 'icomoon';
-  src:  url('../fonts/icomoon/icomoon.eot?6znfxu');
-  src:  url('../fonts/icomoon/icomoon.eot?6znfxu#iefix') format('embedded-opentype'),
-        url('../fonts/icomoon/icomoon.ttf?6znfxu') format('truetype'),
-        url('../fonts/icomoon/icomoon.woff?6znfxu') format('woff'),
-        url('../fonts/icomoon/icomoon.svg?6znfxu#icomoon') format('svg');
+  font-family: 'yb';
+  src:  url('../fonts/yb/icomoon.eot?6znfxu');
+  src:  url('../fonts/yb/icomoon.eot?6znfxu#iefix') format('embedded-opentype'),
+        url('../fonts/yb/icomoon.ttf?6znfxu') format('truetype'),
+        url('../fonts/yb/icomoon.woff?6znfxu') format('woff'),
+        url('../fonts/yb/icomoon.svg?6znfxu#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
    /* use !important to prevent issues with browser extensions that change fonts */
-   font-family: 'icomoon' !important;
+   font-family: 'yb' !important;
    speak: none;
    font-style: normal;
    font-weight: normal;
@@ -107,4 +107,10 @@
 }
 .icon-pinterest2:before {
    content: $icon-pinterest2;
+}
+.icon-doordash:before {
+   content: $icon-doordash;
+}
+.icon-uber-eats:before {
+   content: $icon-uber-eats;
 }
