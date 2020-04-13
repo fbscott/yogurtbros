@@ -3,6 +3,7 @@
  ****************************************************************************/
 var YB = require('./namespace.js');
 
+// from elems
 YB.contactForm = {
     contact: document.getElementById('js-contact'),
     email:   document.getElementById('js-email'),
@@ -15,6 +16,7 @@ YB.contactForm = {
 
 YB.submitForm = function(e) {
 
+    // prevents submission from appending a bunch of query params to the URL
     e.preventDefault();
     
     YB.contactForm.submit.disabled = true;

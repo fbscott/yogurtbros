@@ -7,7 +7,7 @@
       $subject    = stripslashes($_POST['subject']);
       $message    = nl2br(stripslashes($_POST['message']));
 
-      $emailTo    = "scottcurrell@outlook.com";
+      $emailTo    = "scottcurrell@gmail.com";
       $emailSubj  = "NEW yogurtbrothers.com submission. Re: " . $subject;
       $emailIntro = "You have received the following message from yogurtbrothers.com:";
 
