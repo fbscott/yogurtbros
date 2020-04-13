@@ -41,21 +41,16 @@
           </div>
         </div>
 
-
       </div>
       <div class="columns medium-6 large-4 margin-50-on-xsmall">
          <h2 class="text-center">How Are We Doing?</h2>
-         <form id="js-contact" onsubmit="YB.submitForm(); return false;">
-            <!-- <label for="name">First Name</label> -->
+         <form id="js-contact">
             <input type="text" name="name" id="js-name" placeholder="Name" required /><br />
-            <!-- <label for="email">Email</label> -->
             <input type="email" name="email" id="js-email" placeholder="Email Address" required /><br />
-            <!-- <label for="subject">Subject</label> -->
             <input type="text" name="subject" id="js-subject" placeholder="Subject" required /><br />
-            <!-- <label for="message">Message</label> -->
             <textarea name="message" id="js-message" cols="30" rows="10" placeholder="Message . . ." required></textarea><br />
             <input type="submit" name="submit" id="js-submit" class="button expand" value="SEND">
-            <p id="js-status"></p>
+            <div id="js-status"></div>
          </form>
       </div>
     </div>
@@ -66,50 +61,6 @@
   <!--#include virtual="/assets/inc/source-scripts.htm" -->
 
   <!-- page-specific scripts -->
-  <script>
-    var YB = YB || {};
-
-    YB.getFormField = id => document.getElementById(id);
-
-    YB.submitForm = function() {
-
-      YB.getFormField('js-submit').disabled = true;
-      YB.getFormField('js-status').innerHTML = 'Sending message . . .';
-
-      var formData = new FormData();
-
-      formData.append('name', YB.getFormField('js-name').value);
-      formData.append('email', YB.getFormField('js-email').value);
-      formData.append('subject', YB.getFormField('js-subject').value);
-      formData.append('message', YB.getFormField('js-message').value);
-
-      var ajax = new XMLHttpRequest();
-
-      ajax.open('POST', 'contact.php');
-
-      ajax.onreadystatechange = function() {
-
-        if (ajax.readyState === 4 && ajax.status === 200) {
-
-          if (ajax.responseText === "Success") {
-            
-            YB.getFormField('js-contact').innerHTML = '<p>Message sent.</p>';
-
-          } else {
-
-            YB.getFormField('js-status').innerHTML = ajax.responseText;
-            YB.getFormField('js-submit').disabled = false;
-
-          }
-
-        }
-
-      }
-
-      ajax.send(formData);
-
-    };
-  </script>
   <!-- end page-specific scripts -->
 </div><!-- end #container --></body>
 </html>
