@@ -35,14 +35,6 @@ $feature-color-font-secondary: $color-accent-font;
    p {
       font-size: remCalc(14);
       line-height: initial;
-      &.title {
-         margin-top: remCalc(30);
-         margin-bottom: remCalc(12);
-         text-transform: uppercase;
-         font-size: remCalc(18);
-         font-family: OswaldHeavy;
-         color: $color-primary;
-      }
    }
    .feature {
       &:not(:first-of-type) {
@@ -59,13 +51,6 @@ $feature-color-font-secondary: $color-accent-font;
       }
       .standard-label {
          font-size: remCalc(24);
-      }
-   }
-   .featured {
-      p {
-         &.title {
-            margin-top: initial;
-         }
       }
    }
 }

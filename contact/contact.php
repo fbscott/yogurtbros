@@ -75,10 +75,9 @@
   </section>
   <!--------------------------------- end Contact ------------------------------>
 
-<?php 
-  virtual ("/assets/inc/footer.htm");
-  virtual ("/assets/inc/source-scripts.htm");
- ?>
+      $emailTo    = "scottcurrell@outlook.com";
+      $emailSubj  = "NEW yogurtbrothers.com submission. Re: " . $subject;
+      $emailIntro = "You have received the following message from yogurtbrothers.com:";
 
   <!-- page-specific scripts -->
   <!-- end page-specific scripts -->
