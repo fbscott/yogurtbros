@@ -4,19 +4,19 @@
 %contact {
    width: 100%;
    color: $blueberry;
-   background-color: $sky;
+   background-color: $casper;
    border: 1px solid $blueberry;
    margin-bottom: remCalc(15);
    padding: remCalc(20);
+   &::placeholder {
+      font-style: italic;
+      color: lighten($blueberry, 35%);
+   }
 }
 input[type="text"],
 input[type="email"] {
    @extend %contact;
    height: remCalc(30);
-   &::placeholder {
-      font-style: italic;
-      color: lighten($blueberry, 35%);
-   }
 }
 textarea {
    @extend %contact;
