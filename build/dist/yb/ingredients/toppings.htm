@@ -1,0 +1,95 @@
+<!--#include virtual="/assets/inc/page-open.htm" -->
+  <title>Toppings | Yogurt Brothers</title>
+  <meta name="description" content="Top your frozen yogurt with your choice of over 100 different toppings. From fresh fruit, to peanut butter cups, to chopped nuts. We've got you covered when it comes to covering your yogurt!">
+  <meta name="keywords" content="toppings,frozen,yogurt,candy,fruit,nuts,syrup">
+  <meta name="author" content="Scott Currell">
+</head>
+<body><div id="container">
+
+  <!--#include virtual="/assets/inc/header.htm" -->
+
+  <!--------------------------------- features --------------------------------->
+  <!--#include virtual="/assets/inc/page-header-open.htm" -->
+        <h1>Toppings</h1>
+  <!--#include virtual="/assets/inc/page-header-close.htm" -->
+  <!--------------------------------- end features ----------------------------->
+  <!--------------------------------- toppings, visit, awards ------------------>
+  <section class="bg-color-smoke">
+    <div class="row">
+      <div class="column margin-50-top-on-xsmall">
+        <div class="row">
+          <div class="columns medium-5 end">
+            <ul class="toggle">
+              <li><button id="js-toppings-fruit-toggle" class="small">Fresh Fruit</button></li>
+              <li><button id="js-toppings-candy-toggle" class="tertiary small">Candy</button></li>
+              <li><button id="js-toppings-other-toggle" class="tertiary small">Other Toppings</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div id="js-toppings-fruit-content" class="panels-toppings margin-50-on-xsmall">
+          <!--#include virtual="/assets/inc/toppings-fruit.htm" -->
+        </div>
+        <div id="js-toppings-candy-content" class="panels-toppings hide margin-50-on-xsmall">
+          <!--#include virtual="/assets/inc/toppings-candy.htm" -->
+        </div>
+        <div id="js-toppings-other-content" class="panels-toppings hide margin-50-on-xsmall">
+          <!--#include virtual="/assets/inc/toppings-other.htm" -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--------------------------------- end toppings, visit, awards -------------->
+
+  <!--#include virtual="/assets/inc/footer.htm" -->
+  <!--#include virtual="/assets/inc/source-scripts.htm" -->
+
+  <!-- page-specific scripts -->
+  <script>
+    var TOPPINGS = TOPPINGS || {};
+
+    TOPPINGS.toggles = {
+      fruit: document.getElementById('js-toppings-fruit-toggle'),
+      candy: document.getElementById('js-toppings-candy-toggle'),
+      other: document.getElementById('js-toppings-other-toggle')
+    };
+
+    TOPPINGS.contents = {
+      fruit: document.getElementById('js-toppings-fruit-content'),
+      candy: document.getElementById('js-toppings-candy-content'),
+      other: document.getElementById('js-toppings-other-content')
+    };
+
+    TOPPINGS.toggles.fruit.addEventListener('click', function() {
+      TOPPINGS.contents.fruit.classList.remove('hide');
+      TOPPINGS.contents.candy.classList.add('hide');
+      TOPPINGS.contents.other.classList.add('hide');
+      TOPPINGS.toggles.fruit.classList.remove('tertiary');
+      TOPPINGS.toggles.candy.classList.add('tertiary');
+      TOPPINGS.toggles.other.classList.add('tertiary');
+    });
+
+    TOPPINGS.toggles.candy.addEventListener('click', function() {
+      TOPPINGS.contents.fruit.classList.add('hide');
+      TOPPINGS.contents.candy.classList.remove('hide');
+      TOPPINGS.contents.other.classList.add('hide');
+      TOPPINGS.toggles.fruit.classList.add('tertiary');
+      TOPPINGS.toggles.candy.classList.remove('tertiary');
+      TOPPINGS.toggles.other.classList.add('tertiary');
+    });
+
+    TOPPINGS.toggles.other.addEventListener('click', function() {
+      TOPPINGS.contents.fruit.classList.add('hide');
+      TOPPINGS.contents.candy.classList.add('hide');
+      TOPPINGS.contents.other.classList.remove('hide');
+      TOPPINGS.toggles.fruit.classList.add('tertiary');
+      TOPPINGS.toggles.candy.classList.add('tertiary');
+      TOPPINGS.toggles.other.classList.remove('tertiary');
+    });
+  </script>
+  <!-- end page-specific scripts -->
+</div><!-- end #container --></body>
+</html>

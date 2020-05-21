@@ -34,7 +34,7 @@ module.exports = function(grunt) {
             src: 'assets/img/'
          },
          zip: {
-            src: 'zip/'
+            src: 'build/dist/'
          }
       },
 
@@ -132,7 +132,7 @@ module.exports = function(grunt) {
       },
 
       zip: {
-         'zip/yb.zip': ['assets/**/*.*', '**/*.html', '**/*.htm', '.htaccess']
+         'build/dist/yb.zip': ['assets/**/*.*', '**/*.html', '**/*.htm', '.htaccess']
       }
 
    });

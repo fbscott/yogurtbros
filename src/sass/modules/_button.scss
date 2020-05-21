@@ -42,8 +42,8 @@ button, .button {
       width: 100%;
    }
    &.small {
-      font-size: remCalc(16);
-      padding: remCalc(15);
+      font-size: remCalc(14);
+      padding: remCalc(8) remCalc(12);
    }
    &.secondary {
       color: $color-secondary-button;

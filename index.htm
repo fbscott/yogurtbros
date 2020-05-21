@@ -4,22 +4,27 @@
 <body><div id="container">
 
   <!--#include virtual="/assets/inc/header.htm" -->
-  <!--#include virtual="/assets/inc/covid19.htm" -->
+  <!--#include virtual="/assets/inc/delivery.htm" -->
 
   <!--------------------------------- features --------------------------------->
   <section id="bg-paneling" class="padding-50-on-xsmall">
     <div class="row">
     <!-- left -->
     <div class="columns medium-6 large-5 standard">
-      <div class="text-center">
-        <span class="standard-num"><!--#include virtual="/assets/inc/num-flavors.htm" --></span>
-        <span class="standard-label">flavors</span>
-        <span class="standard-num"><!--#include virtual="/assets/inc/num-toppings.htm" --></span>
-        <span class="standard-label">toppings</span>
-        <span class="standard-num"><!--#include virtual="/assets/inc/num-syrups.htm" --></span>
-        <span class="standard-label">syrups</span>
+      <!--#include virtual="/assets/inc/covid19.htm" -->
+      <div class="row">
+        <div class="column">
+          <div class="text-center">
+            <span class="standard-num"><!--#include virtual="/assets/inc/num-flavors.htm" --></span>
+            <span class="standard-label">flavors</span>
+            <span class="standard-num"><!--#include virtual="/assets/inc/num-toppings.htm" --></span>
+            <span class="standard-label">toppings</span>
+            <span class="standard-num"><!--#include virtual="/assets/inc/num-syrups.htm" --></span>
+            <span class="standard-label">syrups</span>
+          </div>
+          <img src="/assets/img/feature_01.jpg" alt="yogurt cup with toppings" class="margin-30-top-on-xsmall">
+        </div>
       </div>
-      <img src="/assets/img/feature_01.jpg" alt="yogurt cup with toppings" class="margin-30-top-on-xsmall">
     </div>
     <!-- end left -->
     <!-- right -->
@@ -40,7 +45,7 @@
                 </div>
               </div>
               <div class="columns small-9 large-10">
-                <p class="title">Cake Batter</p>
+                <h4>Cake Batter</h4>
                 <p>You'll have that richness in texture, plus the sense of a thick, semi-liquid condensed cake, yet get the refreshing and light feel only frozen yogurt can deliver. Indulgence meets self-care.</p>
               </div>
             </div>
@@ -53,7 +58,7 @@
                 </div>
               </div>
               <div class="columns small-9 large-10">
-                <p class="title">Chocolate</p>
+                <h4>Chocolate</h4>
                 <p>A word that should be synonymous with indulgence itself, chocolate is never a bad idea. The Universal mood-enhancer, happiness in a scoop, a fail-proof lifter of spirits.</p>
               </div>
             </div>
@@ -66,7 +71,7 @@
                 </div>
               </div>
               <div class="columns small-9 large-10">
-                <p class="title">Cookies and Cream</p>
+                <h4>Cookies and Cream</h4>
                 <p>It's as if we managed to condense a warm hug and turn that into a frozen yogurt flavor. It melts in your mouth as it melts your heart and fills it with nothing but warmth and feel-good vibes.</p>
               </div>
             </div>
@@ -182,7 +187,12 @@
               <img class="column xsmall-6" src="/assets/img/award_talk_town.jpg" alt="Talk of the Town Award">
             </div>
             <p class="text-color-putty margin-30-top-on-xsmall">At Yogurt Brothers we pride ourselves in offering the best frozen yogurt and service in Colorado. We regularly win top honors in various publications including Colorado Parent Magazine, The Broomfielder, Colorado Community Media, and the Denver A-List.</p>
-            <a href="javascript:void(0);" onclick="alert('This feature coming soon!');" class="button tertiary expand margin-30-top-on-xsmall">Learn More</a>
+            <a class="button tertiary expand margin-30-top-on-xsmall js-swal"
+               data-sa="{
+                 'title':'Awards Page Coming Soon!',
+                 'body':'Until then, please feel free to call us at (303) 466-6562 or visit our store!\n\nYogurt Brothers\n4680 W 120th Ave.\nWestminster, CO 80020\n\nThank You!'
+               }"
+               href="javascript:void(0);">Learn More</a>
           </div>
 
         </div><!-- end grid-container-3 -->

@@ -33,10 +33,16 @@ h3 {
 h4 {
    font-family: OswaldMedium;
    font-size: 18px;
+   text-transform: uppercase;
+   color: $color-primary;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
    margin-bottom: remCalc(30);
+}
+
+h4 {
+   margin: remCalc(15) 0;
 }
 
 ul {
@@ -49,6 +55,12 @@ p, li {
    margin-bottom: remCalc(30);
    line-height: 1.5;
    // &:first-of-type { margin-top: remCalc(30); }
+}
+
+address {
+   margin-bottom: remCalc(30);
+   line-height: 1.25;
+   color: $color-accent-font;
 }
 
 a { @extend %base-content; }

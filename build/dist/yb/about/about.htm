@@ -1,0 +1,95 @@
+<!--#include virtual="/assets/inc/page-open.htm" -->
+  <title>About Us | Yogurt Brothers</title>
+  <meta name="description" content="About Us">
+  <meta name="keywords" content="about,mission,statement,our,yogurt">
+  <meta name="author" content="Scott Currell">
+</head>
+<body><div id="container">
+
+  <!--#include virtual="/assets/inc/header.htm" -->
+
+  <!--------------------------------- features --------------------------------->
+  <!--#include virtual="/assets/inc/page-header-open.htm" -->
+        <h1>About Us</h1>
+  <!--#include virtual="/assets/inc/page-header-close.htm" -->
+  <!--------------------------------- end features ----------------------------->
+  <!--------------------------------- about, visit, awards --------------------->
+  <section class="bg-color-smoke">
+    <div class="row">
+      <div class="column margin-50-top-on-xsmall">
+        <div class="row">
+          <div class="columns large-6 end">
+            <ul class="toggle">
+              <li><button id="js-about-meet-toggle" class="small">Meet the Vanstorys</button></li>
+              <li><button id="js-about-mission-toggle" class="tertiary small">Mission Statement</button></li>
+              <li><button id="js-about-yogurt-toggle" class="tertiary small">Our Yogurt</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div id="js-about-meet-content" class="margin-50-on-xsmall">
+          <!--#include virtual="/assets/inc/about-meet.htm" -->
+        </div>
+        <div id="js-about-mission-content" class="hide margin-50-on-xsmall">
+          <!--#include virtual="/assets/inc/about-mission.htm" -->
+        </div>
+        <div id="js-about-yogurt-content" class="hide margin-50-on-xsmall">
+          <!--#include virtual="/assets/inc/about-yogurt.htm" -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--------------------------------- end about, visit, awards ----------------->
+
+  <!--#include virtual="/assets/inc/footer.htm" -->
+  <!--#include virtual="/assets/inc/source-scripts.htm" -->
+
+  <!-- page-specific scripts -->
+  <script>
+    var ABOUT = ABOUT || {};
+
+    ABOUT.toggles = {
+      meet   : document.getElementById('js-about-meet-toggle'),
+      mission: document.getElementById('js-about-mission-toggle'),
+      yogurt : document.getElementById('js-about-yogurt-toggle')
+    };
+
+    ABOUT.contents = {
+      meet   : document.getElementById('js-about-meet-content'),
+      mission: document.getElementById('js-about-mission-content'),
+      yogurt : document.getElementById('js-about-yogurt-content')
+    };
+
+    ABOUT.toggles.meet.addEventListener('click', function() {
+      ABOUT.contents.meet.classList.remove('hide');
+      ABOUT.contents.mission.classList.add('hide');
+      ABOUT.contents.yogurt.classList.add('hide');
+      ABOUT.toggles.meet.classList.remove('tertiary');
+      ABOUT.toggles.mission.classList.add('tertiary');
+      ABOUT.toggles.yogurt.classList.add('tertiary');
+    });
+
+    ABOUT.toggles.mission.addEventListener('click', function() {
+      ABOUT.contents.meet.classList.add('hide');
+      ABOUT.contents.mission.classList.remove('hide');
+      ABOUT.contents.yogurt.classList.add('hide');
+      ABOUT.toggles.meet.classList.add('tertiary');
+      ABOUT.toggles.mission.classList.remove('tertiary');
+      ABOUT.toggles.yogurt.classList.add('tertiary');
+    });
+
+    ABOUT.toggles.yogurt.addEventListener('click', function() {
+      ABOUT.contents.meet.classList.add('hide');
+      ABOUT.contents.mission.classList.add('hide');
+      ABOUT.contents.yogurt.classList.remove('hide');
+      ABOUT.toggles.meet.classList.add('tertiary');
+      ABOUT.toggles.mission.classList.add('tertiary');
+      ABOUT.toggles.yogurt.classList.remove('tertiary');
+    });
+  </script>
+  <!-- end page-specific scripts -->
+</div><!-- end #container --></body>
+</html>

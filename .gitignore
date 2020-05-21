@@ -1,18 +1,16 @@
-# Build Dependencies
+# build dependencies
 /node_modules
 
-# Built/compiled files
-# Grunt build to create these files
-/assets/css
-/assets/js
-/assets/fonts
+# directories
 .sass-cache/
-/zip
-
-# Ignore these while developing
-/src/js/modules
+/assets/css
+/assets/fonts
 /assets/img
-*.docx
+/assets/js
+/src/js/modules
 
-# Merge conflict files
+# files
+*.docx
 *.orig
+*.sublime-workspace
+sftp-config.json
