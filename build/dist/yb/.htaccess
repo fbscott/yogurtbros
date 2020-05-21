@@ -1,3 +1,0 @@
-AddType text/html .shtml
-AddHandler server-parsed .htm .html .ssi
-Options Indexes FollowSymLinks Includes

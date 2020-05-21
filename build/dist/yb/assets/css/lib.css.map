@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA;;;;;GAKG;AACH,aAAc;EACZ,gBAAgB,EAAE,mBAAmB;;AAEvC,YAAa;EACX,aAAa,EAAE,OAAO;EACtB,gBAAgB,ECmHW,OAAc;;ADjH3C,kCAAmC;EACjC,gBAAgB,EAAE,OAAiB",
-"sources": ["../../src/sass/lib/swal/swal.scss","../../src/sass/_settings.scss"],
-"names": [],
-"file": "lib.css"
-}
