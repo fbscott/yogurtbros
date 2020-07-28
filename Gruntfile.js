@@ -132,7 +132,7 @@ module.exports = function(grunt) {
       },
 
       zip: {
-         'build/dist/yb.zip': ['assets/**/*.*', '**/*.html', '**/*.htm', '.htaccess']
+         'build/dist/yb.zip': ['assets/**/*.*', '**/*.html', '**/*.htm', '**/*.php', '.htaccess']
       }
 
    });

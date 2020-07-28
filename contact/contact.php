@@ -2,12 +2,12 @@
 
    if (isset($_POST['name'])) {
 
-      $name       = stripslashes($_POST['name']); // preg_replace()
+      $name       = cleanString($_POST['name']);
       $emailFrom  = trim($_POST['email']);
-      $subject    = stripslashes($_POST['subject']);
-      $message    = nl2br(stripslashes($_POST['message']));
+      $subject    = cleanString($_POST['subject']);
+      $message    = nl2br(cleanString($_POST['message']));
 
-      $emailTo    = "scottcurrell@outlook.com";
+      $emailTo    = "scottcurrell2@gmail.com";
       $emailSubj  = "NEW yogurtbrothers.com submission. Re: " . $subject;
       $emailIntro = "You have received the following message from yogurtbrothers.com:";
 
@@ -26,6 +26,10 @@
          echo "Failure";
       }
 
+   }
+
+   function cleanString($string) {
+      return preg_replace('/[^\w\s\d\.\,\?\!]/', '', $string); // Removes special chars.
    }
 
  ?>

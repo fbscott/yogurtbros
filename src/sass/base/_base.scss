@@ -60,7 +60,7 @@ p, li {
 address {
    margin-bottom: remCalc(30);
    line-height: 1.25;
-   color: $color-accent-font;
+   // color: $color-accent-font;
 }
 
 a { @extend %base-content; }
