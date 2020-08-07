@@ -135,3 +135,43 @@
     @content;
   }
 }
+
+// Page effects
+@mixin double-border($color) {
+   position: relative;
+   border: 1px solid $color;
+   padding: remCalc(40);
+   &::before {
+      content: " ";
+      position: absolute;
+      // z-index: -1;
+      top: remCalc(2);
+      left: remCalc(2);
+      right: remCalc(2);
+      bottom: remCalc(2);
+      border: 1px solid $color;
+   }
+   p:last-of-type { margin-bottom: 0; }
+}
+
+@mixin circle($name, $diameter) {
+   .circle-#{$name} {
+      width: remCalc($diameter);
+      height: remCalc($diameter);
+      overflow: hidden;
+      @include border-radius(50%);
+      // @include align-vertical(absolute, "Y", 50%, -50%);
+      @include align-center(absolute, 50%, 50%);
+      img {
+         height: 100%;
+         width: auto;
+         object-fit: cover;
+         object-position: center;
+         transform: scale(1.5);
+         &.portrait {
+            width: 100%;
+            height: auto;
+         }
+      }
+   }
+}
