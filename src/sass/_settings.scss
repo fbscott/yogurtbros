@@ -100,6 +100,7 @@ $traffic-cone: #ff5e00;
 $vader:        #000000;
 $wet-jeans:    #00313C;
 $ash:          lighten($vader, 30%);
+$cotton-candy: lighten($sky, 15%);
 $charcoal:     lighten($vader, 20%);
 $smoke:        darken($casper, 4%);
 
@@ -108,6 +109,7 @@ $colors: (
    blueberry:    $blueberry,
    casper:       $casper,
    charcoal:     $charcoal,
+   cotton-candy: $cotton-candy,
    putty:        $putty,
    sky:          $sky,
    kiwi:         $kiwi,
@@ -124,6 +126,7 @@ $color-primary-font:         $charcoal;
 $color-secondary-font:       $casper;
 $color-cta-font:             $color-primary;
 $color-accent-font:          $color-secondary;
+$color-testimonial-font:     $cotton-candy;
 $color-primary-a:            $color-primary;
 $color-primary-a-hover:      lighten($color-primary-a, 7%);
 $color-primary-background:   $casper;

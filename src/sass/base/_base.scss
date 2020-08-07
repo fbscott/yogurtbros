@@ -86,3 +86,15 @@ th, td {
    padding: remCalc(20);
    text-align: center;
 }
+
+blockquote {
+   color: $color-primary-font;
+   background-color: $color-testimonial-font;
+   border-left: 3px solid $ash;
+   padding: remCalc(10);
+   font-style: italic;
+   line-height: 1.5;
+   & + p {
+      margin-top: remCalc(15);
+   }
+}

@@ -1,0 +1,116 @@
+/*****************************************************************************
+ * panels
+ ****************************************************************************/
+$color-panel-bg: $color-primary-background;
+$color-panel-border: darken($smoke, 7%);
+
+// loop over breakpoints
+@each $key, $value in $breakpoints {
+   // create media queries
+   @include break($key) {
+      @if $key == 'xsmall' {
+         .panels {
+            & > div {
+               &:not(:last-child) {
+                  margin-bottom: remCalc(30);
+               }
+               background-color: $color-panel-bg;
+               border: 1px solid $color-panel-border;
+               box-shadow: 0px remCalc(2) remCalc(3) 0px rgba(0,0,0,0.125);
+            }
+            div.topping-content {
+               padding: remCalc(15);
+            }
+            &.panel-one-wide {
+               grid-template-columns: repeat(1, 1fr);
+               margin-bottom: remCalc(30);
+            }
+            &.panel-two-wide {
+               grid-template-columns: repeat(2, 1fr);
+               margin-bottom: remCalc(30);
+            }
+            &.panel-three-wide {
+               grid-template-columns: repeat(3, 1fr);
+               margin-bottom: remCalc(30);
+            }
+            &.panel-four-wide {
+               grid-template-columns: repeat(4, 1fr);
+               margin-bottom: remCalc(30);
+            }
+         }
+      } @else if $key == 'small' {
+         .panels {
+            & > div {
+               &:not(:last-child) {
+                  margin-bottom: initial;
+               }
+            }
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: remCalc(30);
+         }
+      } @else if $key == 'medium' {
+         .panels {
+            grid-template-columns: repeat(3, 1fr);
+         }
+         .panels > *:nth-child(3n-1) {
+               position: relative;
+               display: -webkit-box;
+               display: -moz-box;
+               display: box;
+               -webkit-box-orient: vertical;
+                  -moz-box-orient: vertical;
+                       box-orient: vertical;
+            img {
+               position: absolute;
+               bottom: 0;
+            }
+            & > div:first-of-type {
+               -webkit-box-ordinal-group: 2;
+                  -moz-box-ordinal-group: 2;
+                       box-ordinal-group: 2;
+            }
+         }
+      } @else if $key == 'large' {
+         .panels {
+            grid-template-columns: repeat(4, 1fr);
+         }
+         .panels > *:nth-child(3n-1) {
+               position: initial;
+               display: initial;
+               display: initial;
+               display: initial;
+               -webkit-box-orient: initial;
+                  -moz-box-orient: initial;
+                       box-orient: initial;
+            img {
+               position: initial;
+               bottom: initial;
+            }
+            & > div:first-of-type {
+               -webkit-box-ordinal-group: initial;
+                  -moz-box-ordinal-group: initial;
+                       box-ordinal-group: initial;
+            }
+         }
+         .panels > *:nth-child(even) {
+               position: relative;
+               display: -webkit-box;
+               display: -moz-box;
+               display: box;
+               -webkit-box-orient: vertical;
+                  -moz-box-orient: vertical;
+                       box-orient: vertical;
+            img {
+               position: absolute;
+               bottom: 0;
+            }
+            & > div:first-of-type {
+               -webkit-box-ordinal-group: 2;
+                  -moz-box-ordinal-group: 2;
+                       box-ordinal-group: 2;
+            }
+         }
+      }
+   }
+}
